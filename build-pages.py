@@ -88,7 +88,7 @@ for key,sections in DATA.items():
    sec['class']+=['talk-section'];label=['As cinco dimensões da liderança','Influência real','Auto Performance','EU — A força inabalável de ser'][idx-2]
    sec.select_one('.talk-shade').decompose()
    photo=frag('<figure class="talk-photo">'+img('curadoria-talks-'+str(idx+1),'Veridiana em sua trajetória profissional')+'</figure>');wrap.insert(1,photo)
-   sec.select_one('.talk-copy').insert(0,frag('<p class="eyebrow talk-label">'+e(label)+'</p>'))
+   sec.select_one('.chapter').string=f'{idx:02d} / {label}'
   elif grid:
    features=grid.select(':scope > article');gridclasses=grid.get('class',[])
    for i,a in enumerate(features):
