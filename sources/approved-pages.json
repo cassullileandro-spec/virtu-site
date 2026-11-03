@@ -1,0 +1,721 @@
+{
+  "url": "https://cassullileandro-spec.github.io/virtu-apresentacao/",
+  "pages": {
+    "contato": [
+      {
+        "id": null,
+        "classes": [
+          "hero",
+          "contact-hero"
+        ],
+        "html": "<section class=\"hero contact-hero\"><div class=\"wrap\"><h1>Vamos conversar sobre o seu próximo passo.</h1><p>Quer levar uma palestra ao seu evento ou desenvolver a liderança e a gestão de pessoas da sua empresa? Conte para a Virtù o que você está buscando.</p></div></section>",
+        "text": "Vamos conversar sobre o seu próximo passo. Quer levar uma palestra ao seu evento ou desenvolver a liderança e a gestão de pessoas da sua empresa? Conte para a Virtù o que você está buscando."
+      },
+      {
+        "id": null,
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\"><div class=\"wrap split contact-grid\"><div class=\"section-intro\"><h2>Como podemos ajudar?</h2><p>Conte sobre o objetivo, o público e o principal desafio que deseja trabalhar.</p><div class=\"prototype-note\">Protótipo de formulário<br/>O preenchimento não é enviado nem armazenado.</div></div><form id=\"contact-form\"><div class=\"form-grid\"><label>Nome<input autocomplete=\"off\" name=\"f0\" placeholder=\"Nome\" required=\"\" type=\"text\"/></label><label>E-mail<input autocomplete=\"off\" name=\"f1\" placeholder=\"E-mail\" required=\"\" type=\"email\"/></label><label>WhatsApp com DDD<input autocomplete=\"off\" name=\"f2\" placeholder=\"WhatsApp com DDD\" required=\"\" type=\"tel\"/></label><label>Empresa ou organização<input autocomplete=\"off\" name=\"f3\" placeholder=\"Empresa ou organização\" type=\"text\"/></label><label>Seu cargo ou função<input autocomplete=\"off\" name=\"f4\" placeholder=\"Seu cargo ou função\" type=\"text\"/></label><label>Tenho interesse em<select id=\"interest\" onchange=\"showEvent()\"><option>Preciso de orientação</option><option>Palestra</option><option>Meta V gravado</option><option>Oficina Super Humanos</option><option>Mentoria Meta V</option><option>PHD</option><option>Vanguard</option></select></label></div><div hidden=\"\" id=\"event-fields\"><label>Tema da palestra<select id=\"theme\"><option>Ainda não definido</option><option>As cinco dimensões da liderança</option><option>Influência real</option><option>Auto Performance</option><option>EU — A força inabalável de ser</option></select></label><div class=\"form-grid\"><label>Cidade e estado do evento<input placeholder=\"Ainda não definido\"/></label><label>Data prevista<input placeholder=\"Ainda não definido\"/></label><label>Público estimado<input placeholder=\"Ainda não definido\"/></label></div></div><label>Mensagem<textarea placeholder=\"Conte sobre o objetivo, o público e o principal desafio que deseja trabalhar.\" required=\"\" rows=\"5\"></textarea></label><div class=\"privacy-placeholder\">Política de privacidade · espaço para o link após definição.</div><button class=\"button\" type=\"submit\">Enviar mensagem <span></span></button><div hidden=\"\" id=\"demo-message\" role=\"status\">Simulação concluída. Nenhuma mensagem foi enviada. No site publicado, a confirmação aparecerá somente após o recebimento real.</div></form></div></section>",
+        "text": "Como podemos ajudar? Conte sobre o objetivo, o público e o principal desafio que deseja trabalhar. Protótipo de formulário O preenchimento não é enviado nem armazenado. Nome E-mail WhatsApp com DDD Empresa ou organização Seu cargo ou função Tenho interesse em Preciso de orientação Palestra Meta V gravado Oficina Super Humanos Mentoria Meta V PHD Vanguard Tema da palestra Ainda não definido As cinco dimensões da liderança Influência real Auto Performance EU — A força inabalável de ser Cidade e estado do evento Data prevista Público estimado Mensagem Política de privacidade · espaço para o link após definição. Enviar mensagem Simulação concluída. Nenhuma mensagem foi enviada. No site publicado, a confirmação aparecerá somente após o recebimento real."
+      },
+      {
+        "id": null,
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\"><div class=\"wrap narrow\"><h2>Ainda não sabe qual jornada escolher?</h2><p>Você pode começar contando o que precisa mudar na sua empresa. Vamos entender seu contexto e apresentar os caminhos disponíveis.</p><div class=\"actions\"><a class=\"button\" href=\"#empresas\" onclick=\"return go('empresas','')\">Conheça as soluções para empresas <span aria-hidden=\"true\"></span></a></div></div></section>",
+        "text": "Ainda não sabe qual jornada escolher? Você pode começar contando o que precisa mudar na sua empresa. Vamos entender seu contexto e apresentar os caminhos disponíveis. Conheça as soluções para empresas"
+      }
+    ],
+    "empresas": [
+      {
+        "id": null,
+        "classes": [
+          "hero"
+        ],
+        "html": "<section class=\"hero\"><div class=\"wrap hero-grid\"><div class=\"hero-copy\"><h1>A gestão de pessoas precisa acompanhar o momento da sua empresa.</h1><p>Conheça as jornadas da Virtù para desenvolver lideranças, fortalecer a cultura e estruturar o trabalho das equipes.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','')\">Encontre sua jornada <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "A gestão de pessoas precisa acompanhar o momento da sua empresa. Conheça as jornadas da Virtù para desenvolver lideranças, fortalecer a cultura e estruturar o trabalho das equipes. Encontre sua jornada"
+      },
+      {
+        "id": "bloco-02",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-02\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Por onde sua empresa precisa começar?</h2></div><div class=\"editorial-copy\"><p>Alguns desafios pedem repertório e desenvolvimento individual. Outros exigem trabalho conjunto com as lideranças ou revisão dos processos de gestão.</p><p>As jornadas da Virtù oferecem diferentes formas de participação. Conheça a proposta de cada uma.</p></div></div></section>",
+        "text": "Por onde sua empresa precisa começar? Alguns desafios pedem repertório e desenvolvimento individual. Outros exigem trabalho conjunto com as lideranças ou revisão dos processos de gestão. As jornadas da Virtù oferecem diferentes formas de participação. Conheça a proposta de cada uma."
+      },
+      {
+        "id": "bloco-03",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-03\"><div class=\"wrap\"><h2>Jornadas de liderança</h2><div class=\"card-grid solutions\"><article class=\"solution-card\"><span class=\"index\">01</span><h3>META V — ACESSO GRAVADO</h3><p>Conteúdo para estudar gestão e liderança com flexibilidade e revisar os conceitos conforme sua necessidade.</p><a class=\"text-link\" href=\"#contato\" onclick=\"return go('contato','')\">Conheça o gravado <span aria-hidden=\"true\"></span></a></article><article class=\"solution-card\"><span class=\"index\">02</span><h3>OFICINA SUPER HUMANOS</h3><p>Aprendizagem e aplicação de práticas de liderança, com encontros e acompanhamento conforme a modalidade.</p><a class=\"text-link\" href=\"#contato\" onclick=\"return go('contato','')\">Conheça a oficina <span aria-hidden=\"true\"></span></a></article><article class=\"solution-card\"><span class=\"index\">03</span><h3>MENTORIA META V</h3><p>Construção orientada da gestão de pessoas com quem toma as decisões do negócio.</p><a class=\"text-link\" href=\"#contato\" onclick=\"return go('contato','')\">Conheça a mentoria <span aria-hidden=\"true\"></span></a></article></div></div></section>",
+        "text": "Jornadas de liderança 01 META V — ACESSO GRAVADO Conteúdo para estudar gestão e liderança com flexibilidade e revisar os conceitos conforme sua necessidade. Conheça o gravado 02 OFICINA SUPER HUMANOS Aprendizagem e aplicação de práticas de liderança, com encontros e acompanhamento conforme a modalidade. Conheça a oficina 03 MENTORIA META V Construção orientada da gestão de pessoas com quem toma as decisões do negócio. Conheça a mentoria"
+      },
+      {
+        "id": "bloco-04",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-04\"><div class=\"wrap\"><h2>Jornadas exclusivas</h2><div class=\"card-grid solutions\"><article class=\"solution-card\"><span class=\"index\">01</span><h3>PHD — PROJETO DE DESENVOLVIMENTO DE HABILIDADES</h3><p>Uma jornada in company desenhada para as necessidades de desenvolvimento das lideranças da sua empresa.</p><a class=\"text-link\" href=\"#contato\" onclick=\"return go('contato','')\">Conheça o PHD <span aria-hidden=\"true\"></span></a></article><article class=\"solution-card\"><span class=\"index\">02</span><h3>VANGUARD</h3><p>Consultoria para diagnosticar e estruturar cultura, processos e indicadores da gestão de pessoas.</p><a class=\"text-link\" href=\"#contato\" onclick=\"return go('contato','')\">Conheça o Vanguard <span aria-hidden=\"true\"></span></a></article></div></div></section>",
+        "text": "Jornadas exclusivas 01 PHD — PROJETO DE DESENVOLVIMENTO DE HABILIDADES Uma jornada in company desenhada para as necessidades de desenvolvimento das lideranças da sua empresa. Conheça o PHD 02 VANGUARD Consultoria para diagnosticar e estruturar cultura, processos e indicadores da gestão de pessoas. Conheça o Vanguard"
+      },
+      {
+        "id": "bloco-05",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-05\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Uma conversa ajuda a encontrar o caminho.</h2></div><div class=\"editorial-copy\"><p>Conte quais desafios aparecem no dia a dia, quem precisa participar do trabalho e o que sua empresa pretende desenvolver.</p><p>Com esse contexto, nossa equipe apresenta a jornada e as condições que fazem sentido para o projeto.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','')\">Conversar com a Virtù <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Uma conversa ajuda a encontrar o caminho. Conte quais desafios aparecem no dia a dia, quem precisa participar do trabalho e o que sua empresa pretende desenvolver. Com esse contexto, nossa equipe apresenta a jornada e as condições que fazem sentido para o projeto. Conversar com a Virtù"
+      }
+    ],
+    "palestras": [
+      {
+        "id": null,
+        "classes": [
+          "hero"
+        ],
+        "html": "<section class=\"hero\"><div class=\"wrap hero-grid\"><div class=\"hero-copy\"><h1>Uma conversa que aproxima pessoas dos desafios da sua organização.</h1><p>Palestras com Veridiana Cavalheri sobre liderança, comunicação, performance e autoliderança feminina.</p><p>Encontre o tema que faz sentido para o seu evento.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','')\">Solicitar uma proposta <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Uma conversa que aproxima pessoas dos desafios da sua organização. Palestras com Veridiana Cavalheri sobre liderança, comunicação, performance e autoliderança feminina. Encontre o tema que faz sentido para o seu evento. Solicitar uma proposta"
+      },
+      {
+        "id": "bloco-02",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-02\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>O tema certo começa com o contexto do público.</h2></div><div class=\"editorial-copy\"><p>Cada encontro tem uma intenção: desenvolver líderes, mobilizar uma equipe ou abrir espaço para novas reflexões.</p><p>As palestras da Virtù conectam esses objetivos a situações e comportamentos que fazem parte da vida de quem participa.</p></div></div></section>",
+        "text": "O tema certo começa com o contexto do público. Cada encontro tem uma intenção: desenvolver líderes, mobilizar uma equipe ou abrir espaço para novas reflexões. As palestras da Virtù conectam esses objetivos a situações e comportamentos que fazem parte da vida de quem participa."
+      },
+      {
+        "id": "bloco-03",
+        "classes": [
+          "section",
+          "talk-immersive"
+        ],
+        "html": "<section class=\"section talk-immersive\" id=\"bloco-03\"><div class=\"talk-shade\"></div><div class=\"wrap\"><div class=\"talk-copy\"><h2>Pessoas, cultura e decisões que sustentam o crescimento.</h2><p>Uma palestra que conecta cultura, governança, liderança, engajamento e inteligência comportamental à rotina de gestão.</p><p>O conteúdo aborda o papel do líder na construção da cultura, decisões orientadas por princípios, diversidade geracional e compreensão dos perfis da equipe.</p><p>Para empresários, gestores e lideranças que precisam aproximar estratégia e prática.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','As cinco dimensões da liderança')\">Quero esta palestra <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Pessoas, cultura e decisões que sustentam o crescimento. Uma palestra que conecta cultura, governança, liderança, engajamento e inteligência comportamental à rotina de gestão. O conteúdo aborda o papel do líder na construção da cultura, decisões orientadas por princípios, diversidade geracional e compreensão dos perfis da equipe. Para empresários, gestores e lideranças que precisam aproximar estratégia e prática. Quero esta palestra"
+      },
+      {
+        "id": "bloco-04",
+        "classes": [
+          "section",
+          "talk-immersive"
+        ],
+        "html": "<section class=\"section talk-immersive\" id=\"bloco-04\"><div class=\"talk-shade\"></div><div class=\"wrap\"><div class=\"talk-copy\"><h2>O magnetismo de quem fala e é ouvido.</h2><p>Uma conversa sobre a relação entre emoções, comportamento e comunicação.</p><p>A palestra aborda estilos de comunicação, padrões que desgastam vínculos, escuta e formas de expressar ideias e discordâncias com respeito.</p><p>Para líderes e equipes que desejam desenvolver a qualidade das relações no trabalho.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','Influência real')\">Quero esta palestra <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "O magnetismo de quem fala e é ouvido. Uma conversa sobre a relação entre emoções, comportamento e comunicação. A palestra aborda estilos de comunicação, padrões que desgastam vínculos, escuta e formas de expressar ideias e discordâncias com respeito. Para líderes e equipes que desejam desenvolver a qualidade das relações no trabalho. Quero esta palestra"
+      },
+      {
+        "id": "bloco-05",
+        "classes": [
+          "section",
+          "talk-immersive"
+        ],
+        "html": "<section class=\"section talk-immersive\" id=\"bloco-05\"><div class=\"talk-shade\"></div><div class=\"wrap\"><div class=\"talk-copy\"><h2>As escolhas individuais que sustentam a força de uma equipe.</h2><p>Uma proposta para refletir sobre autoconhecimento, responsabilidade e consistência nas entregas.</p><p>O roteiro percorre cinco atos: autoconsciência, autodireção, autodecisão, autodisciplina e autoevolução. Também aborda inteligência emocional e a participação de cada pessoa no resultado coletivo.</p><p>Para encontros que mobilizam diferentes níveis da organização em torno de um novo ciclo.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','Auto Performance')\">Quero esta palestra <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "As escolhas individuais que sustentam a força de uma equipe. Uma proposta para refletir sobre autoconhecimento, responsabilidade e consistência nas entregas. O roteiro percorre cinco atos: autoconsciência, autodireção, autodecisão, autodisciplina e autoevolução. Também aborda inteligência emocional e a participação de cada pessoa no resultado coletivo. Para encontros que mobilizam diferentes níveis da organização em torno de um novo ciclo. Quero esta palestra"
+      },
+      {
+        "id": "bloco-06",
+        "classes": [
+          "section",
+          "talk-immersive"
+        ],
+        "html": "<section class=\"section talk-immersive\" id=\"bloco-06\"><div class=\"talk-shade\"></div><div class=\"wrap\"><div class=\"talk-copy\"><h2>Uma palestra para mulheres, inspirada em Antifraca.</h2><p>Um convite para olhar para a própria história, reconhecer recursos pessoais e refletir sobre escolhas.</p><p>O conteúdo aborda diálogo interno, autoliderança e construção de hábitos coerentes com a mulher que cada participante deseja ser.</p><p>Para eventos e iniciativas voltados ao desenvolvimento pessoal e profissional feminino.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','EU — A força inabalável de ser')\">Quero esta palestra <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Uma palestra para mulheres, inspirada em Antifraca. Um convite para olhar para a própria história, reconhecer recursos pessoais e refletir sobre escolhas. O conteúdo aborda diálogo interno, autoliderança e construção de hábitos coerentes com a mulher que cada participante deseja ser. Para eventos e iniciativas voltados ao desenvolvimento pessoal e profissional feminino. Quero esta palestra"
+      },
+      {
+        "id": "bloco-07",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-07\"><div class=\"wrap split image-split\"><div><h2>Veridiana Cavalheri</h2><p>Fundadora da Virtù, palestrante, consultora, mentora e autora de Antifraca.</p><p>Sua atuação conecta cultura e comportamento aos desafios de liderança e gestão de pessoas.</p><div class=\"actions\"><a class=\"button\" href=\"#veridiana\" onclick=\"return go('veridiana','')\">Conheça sua trajetória <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Veridiana Cavalheri Fundadora da Virtù, palestrante, consultora, mentora e autora de Antifraca. Sua atuação conecta cultura e comportamento aos desafios de liderança e gestão de pessoas. Conheça sua trajetória"
+      },
+      {
+        "id": "bloco-08",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-08\"><div class=\"wrap\"><h2>Como levar uma palestra ao seu evento</h2><div class=\"steps\"><div><span>01</span><p>Conte sobre o público, o objetivo e a data prevista.</p></div><div><span>02</span><p>Nossa equipe conversa com você para alinhar tema, disponibilidade e condições de contratação.</p></div><div><span>03</span><p>Com a proposta definida, organizamos os detalhes da participação de Veridiana.</p></div></div></div></section>",
+        "text": "Como levar uma palestra ao seu evento 01 Conte sobre o público, o objetivo e a data prevista. 02 Nossa equipe conversa com você para alinhar tema, disponibilidade e condições de contratação. 03 Com a proposta definida, organizamos os detalhes da participação de Veridiana."
+      },
+      {
+        "id": "bloco-09",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-09\"><div class=\"wrap faq-grid\"><div class=\"section-intro\"><h2>Dúvidas frequentes</h2><p class=\"small-copy\">3 perguntas frequentes</p></div><div><details class=\"faq\"><summary>Como escolher o tema?<span></span></summary><p>Comece pelo objetivo do encontro e pelo perfil do público. Nossa equipe pode ajudar a identificar a palestra mais adequada.</p></details><details class=\"faq\"><summary>Qual é a duração e o formato?<span></span></summary><p>A duração e a modalidade de participação são alinhadas conforme o evento e registradas na proposta.</p></details><details class=\"faq\"><summary>Como solicitar um orçamento?<span></span></summary><p>Envie o tema de interesse, a data prevista, a cidade e uma breve descrição do público. Se algum detalhe ainda não estiver definido, conte o que já sabe.</p></details></div></div></section>",
+        "text": "Dúvidas frequentes 3 perguntas frequentes Como escolher o tema? Comece pelo objetivo do encontro e pelo perfil do público. Nossa equipe pode ajudar a identificar a palestra mais adequada. Qual é a duração e o formato? A duração e a modalidade de participação são alinhadas conforme o evento e registradas na proposta. Como solicitar um orçamento? Envie o tema de interesse, a data prevista, a cidade e uma breve descrição do público. Se algum detalhe ainda não estiver definido, conte o que já sabe."
+      },
+      {
+        "id": "bloco-10",
+        "classes": [
+          "section",
+          "dark"
+        ],
+        "html": "<section class=\"section dark\" id=\"bloco-10\"><div class=\"wrap cta-block\"><div class=\"cta-inner\"><h2>Qual conversa precisa acontecer no seu próximo evento?</h2><p>Fale com a equipe Virtù e solicite uma proposta.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','')\">Conversar sobre meu evento <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Qual conversa precisa acontecer no seu próximo evento? Fale com a equipe Virtù e solicite uma proposta. Conversar sobre meu evento"
+      }
+    ],
+    "vanguard": [
+      {
+        "id": null,
+        "classes": [
+          "hero"
+        ],
+        "html": "<section class=\"hero\"><div class=\"wrap hero-grid\"><div class=\"hero-copy\"><h1>Uma estrutura de gestão de pessoas para sustentar o próximo passo da empresa.</h1><p>Consultoria da Virtù para conectar cultura, liderança e indicadores em um processo de diagnóstico, implementação e acompanhamento.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','Vanguard')\">Conversar sobre o Vanguard <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Uma estrutura de gestão de pessoas para sustentar o próximo passo da empresa. Consultoria da Virtù para conectar cultura, liderança e indicadores em um processo de diagnóstico, implementação e acompanhamento. Conversar sobre o Vanguard"
+      },
+      {
+        "id": "bloco-02",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-02\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>O crescimento exige clareza sobre como as pessoas trabalham.</h2></div><div class=\"editorial-copy\"><p>Quem responde por cada entrega? Como avaliar o desempenho? Quais comportamentos a cultura reconhece? Como preparar quem chega e desenvolver quem já faz parte da equipe?</p><p>O Vanguard organiza essas perguntas em um trabalho sobre os processos de gestão de pessoas.</p></div></div></section>",
+        "text": "O crescimento exige clareza sobre como as pessoas trabalham. Quem responde por cada entrega? Como avaliar o desempenho? Quais comportamentos a cultura reconhece? Como preparar quem chega e desenvolver quem já faz parte da equipe? O Vanguard organiza essas perguntas em um trabalho sobre os processos de gestão de pessoas."
+      },
+      {
+        "id": "bloco-03",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-03\"><div class=\"wrap split\"><div class=\"section-intro\"><h2>O que o projeto busca construir</h2></div><div class=\"check-list\"><div><span class=\"check\"></span><p>Uma leitura do cenário de liderança, cultura e indicadores.</p></div><div><span class=\"check\"></span><p>Princípios e comportamentos claros para orientar a gestão.</p></div><div><span class=\"check\"></span><p>Responsabilidades e práticas de acompanhamento das equipes.</p></div><div><span class=\"check\"></span><p>Um modelo de liderança alinhado ao contexto do negócio.</p></div><div><span class=\"check\"></span><p>Um plano para dar continuidade ao trabalho dentro da empresa.</p></div></div></div></section>",
+        "text": "O que o projeto busca construir Uma leitura do cenário de liderança, cultura e indicadores. Princípios e comportamentos claros para orientar a gestão. Responsabilidades e práticas de acompanhamento das equipes. Um modelo de liderança alinhado ao contexto do negócio. Um plano para dar continuidade ao trabalho dentro da empresa."
+      },
+      {
+        "id": "bloco-04",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-04\"><div class=\"wrap\"><h2>Oito processos no campo de visão</h2><div class=\"card-grid systems-grid cols-2\"><article class=\"feature\"><span class=\"index\">01</span><h3>DESIGN FUNCIONAL</h3><p>Estrutura das áreas e definição de responsabilidades.</p></article><article class=\"feature\"><span class=\"index\">02</span><h3>EXPECTATIVAS E METAS</h3><p>Clareza sobre entregas e indicadores por área e função.</p></article><article class=\"feature\"><span class=\"index\">03</span><h3>REMUNERAÇÃO E CRESCIMENTO</h3><p>Proposta de valor e formas de reconhecimento.</p></article><article class=\"feature\"><span class=\"index\">04</span><h3>CULTURA E ENGAJAMENTO</h3><p>Valores traduzidos em comportamentos e critérios de gestão.</p></article><article class=\"feature\"><span class=\"index\">05</span><h3>AVALIAÇÃO DE DESEMPENHO</h3><p>Práticas de avaliação e desenvolvimento das pessoas.</p></article><article class=\"feature\"><span class=\"index\">06</span><h3>ATRAÇÃO E SELEÇÃO</h3><p>Perfil, roteiro e jornada de contratação.</p></article><article class=\"feature\"><span class=\"index\">07</span><h3>INTEGRAÇÃO E DESENVOLVIMENTO</h3><p>Organização da entrada e do crescimento do colaborador.</p></article><article class=\"feature\"><span class=\"index\">08</span><h3>RITMO DE GESTÃO</h3><p>Rituais e práticas para a atuação das lideranças.</p></article></div></div></section>",
+        "text": "Oito processos no campo de visão 01 DESIGN FUNCIONAL Estrutura das áreas e definição de responsabilidades. 02 EXPECTATIVAS E METAS Clareza sobre entregas e indicadores por área e função. 03 REMUNERAÇÃO E CRESCIMENTO Proposta de valor e formas de reconhecimento. 04 CULTURA E ENGAJAMENTO Valores traduzidos em comportamentos e critérios de gestão. 05 AVALIAÇÃO DE DESEMPENHO Práticas de avaliação e desenvolvimento das pessoas. 06 ATRAÇÃO E SELEÇÃO Perfil, roteiro e jornada de contratação. 07 INTEGRAÇÃO E DESENVOLVIMENTO Organização da entrada e do crescimento do colaborador. 08 RITMO DE GESTÃO Rituais e práticas para a atuação das lideranças."
+      },
+      {
+        "id": "bloco-05",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-05\"><div class=\"wrap\"><h2>Um caminho do diagnóstico à sustentação</h2><div class=\"card-grid process-grid cols-2\"><article class=\"feature\"><span class=\"index\">01</span><h3>DIAGNÓSTICO</h3><p>Compreender o que existe, como funciona e quais pontos pedem atenção.</p></article><article class=\"feature\"><span class=\"index\">02</span><h3>ESTRATÉGIA</h3><p>Priorizar mudanças e desenhar um plano para a gestão de pessoas.</p></article><article class=\"feature\"><span class=\"index\">03</span><h3>IMPLEMENTAÇÃO</h3><p>Trabalhar com as lideranças na aplicação das práticas previstas.</p></article><article class=\"feature\"><span class=\"index\">04</span><h3>SUSTENTAÇÃO</h3><p>Organizar indicadores, responsabilidades e continuidade.</p></article></div></div></section>",
+        "text": "Um caminho do diagnóstico à sustentação 01 DIAGNÓSTICO Compreender o que existe, como funciona e quais pontos pedem atenção. 02 ESTRATÉGIA Priorizar mudanças e desenhar um plano para a gestão de pessoas. 03 IMPLEMENTAÇÃO Trabalhar com as lideranças na aplicação das práticas previstas. 04 SUSTENTAÇÃO Organizar indicadores, responsabilidades e continuidade."
+      },
+      {
+        "id": "bloco-06",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-06\"><div class=\"wrap\"><h2>O que fica documentado para a empresa</h2><div class=\"card-grid systems-grid cols-3\"><article class=\"feature\"><span class=\"index\">01</span><h3>RAIO X DO NEGÓCIO</h3><p>Leitura do cenário e dos pontos de atenção.</p></article><article class=\"feature\"><span class=\"index\">02</span><h3>MANUAL DA CULTURA</h3><p>Princípios e políticas adequados ao momento da organização.</p></article><article class=\"feature\"><span class=\"index\">03</span><h3>DESIGN HUMANO</h3><p>Relação entre estrutura, estratégia e cultura.</p></article><article class=\"feature\"><span class=\"index\">04</span><h3>MODELO DE GESTÃO E LIDERANÇA</h3><p>Práticas definidas para conduzir o trabalho.</p></article><article class=\"feature\"><span class=\"index\">05</span><h3>PLANO DE TRANSFORMAÇÃO</h3><p>Ações, prioridades e responsáveis.</p></article><article class=\"feature\"><span class=\"index\">06</span><h3>PLANO DE SUSTENTAÇÃO</h3><p>Marcos e responsabilidades para a continuidade.</p></article></div></div></section>",
+        "text": "O que fica documentado para a empresa 01 RAIO X DO NEGÓCIO Leitura do cenário e dos pontos de atenção. 02 MANUAL DA CULTURA Princípios e políticas adequados ao momento da organização. 03 DESIGN HUMANO Relação entre estrutura, estratégia e cultura. 04 MODELO DE GESTÃO E LIDERANÇA Práticas definidas para conduzir o trabalho. 05 PLANO DE TRANSFORMAÇÃO Ações, prioridades e responsáveis. 06 PLANO DE SUSTENTAÇÃO Marcos e responsabilidades para a continuidade."
+      },
+      {
+        "id": "bloco-07",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-07\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Indicadores para acompanhar a evolução</h2></div><div class=\"editorial-copy\"><p>A proposta utiliza o SMART Index para estabelecer uma leitura inicial e acompanhar aspectos de engajamento, confiança, cultura e liderança.</p><p>Os indicadores e os momentos de avaliação são definidos no projeto, considerando o contexto e os dados disponíveis.</p></div></div></section>",
+        "text": "Indicadores para acompanhar a evolução A proposta utiliza o SMART Index para estabelecer uma leitura inicial e acompanhar aspectos de engajamento, confiança, cultura e liderança. Os indicadores e os momentos de avaliação são definidos no projeto, considerando o contexto e os dados disponíveis."
+      },
+      {
+        "id": "bloco-08",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-08\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Para empresas que precisam estruturar a gestão de pessoas.</h2></div><div class=\"editorial-copy\"><p>O Vanguard atende à necessidade de conectar processos e cultura em um trabalho com as lideranças.</p><p>É uma proposta para olhar a jornada das pessoas de ponta a ponta e definir o que precisa ser construído, retomado ou fortalecido.</p></div></div></section>",
+        "text": "Para empresas que precisam estruturar a gestão de pessoas. O Vanguard atende à necessidade de conectar processos e cultura em um trabalho com as lideranças. É uma proposta para olhar a jornada das pessoas de ponta a ponta e definir o que precisa ser construído, retomado ou fortalecido."
+      },
+      {
+        "id": "bloco-09",
+        "classes": [
+          "section",
+          "dark"
+        ],
+        "html": "<section class=\"section dark\" id=\"bloco-09\"><div class=\"wrap cta-block\"><div class=\"cta-inner\"><h2>Vamos entender o que precisa mudar na sua gestão?</h2><p>Converse com a Virtù sobre o cenário da empresa e conheça o escopo indicado para o seu projeto.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','Vanguard')\">Solicitar uma conversa <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Vamos entender o que precisa mudar na sua gestão? Converse com a Virtù sobre o cenário da empresa e conheça o escopo indicado para o seu projeto. Solicitar uma conversa"
+      }
+    ],
+    "virtu": [
+      {
+        "id": null,
+        "classes": [
+          "hero"
+        ],
+        "html": "<section class=\"hero\"><div class=\"wrap hero-grid\"><div class=\"hero-copy\"><h1>O lado humano do negócio.</h1><p>Sua estratégia ganha força nas pessoas que a colocam em prática.</p><p>A Virtù conecta desenvolvimento de lideranças, cultura organizacional e gestão de pessoas aos desafios de crescimento da sua empresa.</p><p>Reunimos conhecimento, método e ferramentas para ajudar líderes e equipes a transformar aprendizado em decisões, comportamentos e práticas de gestão.</p><div class=\"actions\"><a class=\"button\" href=\"#empresas\" onclick=\"return go('empresas','')\">CONHEÇA NOSSAS JORNADAS <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "O lado humano do negócio. Sua estratégia ganha força nas pessoas que a colocam em prática. A Virtù conecta desenvolvimento de lideranças, cultura organizacional e gestão de pessoas aos desafios de crescimento da sua empresa. Reunimos conhecimento, método e ferramentas para ajudar líderes e equipes a transformar aprendizado em decisões, comportamentos e práticas de gestão. CONHEÇA NOSSAS JORNADAS"
+      },
+      {
+        "id": "bloco-02",
+        "classes": [
+          "section",
+          "editorial-pattern"
+        ],
+        "html": "<section class=\"section editorial-pattern\" id=\"bloco-02\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Por trás de cada entrega, existem pessoas que precisam de direção.</h2></div><div class=\"editorial-copy\"><p>Uma estratégia depende de quem toma decisões, organiza prioridades, conduz conversas e acompanha o trabalho. Quando essas pessoas não têm clareza sobre seu papel, a distância entre o que a empresa planeja e o que acontece na rotina aumenta.</p><p>É nesse encontro entre pessoas e negócio que a Virtù atua. Trabalhamos com o desenvolvimento de lideranças e com a estruturação da gestão de pessoas, considerando a cultura, as expectativas e o momento de cada organização.</p><p>Isso significa olhar tanto para as habilidades de quem lidera quanto para as condições em que a equipe trabalha. Como as responsabilidades são definidas? Como os valores aparecem nas decisões? Como as pessoas recebem orientação, reconhecimento e oportunidades de desenvolvimento?</p><p>Essas perguntas ajudam a conectar o trabalho de desenvolvimento às necessidades reais da empresa.</p></div></div></section>",
+        "text": "Por trás de cada entrega, existem pessoas que precisam de direção. Uma estratégia depende de quem toma decisões, organiza prioridades, conduz conversas e acompanha o trabalho. Quando essas pessoas não têm clareza sobre seu papel, a distância entre o que a empresa planeja e o que acontece na rotina aumenta. É nesse encontro entre pessoas e negócio que a Virtù atua. Trabalhamos com o desenvolvimento de lideranças e com a estruturação da gestão de pessoas, considerando a cultura, as expectativas e o momento de cada organização. Isso significa olhar tanto para as habilidades de quem lidera quanto para as condições em que a equipe trabalha. Como as responsabilidades são definidas? Como os valores aparecem nas decisões? Como as pessoas recebem orientação, reconhecimento e oportunidades de desenvolvimento? Essas perguntas ajudam a conectar o trabalho de desenvolvimento às necessidades reais da empresa."
+      },
+      {
+        "id": "bloco-03",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-03\"><div class=\"wrap split image-split\"><div><h2>O aprendizado precisa encontrar lugar na rotina.</h2><p>Uma conversa sobre liderança ganha sentido quando ajuda um gestor a conduzir um feedback. Um trabalho sobre cultura se torna concreto quando orienta uma contratação, um reconhecimento ou uma decisão difícil.</p><p>Por isso, aproximamos conceitos, reflexão e prática. Nosso trabalho relaciona as habilidades comportamentais às situações que empresários, líderes e equipes precisam enfrentar.</p><p>O foco está em ampliar a capacidade de compreender pessoas, organizar o trabalho e agir com consciência sobre o impacto de cada escolha. O desenvolvimento passa a fazer parte da gestão quando encontra espaço nas conversas, nos processos e nos compromissos da equipe.</p></div></div></section>",
+        "text": "O aprendizado precisa encontrar lugar na rotina. Uma conversa sobre liderança ganha sentido quando ajuda um gestor a conduzir um feedback. Um trabalho sobre cultura se torna concreto quando orienta uma contratação, um reconhecimento ou uma decisão difícil. Por isso, aproximamos conceitos, reflexão e prática. Nosso trabalho relaciona as habilidades comportamentais às situações que empresários, líderes e equipes precisam enfrentar. O foco está em ampliar a capacidade de compreender pessoas, organizar o trabalho e agir com consciência sobre o impacto de cada escolha. O desenvolvimento passa a fazer parte da gestão quando encontra espaço nas conversas, nos processos e nos compromissos da equipe."
+      },
+      {
+        "id": "bloco-04",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-04\"><div class=\"wrap\"><h2>Pessoas, cultura e gestão precisam funcionar juntas.</h2><div class=\"card-grid cols-2\"><article class=\"feature\"><h3>Cultura que orienta escolhas</h3><p>Os valores da empresa precisam ajudar as pessoas a decidir como agir. Trabalhamos a conexão entre esses princípios, os comportamentos esperados e as práticas que a organização reforça no cotidiano.</p></article><article class=\"feature\"><h3>Lideranças que desenvolvem pessoas</h3><p>Liderar envolve dar direção, conversar com clareza, acompanhar entregas e preparar a equipe para assumir responsabilidades. Nossas jornadas abordam essas habilidades a partir dos desafios de quem está à frente de pessoas.</p></article><article class=\"feature\"><h3>Gestão que dá clareza ao trabalho</h3><p>Responsabilidades, expectativas, processos e rituais ajudam a equipe a compreender o que precisa fazer e como seu trabalho contribui para o negócio. Conforme a jornada, apoiamos a organização dessas práticas com as lideranças.</p></article><article class=\"feature\"><h3>Comportamento que sustenta as relações</h3><p>Autoconhecimento, inteligência emocional e comunicação participam da forma como as pessoas enfrentam pressão, resolvem diferenças e trabalham juntas. Desenvolver essas habilidades amplia o repertório para lidar com as situações da rotina.</p></article></div></div></section>",
+        "text": "Pessoas, cultura e gestão precisam funcionar juntas. Cultura que orienta escolhas Os valores da empresa precisam ajudar as pessoas a decidir como agir. Trabalhamos a conexão entre esses princípios, os comportamentos esperados e as práticas que a organização reforça no cotidiano. Lideranças que desenvolvem pessoas Liderar envolve dar direção, conversar com clareza, acompanhar entregas e preparar a equipe para assumir responsabilidades. Nossas jornadas abordam essas habilidades a partir dos desafios de quem está à frente de pessoas. Gestão que dá clareza ao trabalho Responsabilidades, expectativas, processos e rituais ajudam a equipe a compreender o que precisa fazer e como seu trabalho contribui para o negócio. Conforme a jornada, apoiamos a organização dessas práticas com as lideranças. Comportamento que sustenta as relações Autoconhecimento, inteligência emocional e comunicação participam da forma como as pessoas enfrentam pressão, resolvem diferenças e trabalham juntas. Desenvolver essas habilidades amplia o repertório para lidar com as situações da rotina."
+      },
+      {
+        "id": "bloco-05",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-05\"><div class=\"wrap\"><h2>O que nos move e aonde queremos chegar.</h2><div class=\"card-grid cols-2\"><article class=\"feature\"><h3>Nossa missão</h3><p>Ativar o potencial das pessoas construindo ambientes e negócios altamente positivos e lucrativos.</p></article><article class=\"feature\"><h3>Nossa visão</h3><p>Ser referência nacional em educação corporativa, levando pessoas, times e negócios mais longe.</p></article></div></div></section>",
+        "text": "O que nos move e aonde queremos chegar. Nossa missão Ativar o potencial das pessoas construindo ambientes e negócios altamente positivos e lucrativos. Nossa visão Ser referência nacional em educação corporativa, levando pessoas, times e negócios mais longe."
+      },
+      {
+        "id": "bloco-06",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-06\"><div class=\"wrap\"><h2>A forma de trabalhar também expressa aquilo em que acreditamos.</h2><div class=\"card-grid cols-2\"><article class=\"feature\"><h3>Resultado sustenta, propósito impulsiona</h3><p>O propósito orienta a direção. Os resultados ajudam a avaliar quanto desse propósito se tornou prática. Por isso, olhamos para as entregas e para o que elas representam no contexto de cada trabalho.</p></article><article class=\"feature\"><h3>Praticamos o que ensinamos</h3><p>A coerência entre discurso e atitude faz parte da nossa responsabilidade. O que defendemos sobre liderança, relações e compromisso precisa aparecer na maneira como conduzimos nosso próprio trabalho.</p></article><article class=\"feature\"><h3>Velocidade brutal</h3><p>Agir no tempo certo, com atenção à qualidade. Valorizamos a capacidade de reconhecer o que precisa ser feito, tomar decisões e colocar o trabalho em movimento.</p></article><article class=\"feature\"><h3>Compromisso radical</h3><p>Assumir uma entrega significa se responsabilizar por ela até o fim. Construímos confiança no cumprimento dos acordos e no cuidado com cada etapa do trabalho.</p></article></div></div></section>",
+        "text": "A forma de trabalhar também expressa aquilo em que acreditamos. Resultado sustenta, propósito impulsiona O propósito orienta a direção. Os resultados ajudam a avaliar quanto desse propósito se tornou prática. Por isso, olhamos para as entregas e para o que elas representam no contexto de cada trabalho. Praticamos o que ensinamos A coerência entre discurso e atitude faz parte da nossa responsabilidade. O que defendemos sobre liderança, relações e compromisso precisa aparecer na maneira como conduzimos nosso próprio trabalho. Velocidade brutal Agir no tempo certo, com atenção à qualidade. Valorizamos a capacidade de reconhecer o que precisa ser feito, tomar decisões e colocar o trabalho em movimento. Compromisso radical Assumir uma entrega significa se responsabilizar por ela até o fim. Construímos confiança no cumprimento dos acordos e no cuidado com cada etapa do trabalho."
+      },
+      {
+        "id": "bloco-07",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-07\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Diferentes formas de trabalhar o próximo passo da sua empresa.</h2></div><div class=\"editorial-copy\"><p>O formato acompanha a necessidade. Um evento pode abrir uma conversa importante. Uma jornada de aprendizagem permite aprofundar habilidades. Uma mentoria ou consultoria pode trabalhar decisões e processos com quem conduz a organização.</p><p>Palestras</p><p>Encontros com Veridiana Cavalheri sobre liderança, comunicação, performance e autoliderança feminina, conforme o tema escolhido.</p><p>Desenvolvimento de lideranças</p><p>Acesso gravado Meta V, oficina Super Humanos e Mentoria Meta V: propostas distintas de estudo, aplicação e orientação para quem lidera.</p><p>Projetos para empresas</p><p>O PHD trabalha habilidades em jornadas in company. O Vanguard se dedica à estruturação da cultura e dos processos de gestão de pessoas. O escopo de cada projeto acompanha as necessidades alinhadas com a organização.</p><div class=\"actions\"><a class=\"button\" href=\"#empresas\" onclick=\"return go('empresas','')\">ENCONTRE A JORNADA PARA SUA EMPRESA <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Diferentes formas de trabalhar o próximo passo da sua empresa. O formato acompanha a necessidade. Um evento pode abrir uma conversa importante. Uma jornada de aprendizagem permite aprofundar habilidades. Uma mentoria ou consultoria pode trabalhar decisões e processos com quem conduz a organização. Palestras Encontros com Veridiana Cavalheri sobre liderança, comunicação, performance e autoliderança feminina, conforme o tema escolhido. Desenvolvimento de lideranças Acesso gravado Meta V, oficina Super Humanos e Mentoria Meta V: propostas distintas de estudo, aplicação e orientação para quem lidera. Projetos para empresas O PHD trabalha habilidades em jornadas in company. O Vanguard se dedica à estruturação da cultura e dos processos de gestão de pessoas. O escopo de cada projeto acompanha as necessidades alinhadas com a organização. ENCONTRE A JORNADA PARA SUA EMPRESA"
+      },
+      {
+        "id": "bloco-08",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-08\"><div class=\"wrap split image-split reverse\"><div><h2>A experiência de Veridiana Cavalheri na construção da Virtù.</h2><p>Fundadora da Virtù, Veridiana atua desde 2012 em projetos que conectam liderança, cultura e gestão de negócios. Sua trajetória reúne consultoria, mentoria, formação de lideranças e palestras.</p><p>Administradora de formação e estudiosa do comportamento humano, traz para as jornadas uma perspectiva que aproxima as decisões do negócio das relações e dos comportamentos que fazem parte do trabalho.</p><p>Essa conexão orienta a atuação da Virtù: compreender o contexto da empresa e trabalhar o desenvolvimento das pessoas que participam de sua construção.</p><div class=\"actions\"><a class=\"button\" href=\"#veridiana\" onclick=\"return go('veridiana','')\">CONHEÇA VERIDIANA CAVALHERI <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "A experiência de Veridiana Cavalheri na construção da Virtù. Fundadora da Virtù, Veridiana atua desde 2012 em projetos que conectam liderança, cultura e gestão de negócios. Sua trajetória reúne consultoria, mentoria, formação de lideranças e palestras. Administradora de formação e estudiosa do comportamento humano, traz para as jornadas uma perspectiva que aproxima as decisões do negócio das relações e dos comportamentos que fazem parte do trabalho. Essa conexão orienta a atuação da Virtù: compreender o contexto da empresa e trabalhar o desenvolvimento das pessoas que participam de sua construção. CONHEÇA VERIDIANA CAVALHERI"
+      },
+      {
+        "id": "bloco-09",
+        "classes": [
+          "section",
+          "dark"
+        ],
+        "html": "<section class=\"section dark\" id=\"bloco-09\"><div class=\"wrap cta-block\"><div class=\"cta-inner\"><h2>O que precisa evoluir para sua empresa dar o próximo passo?</h2><p>Pode ser a forma de liderar, a clareza das responsabilidades ou a maneira como a cultura aparece no dia a dia. Conte para a Virtù o que você está vivendo e o que deseja desenvolver.</p><p>Vamos entender seu contexto e identificar uma jornada que faça sentido para a sua organização.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','')\">CONVERSE COM A VIRTÙ <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "O que precisa evoluir para sua empresa dar o próximo passo? Pode ser a forma de liderar, a clareza das responsabilidades ou a maneira como a cultura aparece no dia a dia. Conte para a Virtù o que você está vivendo e o que deseja desenvolver. Vamos entender seu contexto e identificar uma jornada que faça sentido para a sua organização. CONVERSE COM A VIRTÙ"
+      }
+    ],
+    "phd": [
+      {
+        "id": null,
+        "classes": [
+          "hero"
+        ],
+        "html": "<section class=\"hero\"><div class=\"wrap hero-grid\"><div class=\"hero-copy\"><h1>Uma jornada de liderança construída para o contexto da sua empresa.</h1><p>Desenvolvimento in company para trabalhar as competências que suas lideranças precisam aplicar na rotina de gestão.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','PHD')\">Conversar sobre um projeto <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Uma jornada de liderança construída para o contexto da sua empresa. Desenvolvimento in company para trabalhar as competências que suas lideranças precisam aplicar na rotina de gestão. Conversar sobre um projeto"
+      },
+      {
+        "id": "bloco-02",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-02\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>O desenvolvimento faz mais sentido quando parte do trabalho real.</h2></div><div class=\"editorial-copy\"><p>A maneira de conduzir uma equipe, comunicar expectativas e acompanhar resultados influencia o cotidiano da organização.</p><p>O PHD conecta essas necessidades a uma jornada de aprendizagem para o grupo, com temas e formatos alinhados ao projeto.</p></div></div></section>",
+        "text": "O desenvolvimento faz mais sentido quando parte do trabalho real. A maneira de conduzir uma equipe, comunicar expectativas e acompanhar resultados influencia o cotidiano da organização. O PHD conecta essas necessidades a uma jornada de aprendizagem para o grupo, com temas e formatos alinhados ao projeto."
+      },
+      {
+        "id": "bloco-03",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-03\"><div class=\"wrap\"><h2>As frentes de desenvolvimento</h2><div class=\"card-grid skills-grid cols-3\"><article class=\"feature\"><span class=\"index\">01</span><h3>CULTURA E ENGAJAMENTO</h3><p>O papel do líder na tradução dos valores em atitudes e na construção de confiança.</p></article><article class=\"feature\"><span class=\"index\">02</span><h3>GESTÃO DE TIMES</h3><p>Objetivos, combinados, delegação e acompanhamento das entregas.</p></article><article class=\"feature\"><span class=\"index\">03</span><h3>INTELIGÊNCIA COMPORTAMENTAL</h3><p>Autoconhecimento, hábitos e compreensão da própria atuação como líder.</p></article><article class=\"feature\"><span class=\"index\">04</span><h3>COMUNICAÇÃO</h3><p>Escuta, feedback, condução de reuniões e conversas difíceis.</p></article><article class=\"feature\"><span class=\"index\">05</span><h3>INTELIGÊNCIA EMOCIONAL</h3><p>Reconhecimento das reações e reflexão sobre a forma de lidar com pressão e mudanças.</p></article></div></div></section>",
+        "text": "As frentes de desenvolvimento 01 CULTURA E ENGAJAMENTO O papel do líder na tradução dos valores em atitudes e na construção de confiança. 02 GESTÃO DE TIMES Objetivos, combinados, delegação e acompanhamento das entregas. 03 INTELIGÊNCIA COMPORTAMENTAL Autoconhecimento, hábitos e compreensão da própria atuação como líder. 04 COMUNICAÇÃO Escuta, feedback, condução de reuniões e conversas difíceis. 05 INTELIGÊNCIA EMOCIONAL Reconhecimento das reações e reflexão sobre a forma de lidar com pressão e mudanças."
+      },
+      {
+        "id": "bloco-04",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-04\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Um projeto pensado para suas lideranças</h2></div><div class=\"editorial-copy\"><p>Começamos pelo alinhamento dos desafios, do público participante e dos objetivos.</p><p>A partir daí, definimos os temas e o percurso de aprendizagem.</p><p>A proposta pode reunir encontros presenciais, conteúdos gravados e momentos de mentoria para aprofundar a aplicação, conforme o escopo contratado.</p></div></div></section>",
+        "text": "Um projeto pensado para suas lideranças Começamos pelo alinhamento dos desafios, do público participante e dos objetivos. A partir daí, definimos os temas e o percurso de aprendizagem. A proposta pode reunir encontros presenciais, conteúdos gravados e momentos de mentoria para aprofundar a aplicação, conforme o escopo contratado."
+      },
+      {
+        "id": "bloco-05",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-05\"><div class=\"wrap split image-split\"><div><h2>Aprender com as situações que a equipe precisa enfrentar.</h2><p>As atividades da jornada aproximam o conteúdo das práticas de gestão.</p><p>O trabalho pode envolver clareza de responsabilidades, rituais de liderança, comunicação e desenvolvimento dos integrantes da equipe.</p><p>O objetivo é dar continuidade à aprendizagem dentro da realidade da empresa.</p></div></div></section>",
+        "text": "Aprender com as situações que a equipe precisa enfrentar. As atividades da jornada aproximam o conteúdo das práticas de gestão. O trabalho pode envolver clareza de responsabilidades, rituais de liderança, comunicação e desenvolvimento dos integrantes da equipe. O objetivo é dar continuidade à aprendizagem dentro da realidade da empresa."
+      },
+      {
+        "id": "bloco-06",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-06\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Veridiana Cavalheri e a metodologia Virtù</h2></div><div class=\"editorial-copy\"><p>O PHD reúne a atuação de Veridiana em desenvolvimento humano e gestão de pessoas em uma jornada voltada ao grupo.</p><p>Diagnóstico, temas e acompanhamento são detalhados na proposta, de acordo com as necessidades do projeto.</p></div></div></section>",
+        "text": "Veridiana Cavalheri e a metodologia Virtù O PHD reúne a atuação de Veridiana em desenvolvimento humano e gestão de pessoas em uma jornada voltada ao grupo. Diagnóstico, temas e acompanhamento são detalhados na proposta, de acordo com as necessidades do projeto."
+      },
+      {
+        "id": "bloco-07",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-07\"><div class=\"wrap faq-grid\"><div class=\"section-intro\"><h2>Dúvidas frequentes</h2><p class=\"small-copy\">3 perguntas frequentes</p></div><div><details class=\"faq\"><summary>O programa tem uma grade única?<span></span></summary><p>A proposta é customizada. A composição dos temas e dos encontros deve responder aos objetivos alinhados com a empresa.</p></details><details class=\"faq\"><summary>Como são definidos o calendário e o investimento?<span></span></summary><p>A partir do escopo, dos formatos e dos participantes. As condições são apresentadas na proposta comercial.</p></details><details class=\"faq\"><summary>Como começar?<span></span></summary><p>Conte sobre suas lideranças e os desafios que deseja trabalhar. Nossa equipe conduz o alinhamento inicial.</p></details></div></div></section>",
+        "text": "Dúvidas frequentes 3 perguntas frequentes O programa tem uma grade única? A proposta é customizada. A composição dos temas e dos encontros deve responder aos objetivos alinhados com a empresa. Como são definidos o calendário e o investimento? A partir do escopo, dos formatos e dos participantes. As condições são apresentadas na proposta comercial. Como começar? Conte sobre suas lideranças e os desafios que deseja trabalhar. Nossa equipe conduz o alinhamento inicial."
+      },
+      {
+        "id": "bloco-08",
+        "classes": [
+          "section",
+          "dark"
+        ],
+        "html": "<section class=\"section dark\" id=\"bloco-08\"><div class=\"wrap cta-block\"><div class=\"cta-inner\"><h2>Que habilidades suas lideranças precisam desenvolver agora?</h2><p>Vamos construir uma proposta para o seu contexto.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','PHD')\">Solicitar uma proposta <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Que habilidades suas lideranças precisam desenvolver agora? Vamos construir uma proposta para o seu contexto. Solicitar uma proposta"
+      }
+    ],
+    "gravado": [
+      {
+        "id": null,
+        "classes": [
+          "hero"
+        ],
+        "html": "<section class=\"hero\"><div class=\"wrap hero-grid\"><div class=\"hero-copy\"><h1>Conteúdo de gestão e liderança para estudar no seu ritmo.</h1><p>Conheça a modalidade gravada do método Virtù e amplie seu repertório para lidar com os desafios da equipe e da organização.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','Meta V gravado')\">Consultar condições de acesso <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Conteúdo de gestão e liderança para estudar no seu ritmo. Conheça a modalidade gravada do método Virtù e amplie seu repertório para lidar com os desafios da equipe e da organização. Consultar condições de acesso"
+      },
+      {
+        "id": "bloco-02",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-02\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Quando você precisa aprender e voltar ao conteúdo.</h2></div><div class=\"editorial-copy\"><p>Uma dúvida de gestão pode aparecer durante uma conversa com a equipe, na definição de responsabilidades ou ao perceber que uma prática deixou de funcionar.</p><p>O formato gravado permite organizar os estudos e revisitar conceitos para refletir sobre essas situações.</p></div></div></section>",
+        "text": "Quando você precisa aprender e voltar ao conteúdo. Uma dúvida de gestão pode aparecer durante uma conversa com a equipe, na definição de responsabilidades ou ao perceber que uma prática deixou de funcionar. O formato gravado permite organizar os estudos e revisitar conceitos para refletir sobre essas situações."
+      },
+      {
+        "id": "bloco-03",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-03\"><div class=\"wrap\"><h2>As frentes de estudo</h2><div class=\"card-grid study-grid cols-2\"><article class=\"feature\"><span class=\"index\">01</span><h3>GESTÃO DE RESULTADOS</h3><p>A relação entre objetivos, responsabilidades e acompanhamento das entregas.</p></article><article class=\"feature\"><span class=\"index\">02</span><h3>CULTURA</h3><p>Como valores e práticas participam da forma de trabalhar.</p></article><article class=\"feature\"><span class=\"index\">03</span><h3>GESTÃO DE TIMES</h3><p>Organização da equipe e compreensão do trabalho coletivo.</p></article><article class=\"feature\"><span class=\"index\">04</span><h3>LIDERANÇA</h3><p>Comportamentos e habilidades presentes na atuação de quem conduz pessoas.</p></article></div></div></section>",
+        "text": "As frentes de estudo 01 GESTÃO DE RESULTADOS A relação entre objetivos, responsabilidades e acompanhamento das entregas. 02 CULTURA Como valores e práticas participam da forma de trabalhar. 03 GESTÃO DE TIMES Organização da equipe e compreensão do trabalho coletivo. 04 LIDERANÇA Comportamentos e habilidades presentes na atuação de quem conduz pessoas."
+      },
+      {
+        "id": "bloco-04",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-04\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Como conhecer a modalidade</h2></div><div class=\"editorial-copy\"><p>A proposta de acesso gravado reúne conteúdo para estudo individual.</p><p>Consulte nossa equipe para conhecer a composição atual do curso, o período de acesso e as condições de contratação.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','Meta V gravado')\">Saber mais sobre o gravado <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Como conhecer a modalidade A proposta de acesso gravado reúne conteúdo para estudo individual. Consulte nossa equipe para conhecer a composição atual do curso, o período de acesso e as condições de contratação. Saber mais sobre o gravado"
+      },
+      {
+        "id": "bloco-05",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-05\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Busca orientação para aplicar o conteúdo?</h2></div><div class=\"editorial-copy\"><p>A Virtù também oferece oficina e mentoria, com propostas próprias de participação e acompanhamento.</p><p>Conheça cada jornada para escolher o formato adequado ao seu momento.</p><div class=\"actions\"><a class=\"button\" href=\"#empresas\" onclick=\"return go('empresas','')\">Comparar as jornadas <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Busca orientação para aplicar o conteúdo? A Virtù também oferece oficina e mentoria, com propostas próprias de participação e acompanhamento. Conheça cada jornada para escolher o formato adequado ao seu momento. Comparar as jornadas"
+      },
+      {
+        "id": "bloco-06",
+        "classes": [
+          "section",
+          "dark"
+        ],
+        "html": "<section class=\"section dark\" id=\"bloco-06\"><div class=\"wrap cta-block\"><div class=\"cta-inner\"><h2>O que você deseja desenvolver na sua gestão?</h2><p>Converse com a equipe Virtù para saber se a modalidade gravada atende ao que você procura.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','Meta V gravado')\">Falar com a equipe <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "O que você deseja desenvolver na sua gestão? Converse com a equipe Virtù para saber se a modalidade gravada atende ao que você procura. Falar com a equipe"
+      }
+    ],
+    "trabalhe": [
+      {
+        "id": null,
+        "classes": [
+          "hero"
+        ],
+        "html": "<section class=\"hero\"><div class=\"wrap hero-grid\"><div class=\"hero-copy\"><h1>Contribua para o desenvolvimento de pessoas e organizações.</h1><p>Conheça a Virtù e apresente seu interesse em fazer parte da nossa trajetória.</p><div class=\"actions\"><a class=\"button\" href=\"#candidatura\">Consultar oportunidades <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Contribua para o desenvolvimento de pessoas e organizações. Conheça a Virtù e apresente seu interesse em fazer parte da nossa trajetória. Consultar oportunidades"
+      },
+      {
+        "id": "bloco-02",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-02\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>O que valorizamos no trabalho</h2></div><div class=\"editorial-copy\"><p>Coerência entre o que se diz e o que se faz. Responsabilidade pelos compromissos assumidos. Agilidade com qualidade e atenção aos resultados.</p><p>Esses valores orientam a forma como a Virtù se relaciona com clientes e conduz suas entregas.</p></div></div></section>",
+        "text": "O que valorizamos no trabalho Coerência entre o que se diz e o que se faz. Responsabilidade pelos compromissos assumidos. Agilidade com qualidade e atenção aos resultados. Esses valores orientam a forma como a Virtù se relaciona com clientes e conduz suas entregas."
+      },
+      {
+        "id": "candidatura",
+        "classes": [
+          "section",
+          "careers-section"
+        ],
+        "html": "<section class=\"section careers-section\" id=\"candidatura\"><div class=\"wrap split contact-grid\"><div class=\"section-intro\"><h2>Quer conhecer as possibilidades de atuação?</h2><p>Fale com nossa equipe para saber sobre oportunidades e formas de apresentar seu perfil.</p><p>Conte brevemente sobre sua área de atuação e sua experiência.</p><p class=\"prototype-note\">Prévia do formulário. Os dados e o currículo ficam apenas nesta tela; nada é enviado.</p></div><form id=\"careers-form\"><div class=\"form-grid\"><label>Nome completo<input autocomplete=\"name\" name=\"candidate\" required=\"\"/></label><label>E-mail<input autocomplete=\"email\" name=\"email\" required=\"\" type=\"email\"/></label><label>Telefone / WhatsApp<input autocomplete=\"tel\" name=\"phone\" type=\"tel\"/></label><label>Cidade e estado<input autocomplete=\"address-level2\" name=\"city\" required=\"\"/></label></div><label>Área de interesse<input name=\"area\" placeholder=\"Em qual área você gostaria de atuar?\" required=\"\"/></label><label>LinkedIn ou portfólio <span>(opcional)</span><input name=\"portfolio\" placeholder=\"https://\" type=\"url\"/></label><label>Conte sobre sua experiência<textarea name=\"experience\" required=\"\" rows=\"4\"></textarea></label><div class=\"upload-field\"><label for=\"resume\">Seu currículo</label><p>Selecione um arquivo PDF, DOC ou DOCX de até 10 MB.</p><input accept=\".pdf,.doc,.docx\" aria-describedby=\"file-feedback\" id=\"resume\" name=\"resume\" required=\"\" type=\"file\"/><span id=\"file-feedback\" role=\"status\">Nenhum currículo selecionado.</span></div><button class=\"button\" type=\"submit\">Enviar candidatura <span></span></button><p hidden=\"\" id=\"careers-feedback\" role=\"status\"></p></form></div></section>",
+        "text": "Quer conhecer as possibilidades de atuação? Fale com nossa equipe para saber sobre oportunidades e formas de apresentar seu perfil. Conte brevemente sobre sua área de atuação e sua experiência. Prévia do formulário. Os dados e o currículo ficam apenas nesta tela; nada é enviado. Nome completo E-mail Telefone / WhatsApp Cidade e estado Área de interesse LinkedIn ou portfólio (opcional) Conte sobre sua experiência Seu currículo Selecione um arquivo PDF, DOC ou DOCX de até 10 MB. Nenhum currículo selecionado. Enviar candidatura"
+      },
+      {
+        "id": "bloco-04",
+        "classes": [
+          "section",
+          "dark"
+        ],
+        "html": "<section class=\"section dark\" id=\"bloco-04\"><div class=\"wrap cta-block\"><div class=\"cta-inner\"><h2>Conheça a empresa por trás das jornadas.</h2><p>Entenda nossa missão, nossos valores e a forma como trabalhamos com o desenvolvimento humano.</p><div class=\"actions\"><a class=\"button\" href=\"#virtu\" onclick=\"return go('virtu','')\">Conheça a Virtù <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Conheça a empresa por trás das jornadas. Entenda nossa missão, nossos valores e a forma como trabalhamos com o desenvolvimento humano. Conheça a Virtù"
+      }
+    ],
+    "veridiana": [
+      {
+        "id": null,
+        "classes": [
+          "hero"
+        ],
+        "html": "<section class=\"hero\"><div class=\"wrap hero-grid\"><div class=\"hero-copy\"><h1>Liderança, cultura e comportamento humano conectados às decisões do negócio.</h1><p>Palestrante, mentora, consultora e fundadora da Virtù. Desde 2012, atua no desenvolvimento de pessoas e organizações, aproximando os desafios de crescimento da forma como líderes e equipes trabalham.</p><div class=\"actions\"><a class=\"button\" href=\"#palestras\" onclick=\"return go('palestras','')\">CONHEÇA AS PALESTRAS <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Liderança, cultura e comportamento humano conectados às decisões do negócio. Palestrante, mentora, consultora e fundadora da Virtù. Desde 2012, atua no desenvolvimento de pessoas e organizações, aproximando os desafios de crescimento da forma como líderes e equipes trabalham. CONHEÇA AS PALESTRAS"
+      },
+      {
+        "id": "bloco-02",
+        "classes": [
+          "section",
+          "editorial-pattern"
+        ],
+        "html": "<section class=\"section editorial-pattern\" id=\"bloco-02\"><div class=\"wrap split image-split reverse\"><div><h2>Uma trajetória construída entre o negócio e as pessoas que fazem parte dele.</h2><p>Veridiana Cavalheri é administradora de formação e dedica sua atuação à relação entre crescimento, cultura organizacional e comportamento humano. Desde 2012, conduz projetos corporativos que aproximam essas frentes em empresas de diferentes setores.</p><p>Sua experiência reúne mentorias com empresários e executivos, jornadas de desenvolvimento de lideranças, consultorias e palestras. Ao transitar por esses formatos, trabalha tanto com as decisões de quem conduz o negócio quanto com as habilidades de quem precisa colocá-las em prática.</p><p>O repertório inclui atuação no agronegócio, na indústria e em serviços. Em cada contexto, a proposta é compreender o que a organização precisa desenvolver e relacionar esse desafio à cultura, à gestão e ao comportamento das pessoas.</p><p>Essa perspectiva também orienta a Virtù, empresa que fundou para reunir suas jornadas de desenvolvimento humano e organizacional.</p></div></div></section>",
+        "text": "Uma trajetória construída entre o negócio e as pessoas que fazem parte dele. Veridiana Cavalheri é administradora de formação e dedica sua atuação à relação entre crescimento, cultura organizacional e comportamento humano. Desde 2012, conduz projetos corporativos que aproximam essas frentes em empresas de diferentes setores. Sua experiência reúne mentorias com empresários e executivos, jornadas de desenvolvimento de lideranças, consultorias e palestras. Ao transitar por esses formatos, trabalha tanto com as decisões de quem conduz o negócio quanto com as habilidades de quem precisa colocá-las em prática. O repertório inclui atuação no agronegócio, na indústria e em serviços. Em cada contexto, a proposta é compreender o que a organização precisa desenvolver e relacionar esse desafio à cultura, à gestão e ao comportamento das pessoas. Essa perspectiva também orienta a Virtù, empresa que fundou para reunir suas jornadas de desenvolvimento humano e organizacional."
+      },
+      {
+        "id": "bloco-03",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-03\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>A forma de liderar aparece em cada conversa, escolha e entrega.</h2></div><div class=\"editorial-copy\"><p>Como uma decisão é comunicada? O que acontece quando alguém erra? Quais atitudes são reconhecidas? Quanto espaço a equipe tem para assumir responsabilidades?</p><p>Essas situações ajudam a revelar a cultura de uma empresa. Para Veridiana, desenvolver a liderança envolve olhar para o modo como gestores influenciam o ambiente, orientam as pessoas e respondem aos desafios do trabalho.</p><p>Sua atuação conecta essa dimensão humana à estratégia, aos processos e à gestão. A proposta é ampliar a consciência sobre o próprio comportamento e desenvolver práticas que ajudem a equipe a trabalhar com mais clareza.</p><p>“Pessoas de valor criam empresas de valor; empresas de valor criam um mundo virtuoso e próspero.”</p></div></div></section>",
+        "text": "A forma de liderar aparece em cada conversa, escolha e entrega. Como uma decisão é comunicada? O que acontece quando alguém erra? Quais atitudes são reconhecidas? Quanto espaço a equipe tem para assumir responsabilidades? Essas situações ajudam a revelar a cultura de uma empresa. Para Veridiana, desenvolver a liderança envolve olhar para o modo como gestores influenciam o ambiente, orientam as pessoas e respondem aos desafios do trabalho. Sua atuação conecta essa dimensão humana à estratégia, aos processos e à gestão. A proposta é ampliar a consciência sobre o próprio comportamento e desenvolver práticas que ajudem a equipe a trabalhar com mais clareza. “Pessoas de valor criam empresas de valor; empresas de valor criam um mundo virtuoso e próspero.”"
+      },
+      {
+        "id": "bloco-04",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-04\"><div class=\"wrap\"><h2>Compreender o cenário, desenvolver pessoas e acompanhar a aplicação.</h2><p>O perfil de atuação de Veridiana apresenta quatro pilares que conectam a leitura do contexto à construção de práticas de gestão. A presença de cada etapa depende do formato e do escopo contratado.</p><div class=\"card-grid cols-2\"><article class=\"feature\"><h3>Assessment — Compreender o ponto de partida</h3><p>Observar o cenário da organização, reconhecer pontos fortes e identificar o que precisa de atenção. Essa leitura ajuda a direcionar prioridades de desenvolvimento.</p></article><article class=\"feature\"><h3>Ecossistema inteligente — Conectar cultura e gestão</h3><p>Relacionar os princípios da organização aos processos de gestão de pessoas, buscando coerência entre o que a empresa espera e a maneira como o trabalho acontece.</p></article><article class=\"feature\"><h3>Formação — Desenvolver líderes e equipes</h3><p>Trabalhar habilidades de liderança e inteligência comportamental em conexão com as responsabilidades e os desafios dos participantes.</p></article><article class=\"feature\"><h3>Resultados — Acompanhar o que muda</h3><p>Observar a aplicação do trabalho e os indicadores definidos para a jornada, reconhecendo avanços e pontos que pedem continuidade.</p></article></div></div></section>",
+        "text": "Compreender o cenário, desenvolver pessoas e acompanhar a aplicação. O perfil de atuação de Veridiana apresenta quatro pilares que conectam a leitura do contexto à construção de práticas de gestão. A presença de cada etapa depende do formato e do escopo contratado. Assessment — Compreender o ponto de partida Observar o cenário da organização, reconhecer pontos fortes e identificar o que precisa de atenção. Essa leitura ajuda a direcionar prioridades de desenvolvimento. Ecossistema inteligente — Conectar cultura e gestão Relacionar os princípios da organização aos processos de gestão de pessoas, buscando coerência entre o que a empresa espera e a maneira como o trabalho acontece. Formação — Desenvolver líderes e equipes Trabalhar habilidades de liderança e inteligência comportamental em conexão com as responsabilidades e os desafios dos participantes. Resultados — Acompanhar o que muda Observar a aplicação do trabalho e os indicadores definidos para a jornada, reconhecendo avanços e pontos que pedem continuidade."
+      },
+      {
+        "id": "bloco-05",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-05\"><div class=\"wrap\"><h2>Do palco às decisões de gestão.</h2><div class=\"card-grid cols-2\"><article class=\"feature\"><h3>Palestras para eventos e encontros corporativos</h3><p>Conteúdos sobre liderança, comunicação, performance e autoliderança feminina. Uma oportunidade de reunir o público em torno de temas que fazem parte de sua realidade e estimular novas reflexões.</p></article><article class=\"feature\"><h3>Desenvolvimento de lideranças</h3><p>Jornadas que trabalham cultura, gestão de equipes, inteligência comportamental e comunicação, aproximando o aprendizado das situações enfrentadas pelos gestores.</p></article><article class=\"feature\"><h3>Mentoria para empresários e líderes</h3><p>Orientação para discutir desafios, rever práticas e construir caminhos de gestão com quem participa das decisões. Um espaço de trabalho sobre pessoas, liderança e organização do negócio.</p></article><article class=\"feature\"><h3>Consultoria em cultura e gestão de pessoas</h3><p>Projetos voltados à estruturação de processos e práticas que conectam a cultura à jornada das pessoas dentro da empresa.</p></article></div><div class=\"actions\"><a class=\"button\" href=\"#empresas\" onclick=\"return go('empresas','')\">CONHEÇA AS JORNADAS DA VIRTÙ <span aria-hidden=\"true\"></span></a></div></div></section>",
+        "text": "Do palco às decisões de gestão. Palestras para eventos e encontros corporativos Conteúdos sobre liderança, comunicação, performance e autoliderança feminina. Uma oportunidade de reunir o público em torno de temas que fazem parte de sua realidade e estimular novas reflexões. Desenvolvimento de lideranças Jornadas que trabalham cultura, gestão de equipes, inteligência comportamental e comunicação, aproximando o aprendizado das situações enfrentadas pelos gestores. Mentoria para empresários e líderes Orientação para discutir desafios, rever práticas e construir caminhos de gestão com quem participa das decisões. Um espaço de trabalho sobre pessoas, liderança e organização do negócio. Consultoria em cultura e gestão de pessoas Projetos voltados à estruturação de processos e práticas que conectam a cultura à jornada das pessoas dentro da empresa. CONHEÇA AS JORNADAS DA VIRTÙ"
+      },
+      {
+        "id": "bloco-06",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-06\"><div class=\"wrap split image-split reverse\"><div><h2>Estudo e prática fazem parte da mesma trajetória.</h2><p>Graduada em Administração de Empresas, Veridiana reúne formações em gestão, coaching e comportamento humano. Seu percurso de estudos inclui coaching executivo, de negócios e de equipes, análise comportamental DISC e coaching generativo.</p><p>Entre 2012 e 2020, também atuou como instrutora na formação de profissionais de coaching. Essa experiência integra seu repertório de condução de grupos e desenvolvimento de pessoas.</p><p>Na atuação corporativa, esses conhecimentos se encontram com as situações apresentadas pelas empresas: decisões sobre liderança, relações de trabalho, cultura e organização das equipes.</p></div></div></section>",
+        "text": "Estudo e prática fazem parte da mesma trajetória. Graduada em Administração de Empresas, Veridiana reúne formações em gestão, coaching e comportamento humano. Seu percurso de estudos inclui coaching executivo, de negócios e de equipes, análise comportamental DISC e coaching generativo. Entre 2012 e 2020, também atuou como instrutora na formação de profissionais de coaching. Essa experiência integra seu repertório de condução de grupos e desenvolvimento de pessoas. Na atuação corporativa, esses conhecimentos se encontram com as situações apresentadas pelas empresas: decisões sobre liderança, relações de trabalho, cultura e organização das equipes."
+      },
+      {
+        "id": "bloco-07",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-07\"><div class=\"wrap split image-split\"><div><h2>Antifraca: uma conversa sobre a força de conduzir a própria história.</h2><p>Veridiana é autora de Antifraca e lidera o movimento de mesmo nome, dedicado aos desafios da liderança e do empreendedorismo feminino.</p><p>Essa frente de seu trabalho abre espaço para refletir sobre diálogo interno, escolhas, coragem e autoliderança. O convite é reconhecer recursos pessoais, pensar sobre a própria trajetória e dar lugar, na rotina, aos próximos passos que se deseja construir.</p><p>A obra também fundamenta a palestra EU — A força inabalável de ser, voltada ao público feminino.</p><p>Encontros que ampliam essa conversa</p><p>Veridiana também idealizou Woman Mato Grosso e One Day Mato Grosso, projetos que fazem parte de sua atuação com eventos, empreendedorismo e desenvolvimento.</p><div class=\"actions\"><a class=\"button\" href=\"#palestras\" onclick=\"return go('palestras','')\">CONHEÇA A PALESTRA PARA MULHERES <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Antifraca: uma conversa sobre a força de conduzir a própria história. Veridiana é autora de Antifraca e lidera o movimento de mesmo nome, dedicado aos desafios da liderança e do empreendedorismo feminino. Essa frente de seu trabalho abre espaço para refletir sobre diálogo interno, escolhas, coragem e autoliderança. O convite é reconhecer recursos pessoais, pensar sobre a própria trajetória e dar lugar, na rotina, aos próximos passos que se deseja construir. A obra também fundamenta a palestra EU — A força inabalável de ser, voltada ao público feminino. Encontros que ampliam essa conversa Veridiana também idealizou Woman Mato Grosso e One Day Mato Grosso, projetos que fazem parte de sua atuação com eventos, empreendedorismo e desenvolvimento. CONHEÇA A PALESTRA PARA MULHERES"
+      },
+      {
+        "id": "bloco-08",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-08\"><div class=\"wrap\"><div class=\"center-intro\"><h2>Contextos diferentes ampliam o olhar sobre liderança.</h2><p>A trajetória profissional de Veridiana inclui trabalhos com organizações do agronegócio, cooperativas financeiras, indústria e serviços. Essa diversidade de contextos compõe seu repertório sobre os desafios de conduzir pessoas e desenvolver a gestão.</p><p>Em cada projeto, o ponto de partida é a realidade da organização: sua cultura, suas prioridades e as pessoas envolvidas no trabalho.</p></div><div class=\"logos\"><div></div><div></div><div></div><div>Bom Futuro</div><div></div><div></div><div></div><div>Urbano Alimentos</div><div>ZMP Consultoria</div><div>Grupo Felice</div><div></div></div></div></section>",
+        "text": "Contextos diferentes ampliam o olhar sobre liderança. A trajetória profissional de Veridiana inclui trabalhos com organizações do agronegócio, cooperativas financeiras, indústria e serviços. Essa diversidade de contextos compõe seu repertório sobre os desafios de conduzir pessoas e desenvolver a gestão. Em cada projeto, o ponto de partida é a realidade da organização: sua cultura, suas prioridades e as pessoas envolvidas no trabalho. Bom Futuro Urbano Alimentos ZMP Consultoria Grupo Felice",
+        "logos": [
+          "Sicoob",
+          "Sicredi",
+          "Fiagril",
+          "Bom Futuro",
+          "Copacol",
+          "C.Vale",
+          "Votorantim",
+          "Urbano Alimentos",
+          "ZMP Consultoria",
+          "Grupo Felice",
+          "Grupo Mult"
+        ]
+      },
+      {
+        "id": "bloco-09",
+        "classes": [
+          "section",
+          "dark"
+        ],
+        "html": "<section class=\"section dark\" id=\"bloco-09\"><div class=\"wrap cta-block\"><div class=\"cta-inner\"><h2>Qual conversa sua equipe precisa ter? E o que sua liderança precisa desenvolver?</h2><p>Leve Veridiana ao seu evento ou conheça as possibilidades de trabalho com a Virtù. Conte sobre o público, os desafios e o momento da sua organização para identificar o formato adequado.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','')\">FALE COM A EQUIPE DE VERIDIANA <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Qual conversa sua equipe precisa ter? E o que sua liderança precisa desenvolver? Leve Veridiana ao seu evento ou conheça as possibilidades de trabalho com a Virtù. Conte sobre o público, os desafios e o momento da sua organização para identificar o formato adequado. FALE COM A EQUIPE DE VERIDIANA"
+      }
+    ],
+    "mentoria": [
+      {
+        "id": null,
+        "classes": [
+          "hero"
+        ],
+        "html": "<section class=\"hero\"><div class=\"wrap hero-grid\"><div class=\"hero-copy\"><h1>Construa uma gestão de pessoas que acompanhe o crescimento do negócio.</h1><p>Uma jornada com Veridiana Cavalheri para olhar o cenário da empresa, definir prioridades e desenvolver práticas de liderança com quem toma as decisões.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','Mentoria Meta V')\">Conversar sobre a mentoria <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Construa uma gestão de pessoas que acompanhe o crescimento do negócio. Uma jornada com Veridiana Cavalheri para olhar o cenário da empresa, definir prioridades e desenvolver práticas de liderança com quem toma as decisões. Conversar sobre a mentoria"
+      },
+      {
+        "id": "bloco-02",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-02\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Quando o esforço da liderança já não basta para organizar a operação.</h2></div><div class=\"editorial-copy\"><p>Responsabilidades pouco claras, decisões concentradas e práticas que dependem de uma única pessoa podem tornar a rotina mais difícil.</p><p>A Meta V propõe olhar para a estrutura, a cultura e o modo de conduzir a equipe, construindo um caminho de desenvolvimento a partir da realidade do negócio.</p></div></div></section>",
+        "text": "Quando o esforço da liderança já não basta para organizar a operação. Responsabilidades pouco claras, decisões concentradas e práticas que dependem de uma única pessoa podem tornar a rotina mais difícil. A Meta V propõe olhar para a estrutura, a cultura e o modo de conduzir a equipe, construindo um caminho de desenvolvimento a partir da realidade do negócio."
+      },
+      {
+        "id": "bloco-03",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-03\"><div class=\"wrap\"><h2>Quatro frentes de trabalho</h2><div class=\"card-grid journey-grid cols-2\"><article class=\"feature\"><h3>ARQUITETURA FUNCIONAL</h3><p>Clareza sobre áreas, papéis, responsabilidades e relações entre as equipes.</p></article><article class=\"feature\"><h3>CULTURA DE CRESCIMENTO</h3><p>Valores e comportamentos que orientam decisões e relações.</p></article><article class=\"feature\"><h3>GESTÃO DE TIMES</h3><p>Práticas de acompanhamento do desempenho e da jornada das pessoas.</p></article><article class=\"feature\"><h3>LIDERANÇA</h3><p>Comunicação, influência e condução do trabalho com foco nos objetivos da organização.</p></article></div></div></section>",
+        "text": "Quatro frentes de trabalho ARQUITETURA FUNCIONAL Clareza sobre áreas, papéis, responsabilidades e relações entre as equipes. CULTURA DE CRESCIMENTO Valores e comportamentos que orientam decisões e relações. GESTÃO DE TIMES Práticas de acompanhamento do desempenho e da jornada das pessoas. LIDERANÇA Comunicação, influência e condução do trabalho com foco nos objetivos da organização."
+      },
+      {
+        "id": "bloco-04",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-04\"><div class=\"wrap\"><h2>O trabalho parte do seu cenário.</h2><div class=\"card-grid journey-grid cols-2\"><article class=\"feature\"><span class=\"index\">01</span><h3>CENÁRIO</h3><p>Compreender a realidade da gestão de pessoas e os desafios presentes.</p></article><article class=\"feature\"><span class=\"index\">02</span><h3>ANÁLISE</h3><p>Reconhecer prioridades e decidir onde concentrar o trabalho.</p></article><article class=\"feature\"><span class=\"index\">03</span><h3>JORNADA</h3><p>Desenvolver práticas e organizar a aplicação com as lideranças.</p></article><article class=\"feature\"><span class=\"index\">04</span><h3>ACOMPANHAMENTO</h3><p>Observar indicadores e revisar o que precisa de continuidade ou ajuste.</p></article></div></div></section>",
+        "text": "O trabalho parte do seu cenário. 01 CENÁRIO Compreender a realidade da gestão de pessoas e os desafios presentes. 02 ANÁLISE Reconhecer prioridades e decidir onde concentrar o trabalho. 03 JORNADA Desenvolver práticas e organizar a aplicação com as lideranças. 04 ACOMPANHAMENTO Observar indicadores e revisar o que precisa de continuidade ou ajuste."
+      },
+      {
+        "id": "bloco-05",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-05\"><div class=\"wrap split\"><div class=\"section-intro\"><h2>Temas ligados às decisões de gestão</h2></div><div class=\"check-list\"><div><span class=\"check\"></span><p>Estrutura das equipes e clareza sobre as entregas.</p></div><div><span class=\"check\"></span><p>Performance e desenvolvimento do colaborador.</p></div><div><span class=\"check\"></span><p>Cultura e práticas de atração e seleção.</p></div><div><span class=\"check\"></span><p>Gestão de resultados e personalidade de liderança.</p></div><div><span class=\"check\"></span><p>Comunicação para conduzir reuniões e conversas com a equipe.</p></div><p>A sequência e a profundidade do trabalho são alinhadas na proposta da mentoria.</p></div></div></section>",
+        "text": "Temas ligados às decisões de gestão Estrutura das equipes e clareza sobre as entregas. Performance e desenvolvimento do colaborador. Cultura e práticas de atração e seleção. Gestão de resultados e personalidade de liderança. Comunicação para conduzir reuniões e conversas com a equipe. A sequência e a profundidade do trabalho são alinhadas na proposta da mentoria."
+      },
+      {
+        "id": "bloco-06",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-06\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Da leitura do cenário a um plano de trabalho</h2></div><div class=\"editorial-copy\"><p>A proposta contempla diagnóstico da gestão de pessoas, prioridades de desenvolvimento e organização de práticas para a liderança.</p><p>O trabalho inclui a construção de um plano de ação, rituais de gestão e acompanhamento dos indicadores definidos para a jornada.</p><p>Escopo, participantes e calendário ficam registrados na contratação.</p></div></div></section>",
+        "text": "Da leitura do cenário a um plano de trabalho A proposta contempla diagnóstico da gestão de pessoas, prioridades de desenvolvimento e organização de práticas para a liderança. O trabalho inclui a construção de um plano de ação, rituais de gestão e acompanhamento dos indicadores definidos para a jornada. Escopo, participantes e calendário ficam registrados na contratação."
+      },
+      {
+        "id": "bloco-07",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-07\"><div class=\"wrap split image-split\"><div><h2>Para quem quer participar da construção.</h2><p>A mentoria se dirige a empresários e lideranças envolvidos nas decisões sobre pessoas e gestão.</p><p>Sua participação no diagnóstico, nas escolhas e na aplicação faz parte da proposta.</p></div></div></section>",
+        "text": "Para quem quer participar da construção. A mentoria se dirige a empresários e lideranças envolvidos nas decisões sobre pessoas e gestão. Sua participação no diagnóstico, nas escolhas e na aplicação faz parte da proposta."
+      },
+      {
+        "id": "bloco-08",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-08\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>Qual formato faz sentido para você?</h2></div><div class=\"editorial-copy\"><p>Se a prioridade é estudar o conteúdo de maneira flexível, conheça o Meta V gravado.</p><p>Se você busca trabalhar a gestão da empresa em uma jornada orientada com as lideranças, converse conosco sobre a mentoria.</p><div class=\"actions\"><a class=\"button\" href=\"#gravado\" onclick=\"return go('gravado','')\">Conhecer o acesso gravado <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Qual formato faz sentido para você? Se a prioridade é estudar o conteúdo de maneira flexível, conheça o Meta V gravado. Se você busca trabalhar a gestão da empresa em uma jornada orientada com as lideranças, converse conosco sobre a mentoria. Conhecer o acesso gravado"
+      },
+      {
+        "id": "bloco-09",
+        "classes": [
+          "section",
+          "dark"
+        ],
+        "html": "<section class=\"section dark\" id=\"bloco-09\"><div class=\"wrap cta-block\"><div class=\"cta-inner\"><h2>Vamos olhar para o momento da sua empresa?</h2><p>Conte sobre o que precisa organizar e sobre quem participa dessas decisões.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','Mentoria Meta V')\">Solicitar uma conversa <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Vamos olhar para o momento da sua empresa? Conte sobre o que precisa organizar e sobre quem participa dessas decisões. Solicitar uma conversa"
+      }
+    ],
+    "oficina": [
+      {
+        "id": null,
+        "classes": [
+          "hero"
+        ],
+        "html": "<section class=\"hero\"><div class=\"wrap hero-grid\"><div class=\"hero-copy\"><h1>Desenvolva sua liderança enquanto organiza a gestão da equipe.</h1><p>Uma oficina que aproxima conteúdo e aplicação para trabalhar resultados, cultura e as habilidades de quem lidera.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','Oficina Super Humanos')\">Conheça a modalidade para você <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Desenvolva sua liderança enquanto organiza a gestão da equipe. Uma oficina que aproxima conteúdo e aplicação para trabalhar resultados, cultura e as habilidades de quem lidera. Conheça a modalidade para você"
+      },
+      {
+        "id": "bloco-02",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-02\"><div class=\"wrap split editorial\"><div class=\"section-intro\"><h2>A rotina da liderança pede escolhas concretas.</h2></div><div class=\"editorial-copy\"><p>Definir prioridades. Conduzir um feedback. Organizar responsabilidades. Entender por que uma equipe se afasta dos objetivos.</p><p>A oficina trabalha essas situações ao conectar aprendizagem, ferramentas de gestão e reflexão sobre a atuação do líder.</p></div></div></section>",
+        "text": "A rotina da liderança pede escolhas concretas. Definir prioridades. Conduzir um feedback. Organizar responsabilidades. Entender por que uma equipe se afasta dos objetivos. A oficina trabalha essas situações ao conectar aprendizagem, ferramentas de gestão e reflexão sobre a atuação do líder."
+      },
+      {
+        "id": "bloco-03",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-03\"><div class=\"wrap\"><h2>Três pilares para olhar a gestão</h2><div class=\"card-grid workshop-grid cols-3\"><article class=\"feature\"><span class=\"index\">01</span><h3>GESTÃO DE RESULTADOS</h3><p>Clareza sobre objetivos, papéis e acompanhamento das entregas.</p></article><article class=\"feature\"><span class=\"index\">02</span><h3>CULTURA</h3><p>Princípios que se traduzem em comportamentos e decisões da equipe.</p></article><article class=\"feature\"><span class=\"index\">03</span><h3>LIDERANÇA</h3><p>Agenda, comunicação e desenvolvimento das pessoas no dia a dia.</p></article></div></div></section>",
+        "text": "Três pilares para olhar a gestão 01 GESTÃO DE RESULTADOS Clareza sobre objetivos, papéis e acompanhamento das entregas. 02 CULTURA Princípios que se traduzem em comportamentos e decisões da equipe. 03 LIDERANÇA Agenda, comunicação e desenvolvimento das pessoas no dia a dia."
+      },
+      {
+        "id": "bloco-04",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-04\"><div class=\"wrap\"><h2>Um caminho para definir o próximo passo</h2><div class=\"card-grid farm-grid cols-2\"><article class=\"feature\"><span class=\"index\">01</span><h3>FOCO</h3><p>Identificar o desafio que merece atenção no momento.</p></article><article class=\"feature\"><span class=\"index\">02</span><h3>ALAVANCA</h3><p>Escolher a iniciativa com potencial para ajudar a enfrentá-lo.</p></article><article class=\"feature\"><span class=\"index\">03</span><h3>RESULTADOS</h3><p>Definir o que se pretende alcançar e como observar o avanço.</p></article><article class=\"feature\"><span class=\"index\">04</span><h3>MELHORIA</h3><p>Organizar aprendizagem e aplicação para continuar evoluindo.</p></article></div></div></section>",
+        "text": "Um caminho para definir o próximo passo 01 FOCO Identificar o desafio que merece atenção no momento. 02 ALAVANCA Escolher a iniciativa com potencial para ajudar a enfrentá-lo. 03 RESULTADOS Definir o que se pretende alcançar e como observar o avanço. 04 MELHORIA Organizar aprendizagem e aplicação para continuar evoluindo."
+      },
+      {
+        "id": "bloco-05",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-05\"><div class=\"wrap split\"><div class=\"section-intro\"><h2>Temas que fazem parte da jornada</h2></div><div class=\"check-list\"><div><span class=\"check\"></span><p>Cultura e engajamento: valores, confiança e práticas da equipe.</p></div><div><span class=\"check\"></span><p>Construção de times: metas, combinados, delegação e desenvolvimento.</p></div><div><span class=\"check\"></span><p>Arquétipos da liderança: compreensão da própria forma de liderar.</p></div><div><span class=\"check\"></span><p>Inteligência social e comunicação: escuta, feedback e conversas difíceis.</p></div><div><span class=\"check\"></span><p>Inteligência emocional: reconhecimento das reações e manejo da pressão.</p></div><div><span class=\"check\"></span><p>Inteligência comportamental: hábitos e ações que influenciam as entregas.</p></div></div></div></section>",
+        "text": "Temas que fazem parte da jornada Cultura e engajamento: valores, confiança e práticas da equipe. Construção de times: metas, combinados, delegação e desenvolvimento. Arquétipos da liderança: compreensão da própria forma de liderar. Inteligência social e comunicação: escuta, feedback e conversas difíceis. Inteligência emocional: reconhecimento das reações e manejo da pressão. Inteligência comportamental: hábitos e ações que influenciam as entregas."
+      },
+      {
+        "id": "bloco-06",
+        "classes": [
+          "section",
+          "muted"
+        ],
+        "html": "<section class=\"section muted\" id=\"bloco-06\"><div class=\"wrap split image-split reverse\"><div><h2>Conteúdo e espaços para trabalhar a aplicação</h2><p>A proposta da oficina combina conteúdos gravados com encontros de desenvolvimento de liderança.</p><p>Também apresenta momentos para discutir obstáculos à implementação e acompanhar o plano de ação, de acordo com a modalidade contratada.</p><p>Nossa equipe detalha o calendário, o acesso e o acompanhamento incluídos em cada opção.</p></div></div></section>",
+        "text": "Conteúdo e espaços para trabalhar a aplicação A proposta da oficina combina conteúdos gravados com encontros de desenvolvimento de liderança. Também apresenta momentos para discutir obstáculos à implementação e acompanhar o plano de ação, de acordo com a modalidade contratada. Nossa equipe detalha o calendário, o acesso e o acompanhamento incluídos em cada opção."
+      },
+      {
+        "id": "bloco-07",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-07\"><div class=\"wrap split\"><div class=\"section-intro\"><h2>Para quem está à frente de pessoas</h2><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','Oficina Super Humanos')\">Conversar sobre a oficina <span aria-hidden=\"true\"></span></a></div></div><div class=\"check-list\"><div><span class=\"check\"></span><p>Líderes que querem ampliar o repertório para conduzir suas equipes.</p></div><div><span class=\"check\"></span><p>Empresários que precisam organizar práticas de gestão conforme o negócio cresce.</p></div><div><span class=\"check\"></span><p>Organizações que buscam desenvolver seus gestores com uma linguagem comum.</p></div></div></div></section>",
+        "text": "Para quem está à frente de pessoas Conversar sobre a oficina Líderes que querem ampliar o repertório para conduzir suas equipes. Empresários que precisam organizar práticas de gestão conforme o negócio cresce. Organizações que buscam desenvolver seus gestores com uma linguagem comum."
+      },
+      {
+        "id": "bloco-08",
+        "classes": [
+          "section"
+        ],
+        "html": "<section class=\"section\" id=\"bloco-08\"><div class=\"wrap faq-grid\"><div class=\"section-intro\"><h2>Dúvidas frequentes</h2><p class=\"small-copy\">3 perguntas frequentes</p></div><div><details class=\"faq\"><summary>A oficina é igual ao acesso gravado?<span></span></summary><p>São propostas distintas. O acesso gravado é voltado ao estudo do conteúdo. A oficina contempla uma jornada de aprendizagem e aplicação, cujas condições variam conforme a modalidade.</p></details><details class=\"faq\"><summary>Posso participar com outros líderes da empresa?<span></span></summary><p>As fontes apresentam opções para equipes. Consulte a composição e as condições disponíveis para o seu grupo.</p></details><details class=\"faq\"><summary>Qual é a duração?<span></span></summary><p>Nossa equipe informa o calendário, o tempo de acesso e o período de acompanhamento da modalidade escolhida antes da contratação.</p></details></div></div></section>",
+        "text": "Dúvidas frequentes 3 perguntas frequentes A oficina é igual ao acesso gravado? São propostas distintas. O acesso gravado é voltado ao estudo do conteúdo. A oficina contempla uma jornada de aprendizagem e aplicação, cujas condições variam conforme a modalidade. Posso participar com outros líderes da empresa? As fontes apresentam opções para equipes. Consulte a composição e as condições disponíveis para o seu grupo. Qual é a duração? Nossa equipe informa o calendário, o tempo de acesso e o período de acompanhamento da modalidade escolhida antes da contratação."
+      },
+      {
+        "id": "bloco-09",
+        "classes": [
+          "section",
+          "dark"
+        ],
+        "html": "<section class=\"section dark\" id=\"bloco-09\"><div class=\"wrap cta-block\"><div class=\"cta-inner\"><h2>Qual situação da sua gestão precisa de um novo caminho?</h2><p>Conheça a oficina e as possibilidades de participação.</p><div class=\"actions\"><a class=\"button\" href=\"#contato\" onclick=\"return go('contato','Oficina Super Humanos')\">Falar com a Virtù <span aria-hidden=\"true\"></span></a></div></div></div></section>",
+        "text": "Qual situação da sua gestão precisa de um novo caminho? Conheça a oficina e as possibilidades de participação. Falar com a Virtù"
+      }
+    ]
+  }
+}

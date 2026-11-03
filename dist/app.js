@@ -6,7 +6,7 @@ const menu = $('#menu');
 const menuToggle = $('.menu-toggle');
 const contactDialog = $('#contact-dialog');
 const videoDialog = $('#video-dialog');
-const video = $('video', videoDialog);
+const video = videoDialog ? $('video', videoDialog) : null;
 let lastFocus;
 function openDialog(dialog, trigger) {
   lastFocus = trigger || document.activeElement;
@@ -34,23 +34,23 @@ $$('[data-contact]').forEach(button => button.addEventListener('click', () => {
   if(!$('#interest').value) $('#interest').selectedIndex = 0;
   openDialog(contactDialog, button);
 }));
-$('#contact-form').addEventListener('submit', e => {
+$('#contact-form')?.addEventListener('submit', e => {
   e.preventDefault();
   const interest = $('#interest').value;
   const message = $('#message').value.trim();
   const body = `Olá, equipe Virtù! Tenho interesse em: ${interest}.${message ? '\n\n' + message : ''}`;
   window.open('https://wa.me/5541999693214?text=' + encodeURIComponent(body), '_blank', 'noopener,noreferrer');
 });
-$('[data-video]').addEventListener('click', e => {
+$('[data-video]')?.addEventListener('click', e => {
   openDialog(videoDialog, e.currentTarget);
   video.play().catch(() => { /* Browser may require a second click on native play. */ });
 });
 // The native details remain usable when JavaScript or animation is unavailable.
-$$('.journey, .faq').forEach(details => {
+$$('.journey, .faq, .topic').forEach(details => {
   details.addEventListener('toggle', () => {
     if(details.open) {
       $$(`details[name="${details.name}"]`).filter(other => other !== details).forEach(other => {other.open = false;});
-      const content = $('.journey-panel, .faq-answer', details);
+      const content = $('.journey-panel, .faq-answer, .topic-answer', details);
       if(!reduced.matches && window.gsap) gsap.fromTo(content, {autoAlpha: 0, y: 12}, {autoAlpha: 1, y: 0, duration: .45, ease: 'power2.out'});
     }
     window.ScrollTrigger?.refresh();
@@ -67,12 +67,12 @@ function changeSlide(index) {
   activeSlide = (index + slides.length) % slides.length;
   slides.forEach((slide, i) => {slide.hidden = i !== activeSlide;});
   $('.challenge-numeral').textContent = String(activeSlide + 1).padStart(2, '0');
-  $('.challenge-count').textContent = `${String(activeSlide + 1).padStart(2, '0')} / 05`;
+  $('.challenge-count').textContent = `${String(activeSlide + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
   $$('[data-slide-to]').forEach((button, i) => button.setAttribute('aria-pressed', String(i === activeSlide)));
   if(!reduced.matches && window.gsap) gsap.fromTo(slides[activeSlide], {autoAlpha: 0, y: 22}, {autoAlpha: 1, y: 0, duration: .5, ease: 'power2.out'});
 }
-$('[data-prev]').addEventListener('click', () => changeSlide(activeSlide - 1));
-$('[data-next]').addEventListener('click', () => changeSlide(activeSlide + 1));
+$('[data-prev]')?.addEventListener('click', () => changeSlide(activeSlide - 1));
+$('[data-next]')?.addEventListener('click', () => changeSlide(activeSlide + 1));
 $$('[data-slide-to]').forEach(button => button.addEventListener('click', () => changeSlide(Number(button.dataset.slideTo))));
 function refreshChrome() {
   menuToggle.classList.toggle('scrolled', scrollY > 90);
@@ -89,6 +89,7 @@ if(window.gsap && window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
   const mm = gsap.matchMedia();
   mm.add('(prefers-reduced-motion: no-preference)', () => {
+    if(!document.body.classList.contains('internal')) {
     const intro = gsap.timeline({defaults: {ease: 'power3.out'}});
     intro.from('.hero-image', {scale: 1.035, duration: 1.8})
       .from('.hero-kicker', {autoAlpha: 0, y: 15, duration: .8}, .1)
@@ -100,9 +101,10 @@ if(window.gsap && window.ScrollTrigger) {
     gsap.from('.journey summary', {autoAlpha: 0, y: 15, duration: .65, stagger: .08, scrollTrigger: {trigger: '.journeys-list', start: 'top 85%', once: true}});
     gsap.from('.quote-layout blockquote', {autoAlpha: 0, y: 25, duration: .9, scrollTrigger: {trigger: '.testimonial', start: 'top 75%', once: true}});
     gsap.from('.contact h2', {y: 35, autoAlpha: 0, duration: 1, scrollTrigger: {trigger: '.contact', start: 'top 70%', once: true}});
+    }
   });
   mm.add('(min-width: 701px) and (prefers-reduced-motion: no-preference)', () => {
-    gsap.to('.film-visual img', {yPercent: 7, ease: 'none', scrollTrigger: {trigger: '.film', start: 'top bottom', end: 'bottom top', scrub: 1}});
+    if($('.film-visual img')) gsap.to('.film-visual img', {yPercent: 7, ease: 'none', scrollTrigger: {trigger: '.film', start: 'top bottom', end: 'bottom top', scrub: 1}});
   });
   document.fonts.ready.then(() => ScrollTrigger.refresh());
 
