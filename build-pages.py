@@ -125,6 +125,30 @@ for key,sections in DATA.items():
   elif 'dark' in source['classes']:
    sec['class']+=['closing-section'];sec['id']='contato'
   else:sec['class']+=['editorial-section']
+  # Preserve the approved words while giving distinct content its own reading structure.
+  approved_words=sec.get_text(' ',strip=True).split()
+  if key in ('virtu','veridiana') and grid and len(grid.select(':scope > article'))==4:
+   grid['class']+=['pillar-rows']
+  if key=='virtu' and sec['id']=='bloco-05':sec['class']+=['purpose-section']
+  if key=='virtu' and sec['id']=='bloco-07':
+   copy=sec.select_one('.editorial-copy');paragraphs=copy.select(':scope > p')
+   for i in (1,3,5):
+    item=frag('<article class="service-summary"></article>')
+    paragraphs[i].insert_before(item);paragraphs[i].name='h3'
+    item.append(paragraphs[i].extract());item.append(paragraphs[i+1].extract())
+  if key=='veridiana' and sec['id']=='bloco-03':
+   pull_quote=sec.select_one('.editorial-copy').select('p')[-1].extract()
+   pull_quote.name='blockquote';pull_quote['class']=['editorial-pullquote'];wrap.append(pull_quote)
+  if key=='veridiana' and sec['id']=='bloco-07':
+   sec.select('.editorial-content p')[3].name='h3'
+  if key=='veridiana' and sec['id']=='bloco-08':
+   intro=sec.select_one('.center-intro');intro['class']=['section-intro']
+   copy=frag('<div class="editorial-copy"></div>')
+   for paragraph in intro.select('p'):copy.append(paragraph.extract())
+   intro.insert_after(copy)
+  if 'index-section' in sec['class']:
+   sec.select_one('.topic')['open']=''
+  assert sec.get_text(' ',strip=True).split()==approved_words, f'Copy changed in {key}/{sec["id"]}'
   # Keep context logos from the approved page as readable names, including image-only logos.
   logos=sec.select_one('.logos')
   if logos:
