@@ -50,3 +50,11 @@ A pedido do usuário, foram removidos os marcadores numerados de seção, inclus
 Títulos recebem composição equilibrada e parágrafos usam text-wrap: pretty conforme a [documentação MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-wrap). Na geração do HTML, as duas últimas palavras ficam ligadas por um espaço inseparável; não se alteram as palavras. Títulos com apenas duas palavras mantêm quebras naturais. No celular, etapas passam a uma coluna e alguns títulos longos recebem escala menor para manter a leitura e evitar transbordamento.
 
 Validação desta atualização: 451 blocos de conteúdo preservados em comparação com a versão anterior; 12 páginas em cinco viewports sem overflow horizontal e com aberturas de dimensão exata; 15 pares imagem/título e nove pares imagem/CTA alinhados. A inspeção de quebras em quatro larguras não encontrou palavras finais isoladas nos parágrafos visíveis, descontando a seta decorativa. Permanecem títulos curtos de duas palavras em duas linhas, uma composição intencional. Há um teste do formatador em test_typography.py. Safari e aparelhos físicos continuam fora da validação.
+
+## Auditoria visual — 03/11/2026
+
+12 páginas revisadas em 1920×1080 e 390×844, com 222 capturas de dobra, primeira impressão/hero estável, mapas completos e estados de interação. Relatório e evidências: `../output/auditoria-2026-11-03/relatorio.html`.
+
+Correções: títulos e cards no mesmo eixo; ação de Veridiana fora da coluna estreita; linhas compartilhadas nos pilares; reflow intermediário em tablet; distância entre imagem e texto reduzida de 146 para 24 px em Full HD, ampliando fotos de 586 para 708 px sem distorção; navegação sobre faixa própria e remoção visual do contato flutuante; separação de 24 px entre título e parágrafo final de Contato no celular.
+
+Validação: 60 combinações de rota/viewport para hero, menu, links e imagens; 88 combinações para overflow interno; 15 alinhamentos superiores e nove inferiores com diferença zero. Copy preservada. Permanecem recomendações editoriais registradas no relatório. Não houve envio real de formulário, teste em aparelho físico, avaliação integral de contraste/leitor de tela ou validação em Safari/Firefox.
