@@ -42,3 +42,11 @@ As 12 páginas passaram em 1920×1080, 1280×720, 390×844, 360×640 e 844×390:
 ## Limites
 
 Esta é uma revisão visual e técnica, não um estudo com usuários. Não foram medidos ganhos de conversão, nem testados Safari ou aparelhos físicos. Os recortes das fotos se adaptam à altura do texto e merecem revisão editorial por página. Não houve alteração da lógica dos formulários ou envio de mensagens.
+
+## Atualização — rótulos e palavras viúvas
+
+A pedido do usuário, foram removidos os marcadores numerados de seção, inclusive os da home, e os espaços reservados a eles. A identificação acessível do depoimento continua disponível aos leitores de tela. Números de etapas e controles de navegação continuam fazendo parte de seus componentes.
+
+Títulos recebem composição equilibrada e parágrafos usam text-wrap: pretty conforme a [documentação MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-wrap). Na geração do HTML, as duas últimas palavras ficam ligadas por um espaço inseparável; não se alteram as palavras. Títulos com apenas duas palavras mantêm quebras naturais. No celular, etapas passam a uma coluna e alguns títulos longos recebem escala menor para manter a leitura e evitar transbordamento.
+
+Validação desta atualização: 451 blocos de conteúdo preservados em comparação com a versão anterior; 12 páginas em cinco viewports sem overflow horizontal e com aberturas de dimensão exata; 15 pares imagem/título e nove pares imagem/CTA alinhados. A inspeção de quebras em quatro larguras não encontrou palavras finais isoladas nos parágrafos visíveis, descontando a seta decorativa. Permanecem títulos curtos de duas palavras em duas linhas, uma composição intencional. Há um teste do formatador em test_typography.py. Safari e aparelhos físicos continuam fora da validação.

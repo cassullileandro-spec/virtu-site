@@ -1,3 +1,4 @@
+from typography import finish_typography
 """Build the eleven internal pages from the approved copy snapshot."""
 from pathlib import Path
 from bs4 import BeautifulSoup
@@ -57,8 +58,6 @@ for key,sections in DATA.items():
   wrap=sec.select_one('.wrap');wrap['class']=['page-wrap']
   title=sec.h2
   if title:title['class']=['section-title']
-  # Insert a quiet chapter number into each section without changing approved headings.
-  wrap.insert(0,frag(f'<p class="chapter eyebrow">{idx:02d} / {e(NAMES[key])}</p>'))
   grid=sec.select_one('.card-grid');checks=sec.select_one('.check-list');faqs=sec.select('.faq');form=sec.select_one('form')
   original=source['html']
   if form:
@@ -85,10 +84,9 @@ for key,sections in DATA.items():
     f.append(answer);group.append(f.extract())
    wrap.append(group)
   elif 'talk-immersive' in source['classes']:
-   sec['class']+=['talk-section'];label=['As cinco dimensões da liderança','Influência real','Auto Performance','EU — A força inabalável de ser'][idx-2]
+   sec['class']+=['talk-section']
    sec.select_one('.talk-shade').decompose()
-   photo=frag('<figure class="talk-photo">'+img('curadoria-talks-'+str(idx+1),'Veridiana em sua trajetória profissional')+'</figure>');wrap.insert(1,photo)
-   sec.select_one('.chapter').string=f'{idx:02d} / {label}'
+   photo=frag('<figure class="talk-photo">'+img('curadoria-talks-'+str(idx+1),'Veridiana em sua trajetória profissional')+'</figure>');wrap.insert(0,photo)
   elif grid:
    features=grid.select(':scope > article');gridclasses=grid.get('class',[])
    for i,a in enumerate(features):
@@ -118,10 +116,10 @@ for key,sections in DATA.items():
    identifier=f'{key}-{idx+1}';file='curadoria-secondary-'+identifier
    if not (P/'dist/assets'/f'{file}.jpg').exists():file='retrato'
    alt='Veridiana Cavalheri e sua trajetória' if key!='oficina' else 'Registro de atuação de Veridiana'
-   wrap.insert(1,frag('<figure class="editorial-photo">'+img(file,alt)+'</figure>'))
+   wrap.insert(0,frag('<figure class="editorial-photo">'+img(file,alt)+'</figure>'))
    # Put all text into a real column; copied layout wrappers are removed.
    column=frag('<div class="editorial-content"></div>')
-   for child in list(wrap.contents)[2:]:column.append(child.extract())
+   for child in list(wrap.contents)[1:]:column.append(child.extract())
    wrap.append(column)
    if idx%2==0:sec['class']+=['image-reverse']
   elif 'dark' in source['classes']:
@@ -140,5 +138,5 @@ for key,sections in DATA.items():
  if not main.select('#contato'):main.append(frag('<div id="contato"></div>'))
  for a in doc.select('a[href="index.html"]'):
   if a.find_parent('footer'):a['href']='index.html'
- (P/'dist'/f'{key}.html').write_text(str(doc),encoding='utf-8')
+ (P/'dist'/f'{key}.html').write_text(finish_typography(str(doc)),encoding='utf-8')
 print('Generated',len(DATA),'internal pages from approved source')
