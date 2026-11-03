@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Palestras",
+    "body": "Leve uma conversa sobre liderança, comunicação, performance ou autoliderança para o seu evento. Conteúdos para provocar reflexão e colocar os desafios de pessoas no centro da conversa.",
+    "cta": "CONHECER AS PALESTRAS  ↗",
+    "image": "palestras"
+  },
+  {
+    "name": "Meta V — Acesso gravado",
+    "body": "Amplie seu repertório de gestão com conteúdos que você pode estudar no seu ritmo. Um caminho para desenvolver sua liderança com flexibilidade de horário.",
+    "cta": "CONHECER O ACESSO GRAVADO  ↗",
+    "image": "gravado"
+  },
+  {
+    "name": "Super Humanos — Oficina",
+    "body": "Trabalhe habilidades de liderança e leve o aprendizado para os desafios da equipe. Uma jornada que conecta conteúdo e aplicação, com encontros conforme a modalidade contratada.",
+    "cta": "CONHECER A OFICINA  ↗",
+    "image": "oficina"
+  },
+  {
+    "name": "Mentoria Meta V",
+    "body": "Encontre espaço para discutir decisões, rever práticas e construir sua gestão com orientação. Para empresários, executivos e líderes que precisam conduzir pessoas e fazer o negócio avançar.",
+    "cta": "CONHECER A MENTORIA  ↗",
+    "image": "mentoria"
+  },
+  {
+    "name": "PHD",
+    "body": "Desenvolva as habilidades que sua equipe precisa fortalecer. Um projeto in company desenhado a partir dos desafios e das prioridades da sua organização.",
+    "cta": "CONHECER O PHD  ↗",
+    "image": "phd"
+  },
+  {
+    "name": "Vanguard",
+    "body": "Estruture a gestão de pessoas para sustentar o próximo passo da empresa. Uma consultoria que conecta diagnóstico, cultura e processos de gestão à implementação e ao acompanhamento.",
+    "cta": "CONHECER O VANGUARD  ↗",
+    "image": "vanguard"
+  }
+]
