@@ -190,3 +190,16 @@ main :is(p,blockquote){text-wrap:pretty}
  .menu-toggle.scrolled{top:18px}
  .editorial-section .page-wrap>.section-title+p{margin-top:24px}
 }
+
+/* A shared warm treatment keeps photography in the wine-and-cream palette. */
+:root{--photo-tone:sepia(.22) saturate(.92)}
+.hero-image,
+.intro-image img,
+.film-visual img,
+.journey-panel>img,
+.about-photo img,
+.editorial-photo img,
+.talk-photo img,
+.solution-card img{filter:var(--photo-tone)}
+.journey-thumb img{filter:var(--photo-tone) saturate(.7)}
+.journey summary:hover .journey-thumb img{filter:var(--photo-tone)}
