@@ -396,3 +396,6 @@ body:not(.internal) :is(.intro-image>span,.portrait-caption){left:var(--gutter);
 @media(max-width:900px){
  .internal .page-section{padding-top:var(--space);padding-bottom:var(--space)}
 }
+
+/* Keep review guides and decorative columns off the published presentation. */
+.hero-grid,.review-grid,.grid-toggle,#grid-review{display:none!important}
