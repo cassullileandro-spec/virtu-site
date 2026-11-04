@@ -19,13 +19,13 @@
     <header><strong>Grid · Virtù</strong><button type="button" aria-expanded="true">Recolher</button></header>
     <div class="controls"><label for="section">Ir para seção</label><select id="section"></select>
     <div class="layers"><label><input id="columns" type="checkbox" checked>Colunas</label><label><input id="horizontal" type="checkbox" checked>Horizontais</label><label><input id="blocks" type="checkbox" checked>Blocos</label><label><input id="rhythm" type="checkbox">Malha de 8 px</label></div>
-    <output></output><details><summary>Como ler o desenho</summary><p>Rosa: colunas. Azul: limites e padding da seção. Verde: início do bloco sobre um eixo. Âmbar: fora do eixo — verificar intenção, não é erro automático.</p><p>As caixas medem o layout, não o contorno das letras. A malha de 8 px é uma régua, não exige que todo conteúdo se encaixe nela.</p></details>
+    <output></output><details><summary>Como ler o desenho</summary><p>Rosa: colunas. Azul: referências fixas a cada 32 px e subdivisões de 8 px, a partir do início da área interna da seção. Roxo tracejado: limites e padding observados. Verde: caixas medidas.</p><p>Δx é a distância ao eixo global mais próximo, não um erro automático. Cards têm recuos internos; as fotos editoriais ocupam meia tela. As caixas não são o contorno das letras nem a baseline. Textos mantêm sua altura natural; a malha não acompanha cada elemento.</p></details>
     <p><a href="${location.pathname}">Sair da revisão</a> · animações de entrada pausadas</p></div></aside>`;
   const svg = root.querySelector('svg');
   const select = root.querySelector('select');
   const output = root.querySelector('output');
   const ns = 'http://www.w3.org/2000/svg';
-  const targets = ':scope > h2, .hero-title-block, .hero-bottom > p, .hero-action, .trust-heading, .logo-strip, .intro-image, .intro-copy, .film-top, .film-bottom, .journeys-list, .challenge-slides, .about-photo, .about-copy, .quote-layout blockquote, .faq-section .display, .faq-list, .contact-bottom, .footer-top > p, .footer-top > div, .footer-bottom';
+  const targets = ':scope > h2, .hero-title-block, .hero-bottom > p, .hero-action, .trust-heading, .logo-strip, .intro-image, .intro-copy > *, .film-top, .film-bottom, .journeys-list, .journey[open] .journey-content, .challenge-slides, .about-photo, .about-copy > *, .quote-layout blockquote, .faq-section .display, .faq-list, .contact-bottom, .footer-top > p, .footer-top > div, .footer-bottom, .page-wrap > *, .content-grid > *';
   let expanded = true;
   let queued = false;
   sections.forEach((section, index) => {
@@ -77,16 +77,16 @@
         const origin = rect.top + top;
         const start = Math.max(0, Math.ceil(-origin / 8));
         for (let i = start; origin + i * 8 < Math.min(rect.bottom, innerHeight); i++) {
-          line(margin, origin + i * 8, width - margin, origin + i * 8, i % 4 ? '#38bdf81c' : '#38bdf855');
+          line(margin, origin + i * 8, width - margin, origin + i * 8, i % 4 ? '#38bdf826' : '#0284c799');
         }
       }
       if (checked('horizontal')) {
-        [rect.top, rect.top + top, rect.bottom - bottom, rect.bottom].forEach(y => line(0, y, width, y, '#38bdf8aa', '6 4'));
+        [rect.top, rect.top + top, rect.bottom - bottom, rect.bottom].forEach(y => line(0, y, width, y, '#c084fccc', '6 4'));
         if (top) {
-          line(margin - 8, rect.top, margin - 8, rect.top + top, '#38bdf8');
-          label(margin + 4, rect.top + Math.min(top / 2, 40), `padding ↑ ${Math.round(top)} px`);
+          line(margin - 8, rect.top, margin - 8, rect.top + top, '#c084fc');
+          label(margin + 4, rect.top + Math.min(top / 2, 40), `padding ↑ ${Math.round(top)} px`, '#c084fc');
         }
-        if (bottom) label(margin + 4, rect.bottom - bottom + 8, `padding ↓ ${Math.round(bottom)} px`);
+        if (bottom) label(margin + 4, rect.bottom - bottom + 8, `padding ↓ ${Math.round(bottom)} px`, '#c084fc');
         const pairs = [['.intro-image', '.intro-copy h3'], ['.about-photo', '.about-copy h2'], ['.faq-section .display', '.faq-list']];
         pairs.forEach(([a, b]) => {
           const first = section.querySelector(a), second = section.querySelector(b);
@@ -95,22 +95,22 @@
           if (right.left < left.right - 2) return;
           if (Math.max(left.top, right.top) < 0 || Math.min(left.top, right.top) > innerHeight) return;
           const delta = Math.abs(left.top - right.top);
-          const color = delta <= 2 ? '#34d399' : '#fbbf24';
+          const color = '#c084fc';
           line(left.left, left.top, right.right, left.top, color, '4 4');
-          label(right.left, Math.max(44, Math.min(left.top, right.top) - 40), `topos Δy ${Math.round(delta)} px`, color);
+          label(right.left, Math.max(44, Math.min(left.top, right.top) - 40), `topos observados Δy ${Math.round(delta)} px`, color);
         });
       }
       if (checked('blocks')) section.querySelectorAll(targets).forEach(element => {
         const box = element.getBoundingClientRect();
         if (!box.width || !box.height || box.bottom < 0 || box.top > innerHeight || getComputedStyle(element).visibility === 'hidden') return;
         const offset = Math.min(...starts.map(x => Math.abs(x - box.left)));
-        const color = offset <= 2 ? '#34d399' : '#fbbf24';
+        const color = '#34d399';
         shape('rect', {x: box.left, y: box.top, width: box.width, height: box.height, fill: 'none', stroke: color, 'stroke-width': 1.5});
         const name = element.id || [...element.classList].find(c => c !== 'display') || element.tagName.toLowerCase();
         const textElement = element.matches('h1,h2,h3,p,blockquote') ? element : element.querySelector('h1,h2,h3,p');
         const textStyle = textElement && getComputedStyle(textElement);
         const leading = checked('rhythm') && textStyle ? ` · fonte ${parseFloat(textStyle.fontSize).toFixed(1)} / linha ${parseFloat(textStyle.lineHeight).toFixed(1)}px` : '';
-        label(box.left, Math.max(22, box.top - 19), `${name} · ${Math.round(box.width)}×${Math.round(box.height)}${offset > 2 ? ` · Δx ${Math.round(offset)}` : ''}${leading}`, color);
+        label(box.left, Math.max(22, box.top - 19), `${name} · ${Math.round(box.width)}×${Math.round(box.height)}${offset > 2 ? ` · eixo global Δx ${Math.round(offset)}` : ''}${leading}`, color);
       });
     });
     if (root.activeElement !== select) select.value = current;

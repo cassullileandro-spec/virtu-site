@@ -269,6 +269,7 @@ body:not(.internal){--home-section:96px;--home-flow:64px}
 }
 @media(min-width:701px) and (max-width:1100px){
  body:not(.internal){--home-section:80px;--home-flow:48px}
+ .journeys-list{grid-column:1/-1}
  .contact-bottom>.button{grid-column:1/-1;justify-self:start}
  .contact-bottom p{grid-column:span 6}
 }
@@ -287,6 +288,7 @@ body:not(.internal){--home-section:96px;--home-flow:64px}
  .contact-bottom>div{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
  .contact-bottom p{margin:0}
  body:not(.internal) .footer-top{column-gap:var(--gap)}
+ .footer-top>p{margin-bottom:0}
  .quote-layout{margin-top:24px}
  .quote-credit{margin-top:24px}
  .faq-list{margin-top:32px}
