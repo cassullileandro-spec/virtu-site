@@ -5,7 +5,7 @@ const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 const gridReview = new URLSearchParams(location.search).get('grid') === '1';
 if (gridReview) {
   const script = document.createElement('script');
-  script.src = 'grid-review.js?v=20261104-alignment';
+  script.src = 'grid-review.js?v=20261104-all-pages';
   document.head.append(script);
 }
 const menu = $('#menu');

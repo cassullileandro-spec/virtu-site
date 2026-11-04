@@ -375,3 +375,24 @@ body:not(.internal) :is(.intro-image>span,.portrait-caption){left:var(--gutter);
  body:not(.internal) .impact{padding-block:80px}
  body:not(.internal) .statement{font-size:40px}
 }
+
+/* Internal audit: keep actions on the same axes and let content own its height. */
+.closing-copy{grid-column:1/7;max-width:650px;align-self:end}
+@media(min-width:901px){
+ .internal .closing-section .actions{grid-row:2;margin-top:0}
+}
+@media(min-width:701px){
+ .internal-hero-bottom>.actions{justify-self:start}
+}
+@media(min-width:701px) and (max-width:1359px){
+ /* Four tracks cannot contain the approved long labels at their existing type size. */
+ .internal .process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .internal .pillar-grid[data-count="4"]:not(.pillar-rows) article{grid-column:span 6}
+}
+@media(min-width:901px) and (max-width:1359px){
+ .internal .form-section .section-intro,.internal .index-section .section-title{grid-column:1/6}
+ .internal .pillar-rows article>h3{grid-column:2/7}
+}
+@media(max-width:900px){
+ .internal .page-section{padding-top:var(--space);padding-bottom:var(--space)}
+}
