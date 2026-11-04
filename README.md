@@ -18,7 +18,7 @@ Na raiz deste diretório:
 
 Após alterar `build.py` ou a copy, execute `python3 build.py`. CSS e JS não são sobrescritos.
 
-A hero aprovada é baseada no quadro 363:2864. As demais seções foram redesenhadas para o navegador. Referência: https://www.spectup.com/.
+A hero da home segue a capa das apresentações, componente Figma 194:1558: fundo cinza, retrato JEF01830 em preto e branco, Editor’s Note e Geist. O estilo responsivo está em `dist/hero-cover.css`; o recorte original e as fontes ficam em `dist/assets`. As demais seções foram redesenhadas para o navegador. Referência: https://www.spectup.com/.
 
 ## Comportamento
 

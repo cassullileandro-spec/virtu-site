@@ -29,9 +29,8 @@
     const footer = document.querySelector('.footer-top');
     assert(near(bounds('.footer-top>div').top - bounds('.footer-top>p').bottom, Number.parseFloat(getComputedStyle(footer).rowGap)), 'Footer gap includes a leftover paragraph margin');
   }
-  assert(near(bounds('.hero-bottom').top - bounds('.hero h1').bottom, 32), 'Hero description gap');
-  assert(bounds('.hero .button').bottom <= bounds('.hero').bottom - 48, 'Hero CTA clipped');
-  assert(near(bounds('.hero .button').top - bounds('.hero-bottom > p').bottom, 24), 'Hero CTA gap');
+  assert(bounds('.hero .button').bottom <= bounds('.hero').bottom - 32, 'Hero CTA clipped');
+  assert(near(bounds('.hero .button').top - bounds('.cover-copy > p:last-of-type').bottom, width <= 700 ? 24 : 28), 'Hero CTA gap');
   for (const section of document.querySelectorAll('main > .section-pad')) {
     const css = getComputedStyle(section), expected = width <= 700 ? '64px' : width <= 1100 ? '80px' : '96px';
     assert(css.paddingTop === expected && css.paddingBottom === expected, 'Inconsistent section padding');
@@ -41,7 +40,7 @@
     assert(style.lineHeight === style.fontSize, 'Inconsistent compact heading leading');
     assert(style.textBoxTrim === 'trim-both', 'Optical top alignment is not active in this browser');
   }
-  const bodyStyles = [...document.querySelectorAll('.intro-copy p,.about-copy p,.hero-bottom>p')].map(el => {const s=getComputedStyle(el);return s.fontSize+'/'+s.lineHeight;});
+  const bodyStyles = [...document.querySelectorAll('.intro-copy p,.about-copy p')].map(el => {const s=getComputedStyle(el);return s.fontSize+'/'+s.lineHeight;});
   assert(new Set(bodyStyles).size === 1, 'Body copy uses competing size/leading roles');
   const aboutHeading = document.querySelector('.about-copy h2');
   assert(getComputedStyle(aboutHeading).lineHeight === getComputedStyle(aboutHeading.querySelector('span')).lineHeight, 'Different leading at the colored title break');
