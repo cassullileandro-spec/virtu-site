@@ -110,3 +110,13 @@ Confirmado no Chrome a 1920 px: título da Veridiana crescia a 86,4 px e dois pa
 - Parágrafos da Veridiana unificados; 32 px entre título/texto e texto/CTA, 24 px entre parágrafos. Foto acompanha o conteúdo sem min-height de 520 px e botão sem margem automática.
 - Malha original preservada. Mantida a adição remota de botão Grid existente em 964fed8.
 - Home: 1920, 1440, 1100, 901, 900, 700, 390 e 360 px. 11 internas: 1440 e 390 px, sem overflow e com trim ativo. Prints e resultados em qa/hierarquia (não versionado).
+
+
+## Composição editorial — 04/11/2026
+
+Pedido posterior: destacar a frase de impacto e aumentar a presença das fotos. Exceções intencionais ao padrão regular:
+- Faixa de logos: título 32 px, em linha única no desktop; quebra natural em telas estreitas.
+- Frase de impacto em seção própria (#sobre), 96/64/40 px e padding 128/96/80 px conforme faixa.
+- Apresentação (#oportunidade) e Veridiana (#veridiana): foto em 50% da largura total, até a borda esquerda; texto na outra metade com recuo interno de 64/48 px e padding vertical de 96/80 px. A malha original exibe esses desvios intencionais sem ocultá-los.
+- Distância texto/CTA de 64 px no desktop e 48 px na composição empilhada; foto acompanha a altura do conjunto. Mobile preserva a proporção das fotos e a ordem de leitura.
+- Copy integral preservada; home verificada em 1920, 1440, 1100, 901, 900, 700, 390 e 360 px. Páginas internas sem alteração de estilo nesta rodada.

@@ -18,7 +18,7 @@
     for (const [photo, copy] of [['.intro-image', '.intro-copy'], ['.about-photo', '.about-copy']]) {
       const a = bounds(photo), b = bounds(copy);
       assert(Math.abs(a.top - b.top) < 1, `${photo}: top misalignment`);
-      assert(Math.abs(b.left - a.right - 24) < 1, `${photo}: incorrect gutter`);
+      assert(Math.abs(b.left - a.right) < 1, `${photo}: incorrect gutter`);
     }
   }
   const near = (a, b) => Math.abs(a - b) < 1;
@@ -42,12 +42,19 @@
     const thumbnail = row.querySelector('.journey-thumb').getBoundingClientRect();
     if (thumbnail.width) assert(near(thumbnail.top, row.querySelector('h3').getBoundingClientRect().top), 'Journey image/title top mismatch');
   }
-  if (width > 900) assert(near(bounds('.about-photo').bottom, bounds('.about-copy > .button').bottom), 'Portrait and CTA bottom mismatch');
+  if (width > 900) {
+    for (const [photo, copy] of [['.intro-image','.intro-copy'],['.about-photo','.about-copy']]) {
+      assert(near(bounds(photo).width,width/2), 'Editorial photo must fill half the viewport');
+      assert(near(bounds(photo).left,0), 'Editorial photo does not reach page edge');
+      const inset=width<=1100?80:96;
+      assert(near(bounds(photo).bottom-bounds(copy+' > .button').bottom,inset), 'Editorial bottom inset mismatch');
+    }
+  }
   for (const block of document.querySelectorAll('.intro-copy,.about-copy')) {
     const heading = block.querySelector('h2,h3'), paragraphs = [...block.querySelectorAll('p')];
     assert(near(paragraphs[0].getBoundingClientRect().top - heading.getBoundingClientRect().bottom, 32), 'Heading/body gap mismatch');
     for (let i = 1; i < paragraphs.length; i++) assert(near(paragraphs[i].getBoundingClientRect().top - paragraphs[i-1].getBoundingClientRect().bottom, 24), 'Paragraph gap mismatch');
-    assert(near(block.querySelector('.button').getBoundingClientRect().top - paragraphs[paragraphs.length-1].getBoundingClientRect().bottom, 32), 'Body/CTA margins accumulated');
+    assert(near(block.querySelector('.button').getBoundingClientRect().top - paragraphs[paragraphs.length-1].getBoundingClientRect().bottom, width > 900 ? 64 : 48), 'Body/CTA margins accumulated');
   }
   const reviewing = new URLSearchParams(location.search).get('grid') === '1';
   const root = document.querySelector('#grid-review')?.shadowRoot;
