@@ -97,3 +97,5 @@ Validação: 60 combinações de rota/viewport para hero, menu, links e imagens;
 - Home: asserções em 1920, 1440, 1100, 901, 900, 700, 390 e 360 px; incluindo alinhamento de miniaturas, título/foto, botão/base e gaps. Onze páginas internas: aplicação da tipografia e overflow dos textos em 1440 e 390 px. Revisão visual dos três trechos indicados e da seção Veridiana sem guias em desktop/mobile; jornadas abrem e fecham.
 - Os testes geométricos não substituem a conferência visual. Não foi realizada auditoria visual completa de todas as páginas internas, teste em aparelhos físicos nem validação em navegadores antigos.
 - Critério óptico registrado na skill layout-grid-responsivo, sem tornar os valores desta implementação universais.
+
+- Na conferência publicada, a aba reutilizou CSS anterior. URLs de pages.css e design-system.css versionadas em todas as páginas e no gerador para invalidar esse cache.
