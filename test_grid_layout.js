@@ -37,7 +37,7 @@
   }
   for (const heading of document.querySelectorAll('.intro-copy h3,.about-copy h2')) {
     const style = getComputedStyle(heading);
-    assert(style.lineHeight === style.fontSize, 'Inconsistent compact heading leading');
+    assert(style.lineHeight === getComputedStyle(document.documentElement).getPropertyValue('--line-title').trim(), 'Inconsistent section heading leading');
     assert(style.textBoxTrim === 'trim-both', 'Optical top alignment is not active in this browser');
   }
   const bodyStyles = [...document.querySelectorAll('.intro-copy p,.about-copy p')].map(el => {const s=getComputedStyle(el);return s.fontSize+'/'+s.lineHeight;});

@@ -18,7 +18,9 @@ Na raiz deste diretório:
 
 Após alterar `build.py` ou a copy, execute `python3 build.py`. CSS e JS não são sobrescritos.
 
-A hero da home segue a capa das apresentações, componente Figma 194:1558: fundo cinza, retrato JEF01830 em preto e branco, Editor’s Note e Geist. O estilo responsivo está em `dist/hero-cover.css`; o recorte original e as fontes ficam em `dist/assets`. As demais seções foram redesenhadas para o navegador. Referência: https://www.spectup.com/.
+A hero da home segue a capa das apresentações, componente Figma 194:1558: fundo cinza, retrato JEF01830 em preto e branco, Editor’s Note e Geist. O estilo responsivo está em `dist/hero-cover.css`; o recorte original e as fontes ficam em `dist/assets`. O restante das 12 páginas segue as apresentações: Editor’s Note regular/itálica, Geist para leitura, fotografias em preto e branco, fundos neutros e fios vermelhos. A copy é preservada.
+
+`dist/design-system.css` centraliza cinco papéis de leitura, em tamanho/entrelinha: título principal 96/100, título de seção 56/60, título de bloco 32/36, corpo 18/28 e auxiliar 14/20 px. No celular: 48/52, 36/40, 24/28, 16/24 e 14/20 px. Os dois parágrafos da hero usam o mesmo corpo; não há um subtítulo maior. Marca e ícones decorativos não fazem parte da escala de leitura. `test_typography_layout.js` verifica a escala e os limites do conteúdo em cada página renderizada.
 
 ## Comportamento
 
@@ -42,4 +44,4 @@ As legendas usam transcrição automática já existente no acervo e precisam de
 
 `python3 build-pages.py` recompõe a home e as 11 internas. Usa BeautifulSoup, já disponível no ambiente de autoria; a hospedagem serve somente HTML, CSS e JS estáticos.
 
-`dist/pages.css` define a base Full HD: 1440 px úteis, grid de 12 colunas, gutters de 24 px e heros 100vh × 100vw. `dist/pages.js` cuida das animações internas e dos formulários que abrem rascunhos no WhatsApp. As fontes aprovadas e os ajustes editoriais estão em `sources/approved-pages.json` e `ALTERACOES-PAGINAS.md`.
+`dist/pages.css` define a base Full HD: 1440 px úteis, grid de 12 colunas, gutters de 24 px e heros com altura mínima de uma tela e crescimento natural para textos longos. `dist/pages.js` cuida das animações internas e dos formulários que abrem rascunhos no WhatsApp. As fontes aprovadas e os ajustes editoriais estão em `sources/approved-pages.json` e `ALTERACOES-PAGINAS.md`.

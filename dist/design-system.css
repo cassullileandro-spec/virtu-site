@@ -1,70 +1,73 @@
-/* Virtù typography: one role, one responsive scale across every page. */
+@font-face{font-family:'Editors Note';src:url('assets/editors-note-regular.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'Editors Note';src:url('assets/editors-note-italic.woff2') format('woff2');font-style:italic;font-weight:400;font-display:swap}
+@font-face{font-family:Geist;src:url('assets/geist-regular.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+/* Five reading roles; decorative wordmarks, numerals and icons are artwork. */
 :root{
- --type-hero:96px;
- --type-brand:128px;
- --type-display:48px;
- --type-title:48px;
- --type-subtitle:32px;
- --type-body:18px;
- --type-lead:var(--type-body);
- --type-small:14px;
- --type-label:12px;
- --type-button:14px;
- --type-quote:32px;
- --type-menu:clamp(36px,3.4vw,64px);
- --type-step:56px;
- --leading-body:28px;
- --leading-heading:1;
- --weight-body:400;
- --weight-heading:400;
- --weight-control:500;
+ --font-heading:'Editors Note',Georgia,serif;
+ --font-body:Geist,Arial,sans-serif;
+ --type-hero:96px;--line-hero:100px;
+ --type-title:56px;--line-title:60px;
+ --type-subtitle:32px;--line-subtitle:36px;
+ --type-body:18px;--leading-body:28px;
+ --type-small:14px;--line-small:20px;
+ --type-brand:var(--type-hero);--type-display:var(--type-title);
+ --type-lead:var(--type-body);--type-label:var(--type-small);--type-button:var(--type-small);
+ --type-quote:var(--type-subtitle);--type-menu:var(--type-subtitle);--type-step:var(--type-subtitle);
+ --leading-heading:1.08;--weight-body:400;--weight-heading:400;--weight-control:400;
+ --photo-tone:grayscale(1) contrast(1.04);
 }
-body{font-size:var(--type-body);line-height:var(--leading-body);font-weight:var(--weight-body)}
+body{font-family:var(--font-body);font-size:var(--type-body);line-height:var(--leading-body);font-weight:400}
 p{font-size:var(--type-body);line-height:var(--leading-body)}
-h1,h2,h3,h4{font-weight:var(--weight-heading);line-height:var(--leading-heading);letter-spacing:-.035em;text-wrap:balance}
-h1{font-size:var(--type-hero);line-height:var(--leading-heading);letter-spacing:-.05em}
-h2{font-size:var(--type-title)}
-h3,h4{font-size:var(--type-subtitle);line-height:1.25;letter-spacing:-.025em}
-body:not(.internal) .hero h1{font-size:var(--type-brand)}
-.display,.statement,.film-top h2,.about-copy h2,.contact h2{font-size:var(--type-display);line-height:var(--leading-heading)}
-.intro-copy h3{font-size:var(--type-title);line-height:var(--leading-heading)}
-.hero-bottom>p,.hero-description,.hero-description p,.hero-deck p,.about-lead,.editorial-copy>p:first-child,.footer-top>p{font-size:var(--type-lead);line-height:var(--leading-body)}
-.journey h3,.portrait-caption{font-size:var(--type-subtitle);line-height:1.25}
-.hero-action>p{font-size:var(--type-body)}
-.quote-layout blockquote,.editorial-pullquote,.challenge-slide p{font-size:var(--type-quote);line-height:1.3;letter-spacing:-.03em}
-.trust h2{font-size:var(--type-body);line-height:1.5}
-.faq h3{font-size:var(--type-lead);line-height:1.4;letter-spacing:-.02em}
-.process-grid .index{font-size:var(--type-step);line-height:1;letter-spacing:-.06em}
-.eyebrow,.micro,.index,.check,.journey-number,.intro-image>span,.play-label,.challenge-count,.menu-toggle,.close-menu,.menu-bottom,.footer-bottom,.video-dialog>p,.steps>div>span{font-size:var(--type-label);line-height:1.5;letter-spacing:.08em;font-weight:var(--weight-control)}
-.small,.trust-heading p,.quote-credit,.quote-credit span:last-child,.footer-top a,.footer-top button,.footer-mission,.form-section label,.form-note,.contact-dialog label,.privacy-note{font-size:var(--type-small);line-height:1.6}
-.button,.text-link{font-size:var(--type-button);font-weight:var(--weight-control);line-height:1.4;letter-spacing:0;min-height:48px}
-.button{padding:18px 24px;gap:24px}
-.menu-main a{font-size:var(--type-menu);line-height:1.15;letter-spacing:-.035em}
-.menu-side>a,.menu-note,.journeys-guide{font-size:var(--type-lead);line-height:var(--leading-body)}
-.dialog-top h2{font-size:var(--type-subtitle)}
-.contact-dialog h2{font-size:var(--type-title)}
-.contact-dialog select,.contact-dialog textarea,.form-section input,.form-section select,.form-section textarea{font-size:16px;line-height:1.5}
+h1,h2,h3,h4{font-family:var(--font-heading);font-weight:400;letter-spacing:-.02em;text-wrap:balance}
+h1{font-size:var(--type-hero);line-height:var(--line-hero)}
+h2,.display,.statement,.film-top h2,.about-copy h2,.contact h2,.intro-copy h3{font-size:var(--type-title);line-height:var(--line-title)}
+h3,h4,.journey h3,.portrait-caption{font-size:var(--type-subtitle);line-height:var(--line-subtitle)}
+.display>span,.statement>span,.film-top h2>span,.portrait-caption,.pillar-grid h3,.process-grid h3{font-style:italic}
+.hero-bottom>p,.hero-description,.hero-description p,.hero-deck p,.about-lead,.editorial-copy>p:first-child,.footer-top>p,.hero-action>p,.trust-heading p,.challenge-slide p{font-size:var(--type-body);line-height:var(--leading-body);letter-spacing:0}
+.quote-layout blockquote,.editorial-pullquote{font-family:var(--font-heading);font-size:var(--type-subtitle);line-height:var(--line-subtitle);letter-spacing:-.01em;font-style:italic}
+.trust h2{font-family:var(--font-heading);font-size:var(--type-subtitle);line-height:var(--line-subtitle)}
+.faq h3{font-family:var(--font-body);font-size:var(--type-body);line-height:var(--leading-body);letter-spacing:0}
+.process-grid .index{font-family:var(--font-heading);font-size:var(--type-subtitle);line-height:var(--line-subtitle);letter-spacing:0}
+.eyebrow,.micro,.index,.check,.journey-number,.intro-image>span,.play-label,.challenge-count,.menu-toggle,.close-menu,.menu-bottom,.footer-bottom,.video-dialog>p,.steps>div>span,.small,.quote-credit,.quote-credit span:last-child,.footer-top a,.footer-top button,.footer-mission,.form-section label,.form-note,.contact-dialog label,.privacy-note{font-family:var(--font-body);font-size:var(--type-small);line-height:var(--line-small);font-weight:400}
+.eyebrow,.micro,.index,.play-label{letter-spacing:.04em}
+.button,.text-link{font-family:var(--font-body);font-size:var(--type-small);font-weight:400;line-height:var(--line-small);letter-spacing:0;min-height:48px}
+.button{padding:17px 24px;gap:24px;border-radius:4px}
+.menu-main a{font-family:var(--font-heading);font-size:var(--type-subtitle);line-height:var(--line-subtitle);letter-spacing:-.02em}
+.menu-side>a,.menu-note,.journeys-guide{font-family:var(--font-body);font-size:var(--type-body);line-height:var(--leading-body)}
+.dialog-top h2{font-size:var(--type-subtitle);line-height:var(--line-subtitle)}
+.contact-dialog h2{font-size:var(--type-title);line-height:var(--line-title)}
+.contact-dialog select,.contact-dialog textarea,.form-section input,.form-section select,.form-section textarea{font-family:var(--font-body);font-size:var(--type-body);line-height:var(--leading-body)}
+/* The deck's fine red rules separate ideas without becoming colored panels. */
+.pillar-grid article,.process-grid article,.solution-card{border-color:#8e232366}
+.wine-section .pillar-grid article{border-color:#fafafa44}
+.journey,.topic,.faq{border-color:var(--line)}
+.editorial-photo,.talk-photo,.solution-card figure{border-radius:8px}
+.challenges{border-radius:0}
+.challenge-stage{min-height:180px;padding:32px 0}
+.challenge-numeral{grid-column:1/3;font-size:var(--type-title);line-height:var(--line-title);letter-spacing:-.02em;color:#fafafa80}
+.challenge-slides{grid-column:3/13}
+.portrait-caption{font-family:var(--font-heading)}
+.contact-glow{display:none}
+.quote-mark,.challenge-numeral{font-family:var(--font-heading);font-weight:400}
+/* Let long openings grow instead of inventing smaller type on short screens. */
+.internal .internal-hero{height:auto;min-height:100svh;max-height:none}
+.internal .internal-hero-content{position:relative;inset:auto;padding:160px var(--gutter) 96px;min-height:100svh;display:flex;gap:32px}
+.internal .internal-hero .hero-kicker{margin:0}
+.internal .internal-hero-bottom{margin-top:0}
+.internal .internal-hero .hero-description,.internal .internal-hero .hero-description p{font-size:var(--type-body);line-height:var(--leading-body)}
+.internal .internal-hero .button{min-height:48px;padding:17px 24px}
 @media(max-width:1100px){
- :root{--type-hero:64px;--type-brand:80px;--type-display:40px;--type-title:40px;--type-subtitle:32px}
+ :root{--type-hero:72px;--line-hero:76px;--type-title:48px;--line-title:52px;--type-subtitle:28px;--line-subtitle:32px}
 }
 @media(max-width:700px){
- :root{--type-hero:48px;--type-brand:48px;--type-display:32px;--type-title:32px;--type-subtitle:24px;--type-body:16px;--leading-body:24px;--type-quote:24px;--type-menu:32px;--type-step:40px}
- .button{padding:16px 20px;gap:16px;min-height:52px}
+ :root{--type-hero:48px;--line-hero:52px;--type-title:36px;--line-title:40px;--type-subtitle:24px;--line-subtitle:28px;--type-body:16px;--leading-body:24px}
+ .challenge-stage{display:grid;grid-template-columns:48px minmax(0,1fr);gap:24px;min-height:0}
+ .challenge-numeral{position:static;grid-column:1;font-size:var(--type-subtitle);line-height:var(--line-subtitle);opacity:1}
+ .challenge-slides{grid-column:2}
+ .button{padding:15px 20px;gap:16px;min-height:52px}
+ .internal .internal-hero-content{padding-top:120px;padding-bottom:80px;gap:24px}
+ .internal .internal-hero-bottom{display:flex;flex-direction:column;align-items:start;gap:24px}
+ .internal .internal-hero-bottom .actions{margin-top:0}
 }
-/* A full-screen opening also has to fit short phones and landscape windows. */
-@media(max-height:720px) and (min-width:701px){.internal{--type-hero:clamp(32px,9vh,64px)}}
-@media(max-height:700px) and (max-width:700px){.internal{--type-hero:32px}}
-@media(max-height:450px){
- .internal{--type-hero:26px}
- .internal .hero-description,.internal .hero-description p{font-size:14px;line-height:1.5}
- .hero .button{padding:10px 16px;min-height:44px}
-}
-@media(max-width:700px){.journey h3{font-size:var(--type-subtitle)}}
-@media(max-height:700px) and (max-width:700px){.hero-title-block{top:15%}}
-
-/* Figma's cap-height-to-baseline box: align visible text, not font leading. */
-h1,h2,h3,h4,p,blockquote{
- text-box-trim:trim-both;
- text-box-edge:cap alphabetic;
-}
-.grid-toggle{font-size:var(--type-button);font-weight:var(--weight-control);line-height:1.4}
+h1,h2,h3,h4,p,blockquote{text-box-trim:trim-both;text-box-edge:cap alphabetic}
+.grid-toggle{font-size:var(--type-small);line-height:var(--line-small);font-weight:400}
