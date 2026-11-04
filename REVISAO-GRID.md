@@ -85,3 +85,15 @@ Validação: 60 combinações de rota/viewport para hero, menu, links e imagens;
 - Todas as seções de conteúdo da home com `.section-pad`: 96 px em desktop, 80 px entre 701 e 1100 px, 64 px até 700 px, acima e abaixo. Hero, filme em tela cheia e rodapé mantêm composições próprias.
 - Verificadas larguras 1440, 900, 700, 470, 390, 360 e 844 px (paisagem, altura 390): sem overflow horizontal, distâncias e padding conferidos por asserções. Modo normal conferido em 390 e 1440 px; contato abre e fecha. Não houve envio de mensagem.
 - Evidências locais em qa/explicacao/hero-ajustada-*.jpg. Páginas internas não foram alteradas; sem teste em dispositivos físicos.
+
+
+## Caixa tipográfica e alinhamento óptico — 04/11/2026
+
+- Aplicado cap height até baseline (`text-box-trim: trim-both; text-box-edge: cap alphabetic`) no sistema compartilhado de h1–h4, p e blockquote, incluindo as páginas internas. Browsers antigos que não suportam essas propriedades conservam a caixa tipográfica tradicional.
+- Títulos da introdução, das jornadas e da seção Veridiana com entrelinha 1; mesma entrelinha no trecho colorido. Títulos adjacentes às imagens passam a alinhar o topo das maiúsculas, e não somente caixas com leading invisível.
+- Miniaturas e títulos das jornadas alinhados pelo topo; números e controles permanecem centralizados.
+- Nos blocos de introdução e Veridiana: 32 px título/texto e 24 px entre parágrafos. Eliminada a soma de margem do último parágrafo com a do botão no mobile; intervalo de 32 px.
+- Malha de revisão preservada integralmente, como solicitado. Nenhuma imagem substituída; as oito imagens verificadas na introdução, jornadas e Veridiana carregaram. A falha de carregamento do print não se reproduziu.
+- Home: asserções em 1920, 1440, 1100, 901, 900, 700, 390 e 360 px; incluindo alinhamento de miniaturas, título/foto, botão/base e gaps. Onze páginas internas: aplicação da tipografia e overflow dos textos em 1440 e 390 px. Revisão visual dos três trechos indicados e da seção Veridiana sem guias em desktop/mobile; jornadas abrem e fecham.
+- Os testes geométricos não substituem a conferência visual. Não foi realizada auditoria visual completa de todas as páginas internas, teste em aparelhos físicos nem validação em navegadores antigos.
+- Critério óptico registrado na skill layout-grid-responsivo, sem tornar os valores desta implementação universais.

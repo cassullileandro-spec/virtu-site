@@ -30,6 +30,24 @@
     const css = getComputedStyle(section), expected = width <= 700 ? '64px' : width <= 1100 ? '80px' : '96px';
     assert(css.paddingTop === expected && css.paddingBottom === expected, 'Inconsistent section padding');
   }
+  for (const heading of document.querySelectorAll('.intro-copy h3,.about-copy h2,.journey h3')) {
+    const style = getComputedStyle(heading);
+    assert(style.lineHeight === style.fontSize, 'Inconsistent compact heading leading');
+    assert(style.textBoxTrim === 'trim-both', 'Optical top alignment is not active in this browser');
+  }
+  const aboutHeading = document.querySelector('.about-copy h2');
+  assert(getComputedStyle(aboutHeading).lineHeight === getComputedStyle(aboutHeading.querySelector('span')).lineHeight, 'Different leading at the colored title break');
+  for (const row of document.querySelectorAll('.journey summary')) {
+    const thumbnail = row.querySelector('.journey-thumb').getBoundingClientRect();
+    if (thumbnail.width) assert(near(thumbnail.top, row.querySelector('h3').getBoundingClientRect().top), 'Journey image/title top mismatch');
+  }
+  if (width > 900) assert(near(bounds('.about-photo').bottom, bounds('.about-copy > .button').bottom), 'Portrait and CTA bottom mismatch');
+  for (const block of document.querySelectorAll('.intro-copy,.about-copy')) {
+    const heading = block.querySelector('h2,h3'), paragraphs = [...block.querySelectorAll('p')];
+    assert(near(paragraphs[0].getBoundingClientRect().top - heading.getBoundingClientRect().bottom, 32), 'Heading/body gap mismatch');
+    for (let i = 1; i < paragraphs.length; i++) assert(near(paragraphs[i].getBoundingClientRect().top - paragraphs[i-1].getBoundingClientRect().bottom, 24), 'Paragraph gap mismatch');
+    if (width <= 900) assert(near(block.querySelector('.button').getBoundingClientRect().top - paragraphs[paragraphs.length-1].getBoundingClientRect().bottom, 32), 'Body/CTA margins accumulated');
+  }
   const reviewing = new URLSearchParams(location.search).get('grid') === '1';
   const root = document.querySelector('#grid-review')?.shadowRoot;
   assert(Boolean(root) === reviewing, 'Review layer activation mismatch');
