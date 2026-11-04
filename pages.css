@@ -319,6 +319,7 @@ body:not(.internal) :is(.intro-copy h3,.about-copy h2){
  line-height:var(--line-title);
 }
 body:not(.internal) .about-copy h2 span{line-height:inherit}
+body:not(.internal) .intro-copy h3{line-height:calc(var(--line-title) + 4px)}
 body:not(.internal) .journey summary{align-items:start;padding-block:32px}
 body:not(.internal) .journey-number,
 body:not(.internal) .journey summary>.plus{align-self:center}
@@ -354,11 +355,11 @@ body:not(.internal) .editorial-split{padding:0}
 body:not(.internal) :is(.intro-lower,.about-grid){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 var(--gap);margin:0;align-items:stretch}
 body:not(.internal) :is(.intro-image,.about-photo){grid-column:1;min-height:0;max-height:none;aspect-ratio:auto;height:auto;margin:0}
 body:not(.internal) :is(.intro-image img,.about-photo img){position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-body:not(.internal) :is(.intro-copy,.about-copy){grid-column:2;max-width:none;padding:96px var(--gutter) 96px 0;display:flex;flex-direction:column;align-items:flex-start}
+body:not(.internal) :is(.intro-copy,.about-copy){grid-column:2;max-width:none;padding:96px var(--gutter) 96px 48px;display:flex;flex-direction:column;align-items:flex-start}
 body:not(.internal) :is(.intro-copy>.button,.about-copy>.button){margin-top:64px}
 body:not(.internal) :is(.intro-image>span,.portrait-caption){left:var(--gutter);bottom:32px}
 @media(min-width:901px) and (max-width:1100px){
- body:not(.internal) :is(.intro-copy,.about-copy){padding:80px var(--gutter) 80px 0}
+ body:not(.internal) :is(.intro-copy,.about-copy){padding:80px var(--gutter) 80px 24px}
 }
 @media(max-width:1100px){
  body:not(.internal) .impact{padding-block:96px}
