@@ -115,3 +115,25 @@ if(window.gsap && window.ScrollTrigger && !gridReview) {
   document.fonts.ready.then(() => ScrollTrigger.refresh());
 
 }
+
+// Review guides use the same margins and gutters as the page layout.
+const gridGuides = document.createElement('div');
+gridGuides.className = 'review-grid';
+gridGuides.id = 'review-grid';
+gridGuides.setAttribute('aria-hidden', 'true');
+const gridToggle = document.createElement('button');
+gridToggle.type = 'button';
+gridToggle.className = 'grid-toggle';
+gridToggle.setAttribute('aria-controls', 'review-grid');
+function setGridVisible(visible) {
+  gridGuides.hidden = !visible;
+  gridToggle.setAttribute('aria-pressed', String(visible));
+  gridToggle.setAttribute('aria-label', visible ? 'Ocultar guias de grid' : 'Mostrar guias de grid');
+  gridToggle.textContent = visible ? 'Grid: ligado' : 'Grid';
+  try { localStorage.setItem('virtu-review-grid', String(visible)); } catch {}
+}
+let savedGrid = false;
+try { savedGrid = localStorage.getItem('virtu-review-grid') === 'true'; } catch {}
+setGridVisible(savedGrid);
+gridToggle.addEventListener('click', () => setGridVisible(gridGuides.hidden));
+document.body.append(gridGuides, gridToggle);

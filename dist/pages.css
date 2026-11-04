@@ -323,3 +323,16 @@ body:not(.internal) .journeys-guide{padding-top:32px;text-box-trim:trim-both;tex
 body:not(.internal) :is(.intro-copy h3,.about-copy h2){margin:0 0 32px}
 body:not(.internal) :is(.intro-copy p,.about-copy p){margin:0 0 24px}
 body:not(.internal) :is(.intro-copy p:last-of-type,.about-copy p:last-of-type){margin-bottom:0}
+
+/* Non-interactive review overlay; its tracks follow the real content grid. */
+.review-grid{
+ --review-columns:12;
+ position:fixed;inset:0 var(--gutter);z-index:60;pointer-events:none;
+ background-image:linear-gradient(to right,#d22f5540 calc(100% - var(--gap)),transparent 0);
+ background-size:calc((100% + var(--gap))/var(--review-columns)) 100%;
+ outline:1px solid #d22f5580;
+}
+.grid-toggle{position:fixed;left:16px;bottom:16px;z-index:70;min-height:44px;padding:10px 16px;border:1px solid var(--paper);border-radius:4px;background:var(--ink);color:var(--paper);box-shadow:0 2px 12px #0002}
+.grid-toggle[aria-pressed="true"]{background:var(--wine)}
+@media(max-width:700px){.review-grid{--review-columns:4}}
+@media print{.review-grid,.grid-toggle{display:none}}

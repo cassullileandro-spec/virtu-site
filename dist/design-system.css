@@ -66,3 +66,4 @@ h1,h2,h3,h4,p,blockquote{
  text-box-trim:trim-both;
  text-box-edge:cap alphabetic;
 }
+.grid-toggle{font-size:var(--type-button);font-weight:var(--weight-control);line-height:1.4}
