@@ -33,7 +33,7 @@ for key,sections in DATA.items():
  doc=soup(str(home));doc.title.string=NAMES[key]+' · Virtù';doc.body['class']=['internal','page-'+key]
  doc.select_one('meta[name="description"]')['content']=txt(soup(sections[0]['html']).select_one('p'))
  doc.select_one('link[rel="preload"][as="image"]')['href']=f'assets/curadoria-heroes-{key}.jpg'
- for s in doc.select('script[src="app.js"]'):s.insert_after(frag('<script defer src="pages.js"></script>'))
+ for s in doc.select('script[src^="app.js"]'):s.insert_after(frag('<script defer src="pages.js"></script>'))
  header=doc.select_one('.brand');header['href']='index.html'
  menu=doc.select_one('#menu');menu.select_one('a[href="#filme"]')['href']='index.html#filme'
  side=menu.select_one('.menu-side');side.insert(-1,frag('<a class="menu-careers" href="trabalhe.html">Trabalhe conosco</a>'))

@@ -22,19 +22,20 @@
     }
   }
   const near = (a, b) => Math.abs(a - b) < 1;
-  assert(near(bounds('.hero h1').top - bounds('.hero-kicker').bottom, 24), 'Hero kicker gap');
   assert(near(bounds('.hero-bottom').top - bounds('.hero h1').bottom, 32), 'Hero description gap');
   assert(bounds('.hero .button').bottom <= bounds('.hero').bottom - 48, 'Hero CTA clipped');
-  if (width <= 700) assert(near(bounds('.hero .button').top - bounds('.hero-bottom > p').bottom, 24), 'Hero CTA gap');
+  assert(near(bounds('.hero .button').top - bounds('.hero-bottom > p').bottom, 24), 'Hero CTA gap');
   for (const section of document.querySelectorAll('main > .section-pad')) {
     const css = getComputedStyle(section), expected = width <= 700 ? '64px' : width <= 1100 ? '80px' : '96px';
     assert(css.paddingTop === expected && css.paddingBottom === expected, 'Inconsistent section padding');
   }
-  for (const heading of document.querySelectorAll('.intro-copy h3,.about-copy h2,.journey h3')) {
+  for (const heading of document.querySelectorAll('.intro-copy h3,.about-copy h2')) {
     const style = getComputedStyle(heading);
     assert(style.lineHeight === style.fontSize, 'Inconsistent compact heading leading');
     assert(style.textBoxTrim === 'trim-both', 'Optical top alignment is not active in this browser');
   }
+  const bodyStyles = [...document.querySelectorAll('.intro-copy p,.about-copy p,.hero-bottom>p')].map(el => {const s=getComputedStyle(el);return s.fontSize+'/'+s.lineHeight;});
+  assert(new Set(bodyStyles).size === 1, 'Body copy uses competing size/leading roles');
   const aboutHeading = document.querySelector('.about-copy h2');
   assert(getComputedStyle(aboutHeading).lineHeight === getComputedStyle(aboutHeading.querySelector('span')).lineHeight, 'Different leading at the colored title break');
   for (const row of document.querySelectorAll('.journey summary')) {
@@ -46,7 +47,7 @@
     const heading = block.querySelector('h2,h3'), paragraphs = [...block.querySelectorAll('p')];
     assert(near(paragraphs[0].getBoundingClientRect().top - heading.getBoundingClientRect().bottom, 32), 'Heading/body gap mismatch');
     for (let i = 1; i < paragraphs.length; i++) assert(near(paragraphs[i].getBoundingClientRect().top - paragraphs[i-1].getBoundingClientRect().bottom, 24), 'Paragraph gap mismatch');
-    if (width <= 900) assert(near(block.querySelector('.button').getBoundingClientRect().top - paragraphs[paragraphs.length-1].getBoundingClientRect().bottom, 32), 'Body/CTA margins accumulated');
+    assert(near(block.querySelector('.button').getBoundingClientRect().top - paragraphs[paragraphs.length-1].getBoundingClientRect().bottom, 32), 'Body/CTA margins accumulated');
   }
   const reviewing = new URLSearchParams(location.search).get('grid') === '1';
   const root = document.querySelector('#grid-review')?.shadowRoot;

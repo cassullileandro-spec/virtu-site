@@ -98,7 +98,6 @@ if(window.gsap && window.ScrollTrigger && !gridReview) {
     if(!document.body.classList.contains('internal')) {
     const intro = gsap.timeline({defaults: {ease: 'power3.out'}});
     intro.from('.hero-image', {scale: 1.035, duration: 1.8})
-      .from('.hero-kicker', {autoAlpha: 0, y: 15, duration: .8}, .1)
       .from('.hero h1 .line > span', {yPercent: 110, duration: 1.15, stagger: .12}, .2)
       .from('.hero-bottom', {autoAlpha: 0, y: 20, duration: .8}, .65);
     // Different motion serves different content: editorial text, photo reveals and a film parallax.

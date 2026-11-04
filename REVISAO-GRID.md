@@ -99,3 +99,14 @@ Validação: 60 combinações de rota/viewport para hero, menu, links e imagens;
 - Critério óptico registrado na skill layout-grid-responsivo, sem tornar os valores desta implementação universais.
 
 - Na conferência publicada, a aba reutilizou CSS anterior. URLs de pages.css e design-system.css versionadas em todas as páginas e no gerador para invalidar esse cache.
+
+
+## Hierarquia e entrelinha — 04/11/2026
+
+Confirmado no Chrome a 1920 px: título da Veridiana crescia a 86,4 px e dois parágrafos alternavam 22/18 px, enquanto o container já estava limitado. Hero tinha rótulo, título, descrição e frase lateral com níveis concorrentes.
+
+- Escala compartilhada estável: títulos de seção 48/48, 40/40 ou 32/32; texto 18/28 e 16/24; itens 32/40 ou 24/30. Abertura da home 128, 80 ou 48 px.
+- Hero simplificada para título, descrição e botão; linhas com trim óptico nos wrappers, sem padding/margem negativos e sem recorte de descendentes.
+- Parágrafos da Veridiana unificados; 32 px entre título/texto e texto/CTA, 24 px entre parágrafos. Foto acompanha o conteúdo sem min-height de 520 px e botão sem margem automática.
+- Malha original preservada. Mantida a adição remota de botão Grid existente em 964fed8.
+- Home: 1920, 1440, 1100, 901, 900, 700, 390 e 360 px. 11 internas: 1440 e 390 px, sem overflow e com trim ativo. Prints e resultados em qa/hierarquia (não versionado).

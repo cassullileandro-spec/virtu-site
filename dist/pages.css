@@ -62,8 +62,8 @@ body{overflow-x:clip}.section-pad{padding-left:var(--gutter);padding-right:var(-
  .intro-copy p,.about-copy p,.editorial-content p,.talk-copy p{margin:0 0 24px;max-width:65ch;}
  .image-section .editorial-content p+p,.talk-copy p+p{margin-top:0}
  .intro-copy p:last-of-type,.about-copy p:last-of-type,.editorial-content p:last-of-type,.talk-copy p:last-of-type{margin-bottom:0}
- .intro-copy>.button,.about-copy>.button{margin-top:auto;transform:translateY(0)}
- .intro-copy p:last-of-type,.about-copy p:last-of-type{padding-bottom:32px}
+ .intro-copy>.button,.about-copy>.button{margin-top:32px;transform:translateY(0)}
+ .intro-copy p:last-of-type,.about-copy p:last-of-type{padding-bottom:0}
  .image-section .actions,.talk-copy .actions{margin-top:auto;padding-top:32px;width:100%}
  .page-veridiana #bloco-07 .editorial-photo,.page-virtu #bloco-03 .editorial-photo{aspect-ratio:auto}
  .process-grid{gap:var(--gap);margin-top:64px}
@@ -256,7 +256,7 @@ body:not(.internal){--home-section:96px;--home-flow:64px}
 .contact-bottom{margin-top:var(--home-flow);padding-top:32px;gap:var(--gap)}
 @media(min-width:701px){
  .intro-image{min-height:0}
- .about-photo{grid-column:1/6;min-height:520px}
+ .about-photo{grid-column:1/6;min-height:0}
  .about-copy{grid-column:6/13}
  .challenge-stage{grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);padding-top:32px;min-height:360px}
  .challenge-numeral{grid-column:1/5;font-size:clamp(160px,20vw,320px)}
@@ -301,16 +301,19 @@ body:not(.internal) .hero{
 body:not(.internal) .hero-title-block,
 body:not(.internal) .hero-bottom{position:static;width:100%}
 body:not(.internal) .hero-title-block{margin-bottom:32px}
-body:not(.internal) .hero-kicker{margin-bottom:24px}
+body:not(.internal) .hero-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+body:not(.internal) .hero-bottom>p{max-width:60ch}
+body:not(.internal) .hero-action,body:not(.internal) .hero-action .button{margin:0}
 body:not(.internal) .hero h1{line-height:1}
-body:not(.internal) .hero h1 .line:last-child{margin-bottom:0}
+body:not(.internal) .hero h1 .line{overflow:visible;padding:0;margin:0;text-box-trim:trim-both;text-box-edge:cap alphabetic}
+body:not(.internal) .hero h1 .line+.line{margin-top:16px}
 @media(max-width:700px){
  body:not(.internal) .hero{padding-top:120px;padding-bottom:80px}
- body:not(.internal) .hero-action{margin-top:24px}
+ body:not(.internal) .hero h1 .line+.line{margin-top:8px}
 }
 
 /* Align the visible capitals with adjacent photographs, not the font's leading. */
-body:not(.internal) :is(.intro-copy h3,.about-copy h2,.journey h3){
+body:not(.internal) :is(.intro-copy h3,.about-copy h2){
  line-height:1;
 }
 body:not(.internal) .about-copy h2 span{line-height:inherit}
@@ -336,3 +339,5 @@ body:not(.internal) :is(.intro-copy p:last-of-type,.about-copy p:last-of-type){m
 .grid-toggle[aria-pressed="true"]{background:var(--wine)}
 @media(max-width:700px){.review-grid{--review-columns:4}}
 @media print{.review-grid,.grid-toggle{display:none}}
+
+body:not(.internal) .about-copy p{color:var(--ink)}
