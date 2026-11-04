@@ -1,5 +1,22 @@
 # Revisão de grid e posicionamento — 03/11/2026
 
+## Aplicação visual na home — 04/11/2026
+
+Adicionado modo opt-in `?grid=1`: colunas, limites/padding horizontais, caixas medidas dos blocos e malha opcional de 8 px. Na malha, os rótulos também mostram tamanho da fonte e entrelinha computados. O painel permite saltar entre as dez seções e o rodapé, alternar camadas e recolher os controles mantendo o desenho. As animações de entrada ficam pausadas apenas nesse modo. Âmbar significa deslocamento a investigar, não erro estético automático.
+
+Correções aplicadas à home, preservando HTML, copy, imagens e hero aprovada:
+
+- Seções principais com padding 104/80/64 px conforme a faixa; faixas compactas com 64/56/48 px. Alturas continuam determinadas pelo conteúdo.
+- FAQ: título e lista passam a compartilhar topo; removida diferença de 35 px no desktop.
+- Desafios: texto passa a ocupar colunas 5–12 do grid, substituindo a divisão percentual independente.
+- Retrato: divisão 5/7 e altura mínima de 520 px no desktop, em vez de 6/6 e 640 px; pilha até 900 px.
+- Introdução: foto acompanha a altura do texto; removido espaçamento adicional dentro do título. No mobile, o span colorido adicionava 12 px a uma entrelinha de 43,2 px; essa margem agora é zero. Preservadas as duas frases editoriais e a escala tipográfica.
+- Contato: textos e ação alinhados ao grid no desktop e empilhados no mobile. Footer mobile com gutter igual ao da página.
+
+Verificação geométrica da home em 1920×1080, 1440×1000, 900×900, 700×900, 390×844 e 360×640: conteúdo dentro da viewport; pares alinhados no desktop; desenho do retrato coincide com sua caixa real; margem adicional do título zerada. O FAQ empilha no mobile, portanto seus topos não precisam coincidir. Teste preservado em `test_grid_layout.js`; resultados locais em `qa/layout-results.json`.
+
+Inspeção visual das seções no desktop e dos principais ajustes no mobile. Conferidos abertura do FAQ, controle de desafios, malha, recolhimento e modo normal sem overlay. Esta aplicação se limita à home; não constitui nova auditoria das onze páginas internas. Sem teste em aparelhos físicos ou Safari/Firefox.
+
 Revisão focada nas 12 páginas da Virtù: alinhamento entre fotografia e texto, continuidade das colunas e espaçamento. A identidade vinho/creme, a copy aprovada e as funções existentes foram preservadas.
 
 ## Fundamentação

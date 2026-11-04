@@ -26,6 +26,14 @@ Menu em diálogo nativo; jornadas e FAQ em `details`; desafios por controles; v�
 
 A prévia é um Site separado, inicialmente privado. A produção existente não foi modificada. Manifesto: `.openai/hosting.json`.
 
+## Revisão visual de grid
+
+Na home, acrescente `?grid=1` à URL. O painel desenha colunas, limites/padding das seções, caixas dos blocos e, opcionalmente, uma malha de 8 px. Mostra diferenças entre topos e deslocamentos laterais. Âmbar indica uma diferença a investigar, não um erro automático. Recolher mantém o desenho; sair da revisão retorna ao site normal.
+
+As animações de entrada são desativadas somente nessa URL para medir a composição final. O script `dist/grid-review.js` só é carregado nesse modo. A home mantém 12 colunas acima de 700 px e uma referência de quatro colunas abaixo; blocos lado a lado empilham até 900 px.
+
+`test_grid_layout.js` contém uma função de verificação DOM, para executar no contexto da home renderizada. Confere overflow de conteúdo, alinhamento do FAQ, pares imagem/texto, margem adicional dentro do título, ativação da revisão e correspondência entre retângulo desenhado e caixa real. Não substitui inspeção visual.
+
 ## Pendências editoriais
 
 As legendas usam transcrição automática já existente no acervo e precisam de revisão audiovisual. Um trecho de baixa confiança foi marcado como incerto. As fotografias vêm do projeto; a hero aprovada tem cenário trabalhado por IA conforme manifesto original.
