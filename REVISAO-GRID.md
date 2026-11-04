@@ -75,3 +75,13 @@ Validação desta atualização: 451 blocos de conteúdo preservados em compara�
 Correções: títulos e cards no mesmo eixo; ação de Veridiana fora da coluna estreita; linhas compartilhadas nos pilares; reflow intermediário em tablet; distância entre imagem e texto reduzida de 146 para 24 px em Full HD, ampliando fotos de 586 para 708 px sem distorção; navegação sobre faixa própria e remoção visual do contato flutuante; separação de 24 px entre título e parágrafo final de Contato no celular.
 
 Validação: 60 combinações de rota/viewport para hero, menu, links e imagens; 88 combinações para overflow interno; 15 alinhamentos superiores e nove inferiores com diferença zero. Copy preservada. Permanecem recomendações editoriais registradas no relatório. Não houve envio real de formulário, teste em aparelho físico, avaliação integral de contraste/leitor de tela ou validação em Safari/Firefox.
+
+
+## Hero agrupada e padding uniforme — 04/11/2026
+
+- Hero em fluxo, com altura mínima de uma tela e crescimento pelo conteúdo; retirado o posicionamento independente entre título e descrição.
+- Pequeno título → H1: 24 px; H1 → descrição: 32 px; descrição → botão no mobile: 24 px. Desktop preserva as colunas da descrição e ação.
+- Entrelinha do H1: 1; corrigida a margem negativa da última linha para o limite do bloco incluir a área de proteção dos glifos.
+- Todas as seções de conteúdo da home com `.section-pad`: 96 px em desktop, 80 px entre 701 e 1100 px, 64 px até 700 px, acima e abaixo. Hero, filme em tela cheia e rodapé mantêm composições próprias.
+- Verificadas larguras 1440, 900, 700, 470, 390, 360 e 844 px (paisagem, altura 390): sem overflow horizontal, distâncias e padding conferidos por asserções. Modo normal conferido em 390 e 1440 px; contato abre e fecha. Não houve envio de mensagem.
+- Evidências locais em qa/explicacao/hero-ajustada-*.jpg. Páginas internas não foram alteradas; sem teste em dispositivos físicos.

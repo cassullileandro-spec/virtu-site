@@ -21,6 +21,15 @@
       assert(Math.abs(b.left - a.right - 24) < 1, `${photo}: incorrect gutter`);
     }
   }
+  const near = (a, b) => Math.abs(a - b) < 1;
+  assert(near(bounds('.hero h1').top - bounds('.hero-kicker').bottom, 24), 'Hero kicker gap');
+  assert(near(bounds('.hero-bottom').top - bounds('.hero h1').bottom, 32), 'Hero description gap');
+  assert(bounds('.hero .button').bottom <= bounds('.hero').bottom - 48, 'Hero CTA clipped');
+  if (width <= 700) assert(near(bounds('.hero .button').top - bounds('.hero-bottom > p').bottom, 24), 'Hero CTA gap');
+  for (const section of document.querySelectorAll('main > .section-pad')) {
+    const css = getComputedStyle(section), expected = width <= 700 ? '64px' : width <= 1100 ? '80px' : '96px';
+    assert(css.paddingTop === expected && css.paddingBottom === expected, 'Inconsistent section padding');
+  }
   const reviewing = new URLSearchParams(location.search).get('grid') === '1';
   const root = document.querySelector('#grid-review')?.shadowRoot;
   assert(Boolean(root) === reviewing, 'Review layer activation mismatch');

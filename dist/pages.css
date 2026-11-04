@@ -242,10 +242,10 @@ main :is(p,blockquote){text-wrap:pretty}
 
 .internal .solution-card h3{max-width:none}
 
-/* Home: one spacing system, with compact bands and content-led image heights. */
-body:not(.internal){--home-section:104px;--home-band:64px;--home-flow:64px}
+/* Home: shared section padding and content-led image heights. */
+body:not(.internal){--home-section:96px;--home-flow:64px}
 .intro,.journeys,.about,.faq-section{padding-top:var(--home-section);padding-bottom:var(--home-section)}
-.trust,.testimonial,.challenges,.contact{padding-top:var(--home-band);padding-bottom:var(--home-band)}
+.trust,.testimonial,.challenges,.contact{padding-top:var(--home-section);padding-bottom:var(--home-section)}
 .intro-lower,.journeys-layout{margin-top:var(--home-flow)}
 .statement span{margin-top:0}
 .logo-strip{margin-top:32px;gap:var(--gap)}
@@ -268,7 +268,7 @@ body:not(.internal){--home-section:104px;--home-band:64px;--home-flow:64px}
  .contact-bottom>.button{grid-column:9/13}
 }
 @media(min-width:701px) and (max-width:1100px){
- body:not(.internal){--home-section:80px;--home-band:56px;--home-flow:48px}
+ body:not(.internal){--home-section:80px;--home-flow:48px}
  .contact-bottom>.button{grid-column:1/-1;justify-self:start}
  .contact-bottom p{grid-column:span 6}
 }
@@ -282,7 +282,7 @@ body:not(.internal){--home-section:104px;--home-band:64px;--home-flow:64px}
  .intro-copy p:last-of-type,.about-copy p:last-of-type{padding-bottom:0}
 }
 @media(max-width:700px){
- body:not(.internal){--home-section:64px;--home-band:48px;--home-flow:32px}
+ body:not(.internal){--home-section:64px;--home-flow:32px}
  .contact-bottom{display:flex;gap:24px}
  .contact-bottom>div{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
  .contact-bottom p{margin:0}
@@ -290,4 +290,21 @@ body:not(.internal){--home-section:104px;--home-band:64px;--home-flow:64px}
  .quote-layout{margin-top:24px}
  .quote-credit{margin-top:24px}
  .faq-list{margin-top:32px}
+}
+
+/* Keep the opening message in one flow so viewport height cannot separate it. */
+body:not(.internal) .hero{
+ display:flex;flex-direction:column;justify-content:center;
+ height:auto;min-height:100svh;max-height:none;
+ padding:128px var(--gutter) 96px;
+}
+body:not(.internal) .hero-title-block,
+body:not(.internal) .hero-bottom{position:static;width:100%}
+body:not(.internal) .hero-title-block{margin-bottom:32px}
+body:not(.internal) .hero-kicker{margin-bottom:24px}
+body:not(.internal) .hero h1{line-height:1}
+body:not(.internal) .hero h1 .line:last-child{margin-bottom:0}
+@media(max-width:700px){
+ body:not(.internal) .hero{padding-top:120px;padding-bottom:80px}
+ body:not(.internal) .hero-action{margin-top:24px}
 }
