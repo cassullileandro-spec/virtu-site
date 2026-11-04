@@ -308,3 +308,18 @@ body:not(.internal) .hero h1 .line:last-child{margin-bottom:0}
  body:not(.internal) .hero{padding-top:120px;padding-bottom:80px}
  body:not(.internal) .hero-action{margin-top:24px}
 }
+
+/* Align the visible capitals with adjacent photographs, not the font's leading. */
+body:not(.internal) :is(.intro-copy h3,.about-copy h2,.journey h3){
+ line-height:1;
+}
+body:not(.internal) .about-copy h2 span{line-height:inherit}
+body:not(.internal) .journey summary{align-items:start;padding-block:32px}
+body:not(.internal) .journey-number,
+body:not(.internal) .journey summary>.plus{align-self:center}
+body:not(.internal) .journeys-guide{padding-top:32px;text-box-trim:trim-both;text-box-edge:cap alphabetic}
+
+/* One owner for each gap avoids adding paragraph margins to button spacing. */
+body:not(.internal) :is(.intro-copy h3,.about-copy h2){margin:0 0 32px}
+body:not(.internal) :is(.intro-copy p,.about-copy p){margin:0 0 24px}
+body:not(.internal) :is(.intro-copy p:last-of-type,.about-copy p:last-of-type){margin-bottom:0}

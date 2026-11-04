@@ -60,3 +60,9 @@ body:not(.internal) .hero h1{font-size:var(--type-brand)}
 }
 @media(max-width:700px){.journey h3{font-size:var(--type-subtitle)}}
 @media(max-height:700px) and (max-width:700px){.hero-title-block{top:15%}}
+
+/* Figma's cap-height-to-baseline box: align visible text, not font leading. */
+h1,h2,h3,h4,p,blockquote{
+ text-box-trim:trim-both;
+ text-box-edge:cap alphabetic;
+}
