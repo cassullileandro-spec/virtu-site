@@ -22,6 +22,13 @@
     }
   }
   const near = (a, b) => Math.abs(a - b) < 1;
+  if (width > 700 && width <= 1100) {
+    assert(near(bounds('.journeys-list').left, bounds('#journeys-title').left), 'Hidden guide leaves empty columns before journeys');
+  }
+  if (width <= 700) {
+    const footer = document.querySelector('.footer-top');
+    assert(near(bounds('.footer-top>div').top - bounds('.footer-top>p').bottom, Number.parseFloat(getComputedStyle(footer).rowGap)), 'Footer gap includes a leftover paragraph margin');
+  }
   assert(near(bounds('.hero-bottom').top - bounds('.hero h1').bottom, 32), 'Hero description gap');
   assert(bounds('.hero .button').bottom <= bounds('.hero').bottom - 48, 'Hero CTA clipped');
   assert(near(bounds('.hero .button').top - bounds('.hero-bottom > p').bottom, 24), 'Hero CTA gap');
@@ -63,6 +70,23 @@
     const svg = root.querySelector('svg');
     assert(svg.children.length > 0, 'Grid is empty');
     assert(getComputedStyle(svg).pointerEvents === 'none', 'Drawing blocks page interactions');
+    const reference = document.querySelector('.section-pad');
+    const margin = Number.parseFloat(getComputedStyle(reference).paddingLeft);
+    const gap = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap'));
+    const count = width <= 700 ? 4 : 12;
+    const columns = [...svg.querySelectorAll('rect')].filter(r => r.getAttribute('fill') === '#f43f5e0b');
+    if (root.querySelector('#columns').checked) {
+      assert(columns.length === count, 'Wrong number of guide columns');
+      for (let i = 0; i < count; i++) assert(near(Number(columns[i].getAttribute('x')), margin + i * ((width - 2 * margin + gap) / count)), 'Column guide differs from layout tracks');
+    }
+    const strong = [...svg.querySelectorAll('line')].filter(l => l.getAttribute('stroke') === '#0284c799');
+    for (const l of strong) {
+      const y = Number(l.getAttribute('y1'));
+      assert([...document.querySelectorAll('main>section,.site-footer')].some(section => {
+        const box = section.getBoundingClientRect(), origin = box.top + Number.parseFloat(getComputedStyle(section).paddingTop);
+        return y >= origin - .1 && y <= box.bottom && near((y-origin)/32, Math.round((y-origin)/32));
+      }), 'Strong guide follows an element instead of the fixed 32px reference');
+    }
     const photo = bounds('.about-photo');
     if (photo.top >= 0 && photo.top < innerHeight) {
       const drawn = [...svg.querySelectorAll('rect')].some(rect =>
