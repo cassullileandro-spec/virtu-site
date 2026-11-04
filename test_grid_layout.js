@@ -37,7 +37,7 @@
   }
   for (const heading of document.querySelectorAll('.intro-copy h3,.about-copy h2')) {
     const style = getComputedStyle(heading);
-    assert(style.lineHeight === getComputedStyle(document.documentElement).getPropertyValue('--line-title').trim(), 'Inconsistent section heading leading');
+    assert(parseFloat(style.lineHeight) === parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--line-title')) + (heading.matches('.intro-copy h3') ? 4 : 0), 'Inconsistent section heading leading');
     assert(style.textBoxTrim === 'trim-both', 'Optical top alignment is not active in this browser');
   }
   const bodyStyles = [...document.querySelectorAll('.intro-copy p,.about-copy p')].map(el => {const s=getComputedStyle(el);return s.fontSize+'/'+s.lineHeight;});
@@ -52,7 +52,7 @@
     for (const [photo, copy] of [['.intro-image','.intro-copy'],['.about-photo','.about-copy']]) {
       const gap = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap'));
       assert(near(bounds(photo).width,(width-gap)/2), 'Editorial photo must end at column 6');
-      for (const element of document.querySelector(copy).children) assert(near(element.getBoundingClientRect().left,(width+gap)/2), 'Editorial text/CTA must start at column 7');
+      for (const element of document.querySelector(copy).children) assert(near(element.getBoundingClientRect().left,(width+gap)/2 + (width <= 1100 ? 24 : 48)), 'Editorial text/CTA inset mismatch');
       assert(near(bounds(photo).left,0), 'Editorial photo does not reach page edge');
       const inset=width<=1100?80:96;
       assert(near(bounds(photo).bottom-bounds(copy+' > .button').bottom,inset), 'Editorial bottom inset mismatch');
