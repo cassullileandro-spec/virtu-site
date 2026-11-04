@@ -97,9 +97,9 @@ if(window.gsap && window.ScrollTrigger && !gridReview) {
   mm.add('(prefers-reduced-motion: no-preference)', () => {
     if(!document.body.classList.contains('internal')) {
     const intro = gsap.timeline({defaults: {ease: 'power3.out'}});
-    intro.from('.hero-image', {scale: 1.035, duration: 1.8})
-      .from('.hero h1 .line > span', {yPercent: 110, duration: 1.15, stagger: .12}, .2)
-      .from('.hero-bottom', {autoAlpha: 0, y: 20, duration: .8}, .65);
+    intro.from('.cover-portrait', {scale: 1.035, duration: 1.8})
+      .from('.cover-heading h1 > *', {yPercent: 110, duration: 1.15, stagger: .12}, .2)
+      .from('.cover-copy', {autoAlpha: 0, y: 20, duration: .8}, .65);
     // Different motion serves different content: editorial text, photo reveals and a film parallax.
     gsap.from('.statement', {y: 35, autoAlpha: 0, duration: 1.05, scrollTrigger: {trigger: '.statement', start: 'top 92%', once: true}});
     $$('.reveal-image').forEach(frame => gsap.from($('img', frame), {scale: 1.09, duration: 1.5, ease: 'power2.out', scrollTrigger: {trigger: frame, start: 'top 85%', once: true}}));
