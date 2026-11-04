@@ -33,7 +33,7 @@ for key,sections in DATA.items():
  doc=soup(str(home));doc.title.string=NAMES[key]+' · Virtù';doc.body['class']=['internal','page-'+key]
  doc.select_one('meta[name="description"]')['content']=txt(soup(sections[0]['html']).select_one('p'))
  doc.select_one('link[rel="preload"][as="image"]')['href']=f'assets/curadoria-heroes-{key}.jpg'
- for s in doc.select('script[src^="app.js"]'):s.insert_after(frag('<script defer src="pages.js"></script>'))
+ for s in doc.select('script[src^="app.js"]'):s.insert_after(frag('<script defer src="pages.js?v=20261104-all-pages"></script>'))
  header=doc.select_one('.brand');header['href']='index.html'
  menu=doc.select_one('#menu');menu.select_one('a[href="#filme"]')['href']='index.html#filme'
  side=menu.select_one('.menu-side');side.insert(-1,frag('<a class="menu-careers" href="trabalhe.html">Trabalhe conosco</a>'))
@@ -148,6 +148,18 @@ for key,sections in DATA.items():
    intro.insert_after(copy)
   if 'index-section' in sec['class']:
    sec.select_one('.topic')['open']=''
+  # Text and its action stay in one flow instead of inheriting the adjacent title's height.
+  if 'editorial-section' in sec['class'] and wrap.select(':scope > p'):
+   copy=frag('<div class="editorial-copy"></div>')
+   direct=wrap.select(':scope > p, :scope > .actions')
+   direct[0].insert_before(copy)
+   for child in direct:copy.append(child.extract())
+  if 'closing-section' in sec['class']:
+   inner=sec.select_one('.cta-inner')
+   paragraphs=inner.select(':scope > p')
+   if paragraphs:
+    copy=frag('<div class="closing-copy"></div>');paragraphs[0].insert_before(copy)
+    for paragraph in paragraphs:copy.append(paragraph.extract())
   assert sec.get_text(' ',strip=True).split()==approved_words, f'Copy changed in {key}/{sec["id"]}'
   # Keep context logos from the approved page as readable names, including image-only logos.
   logos=sec.select_one('.logos')

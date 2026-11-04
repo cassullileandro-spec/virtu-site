@@ -25,7 +25,7 @@
   const select = root.querySelector('select');
   const output = root.querySelector('output');
   const ns = 'http://www.w3.org/2000/svg';
-  const targets = ':scope > h2, .hero-title-block, .hero-bottom > p, .hero-action, .trust-heading, .logo-strip, .intro-image, .intro-copy > *, .film-top, .film-bottom, .journeys-list, .journey[open] .journey-content, .challenge-slides, .about-photo, .about-copy > *, .quote-layout blockquote, .faq-section .display, .faq-list, .contact-bottom, .footer-top > p, .footer-top > div, .footer-bottom, .page-wrap > *, .content-grid > *';
+  const targets = ':scope > h2, .hero-title-block, .hero-bottom > p, .hero-action, .trust-heading, .logo-strip, .intro-image, .intro-copy > *, .film-top, .film-bottom, .journeys-list, .journey[open] .journey-content, .challenge-slides, .about-photo, .about-copy > *, .quote-layout blockquote, .faq-section .display, .faq-list, .contact-bottom, .footer-top > p, .footer-top > div, .footer-bottom, .page-wrap > *, .content-grid > *, .internal-hero-content > *, .internal-hero-bottom .actions, .editorial-content :is(h2,h3,p,.actions), .talk-copy > *, .pillar-grid article > *, .process-grid article > *, .solution-card > *, .closing-copy, .cta-inner > .actions';
   let expanded = true;
   let queued = false;
   sections.forEach((section, index) => {

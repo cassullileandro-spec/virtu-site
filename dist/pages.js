@@ -32,7 +32,7 @@ if (inquiry) {
     window.open('https://wa.me/5541999693214?text=' + encodeURIComponent(lines.join('\n\n')), '_blank', 'noopener,noreferrer');
   });
 }
-if (window.gsap && window.ScrollTrigger) {
+if (window.gsap && window.ScrollTrigger && !gridReview) {
   const motion = gsap.matchMedia();
   motion.add('(prefers-reduced-motion: no-preference)', () => {
     gsap.from('.internal-hero h1', {y:30, autoAlpha:0, duration:1.1, ease:'power3.out'});
