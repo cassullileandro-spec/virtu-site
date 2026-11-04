@@ -24,7 +24,7 @@ A malha mantém a origem no início da área interna da seção e incrementos fi
 
 ## Exceções preservadas
 
-- Fotos editoriais ocupam metade da viewport e chegam à borda. O texto tem recuo interno de 64 px (48 px entre 901 e 1100), com padding vertical de 96/80 px. Em 1920 px, o texto começa em x=1024, intencionalmente diferente da coluna global em x=972. Não é uma composição com topo visível do título igual ao topo da foto.
+- Fotos editoriais chegam à borda esquerda. Correção posterior à revisão inicial: o recuo horizontal de 64/48 px foi retirado, pois impedia o texto de começar no grid global. A foto termina no fim da coluna 6, seguida do gutter existente de 24 px; título, parágrafos e botão começam na coluna 7. Em 1920 px: foto de 948 px, texto em x=972 (antes x=1024). Padding vertical de 96/80 px preservado; topo da foto e topo visível do título continuam separados por esse padding editorial.
 - Miniaturas e títulos das jornadas compartilham topo óptico; índice e controle ficam centralizados. O texto pertence ao grid interno da linha, após índice, miniatura e gaps. As miniaturas mantêm tamanho/proporção; as linhas não foram esticadas para múltiplos de oito.
 - Textos independentes conservam alturas naturais. Não foram adicionados espaços vazios, quebras artificiais, cortes, alterações de fontes ou redução de entrelinha.
 - `text-box-trim: trim-both` e `text-box-edge: cap alphabetic` existentes foram preservados. A caixa não equivale ao contorno dos acentos/descendentes; Range/contorno não foi apresentado como baseline medida.
@@ -40,3 +40,9 @@ A malha mantém a origem no início da área interna da seção e incrementos fi
 - Conteúdo textual e fontes/alt das imagens das 12 páginas comparados ao backup: idênticos. Teste de normalização tipográfica, sintaxe JavaScript e `git diff --check` aprovados.
 
 Não foram testados Safari/Firefox nem aparelhos físicos. As páginas internas receberam verificação geométrica compartilhada, não revisão visual integral dobra a dobra. Não houve mudanças de permissões de acesso.
+
+## Correção das duas composições editoriais após conferência do print completo
+
+O recuo anteriormente classificado como exceção não atendia ao pedido de início na coluna. Corrigida a origem em `.intro-lower/.about-grid` e `.intro-copy/.about-copy`: gutter compartilhado, sem offset individual nos textos. Foto com largura `(viewport - gutter)/2`; texto começa em `(viewport + gutter)/2`, exatamente na coluna 7 do container simétrico. A foto diminui 12 px em largura no desktop; a composição em pilha até 900 px permanece igual. As alturas continuam naturais e podem mudar com o reflow do texto.
+
+Backup desta etapa: tag `editorial-columns-20261104-before`, commit `e8563e72415d769d6b2d4c31833be25002997867`, arquivo `qa/alinhamentos-20261104/antes-coluna-editorial.tar.gz`. Print completo anterior em `qa/alinhamentos-20261104/depois/pagina-completa-colunas.jpg` (overlay fixo aparece somente na área visível no momento da captura); detalhes das duas seções registrados separadamente. Teste atualizado exige início na coluna 7 para cada título, parágrafo e botão, e gutter de 24 px. Passou em 390, 900, 901, 1100, 1101, 1440 e 1920 px. Nenhuma alteração de fontes, cores, conteúdo ou arquivos de imagem.

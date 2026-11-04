@@ -18,7 +18,7 @@
     for (const [photo, copy] of [['.intro-image', '.intro-copy'], ['.about-photo', '.about-copy']]) {
       const a = bounds(photo), b = bounds(copy);
       assert(Math.abs(a.top - b.top) < 1, `${photo}: top misalignment`);
-      assert(Math.abs(b.left - a.right) < 1, `${photo}: incorrect gutter`);
+      assert(Math.abs(b.left - a.right - Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap'))) < 1, `${photo}: incorrect gutter`);
     }
   }
   const near = (a, b) => Math.abs(a - b) < 1;
@@ -51,7 +51,9 @@
   }
   if (width > 900) {
     for (const [photo, copy] of [['.intro-image','.intro-copy'],['.about-photo','.about-copy']]) {
-      assert(near(bounds(photo).width,width/2), 'Editorial photo must fill half the viewport');
+      const gap = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap'));
+      assert(near(bounds(photo).width,(width-gap)/2), 'Editorial photo must end at column 6');
+      for (const element of document.querySelector(copy).children) assert(near(element.getBoundingClientRect().left,(width+gap)/2), 'Editorial text/CTA must start at column 7');
       assert(near(bounds(photo).left,0), 'Editorial photo does not reach page edge');
       const inset=width<=1100?80:96;
       assert(near(bounds(photo).bottom-bounds(copy+' > .button').bottom,inset), 'Editorial bottom inset mismatch');
