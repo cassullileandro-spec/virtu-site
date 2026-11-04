@@ -2,6 +2,12 @@
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+const gridReview = new URLSearchParams(location.search).get('grid') === '1';
+if (gridReview) {
+  const script = document.createElement('script');
+  script.src = 'grid-review.js';
+  document.head.append(script);
+}
 const menu = $('#menu');
 const menuToggle = $('.menu-toggle');
 const contactDialog = $('#contact-dialog');
@@ -85,7 +91,7 @@ let scrollQueued = false;
 addEventListener('scroll', () => {if(!scrollQueued){scrollQueued=true;requestAnimationFrame(()=>{refreshChrome();scrollQueued=false;});}}, {passive:true});
 addEventListener('resize', refreshChrome);
 refreshChrome();
-if(window.gsap && window.ScrollTrigger) {
+if(window.gsap && window.ScrollTrigger && !gridReview) {
   gsap.registerPlugin(ScrollTrigger);
   const mm = gsap.matchMedia();
   mm.add('(prefers-reduced-motion: no-preference)', () => {

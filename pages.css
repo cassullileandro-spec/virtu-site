@@ -241,3 +241,53 @@ main :is(p,blockquote){text-wrap:pretty}
 .internal .editorial-content h3{margin:32px 0 16px}
 
 .internal .solution-card h3{max-width:none}
+
+/* Home: one spacing system, with compact bands and content-led image heights. */
+body:not(.internal){--home-section:104px;--home-band:64px;--home-flow:64px}
+.intro,.journeys,.about,.faq-section{padding-top:var(--home-section);padding-bottom:var(--home-section)}
+.trust,.testimonial,.challenges,.contact{padding-top:var(--home-band);padding-bottom:var(--home-band)}
+.intro-lower,.journeys-layout{margin-top:var(--home-flow)}
+.statement span{margin-top:0}
+.logo-strip{margin-top:32px;gap:var(--gap)}
+.faq-section .display{margin-top:0}
+.testimonial .section-top{margin-bottom:0}
+.quote-layout{margin-top:32px}
+.quote-credit{margin-top:32px}
+.contact-bottom{margin-top:var(--home-flow);padding-top:32px;gap:var(--gap)}
+@media(min-width:701px){
+ .intro-image{min-height:0}
+ .about-photo{grid-column:1/6;min-height:520px}
+ .about-copy{grid-column:6/13}
+ .challenge-stage{grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);padding-top:32px;min-height:360px}
+ .challenge-numeral{grid-column:1/5;font-size:clamp(160px,20vw,320px)}
+ .challenge-slides{grid-column:5/13}
+ .challenge-bottom{padding-top:24px}
+ .contact-bottom{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:end}
+ .contact-bottom>div{display:contents}
+ .contact-bottom p{grid-column:span 4;max-width:none}
+ .contact-bottom>.button{grid-column:9/13}
+}
+@media(min-width:701px) and (max-width:1100px){
+ body:not(.internal){--home-section:80px;--home-band:56px;--home-flow:48px}
+ .contact-bottom>.button{grid-column:1/-1;justify-self:start}
+ .contact-bottom p{grid-column:span 6}
+}
+@media(max-width:900px){
+ .intro-lower,.about-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:32px}
+ .intro-image,.about-photo{grid-column:1;position:relative;min-height:0;height:auto;max-height:520px;aspect-ratio:4/3;margin:0}
+ .about-photo{aspect-ratio:4/5}
+ .intro-image img,.about-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+ .intro-copy,.about-copy{grid-column:1;margin:0;max-width:none}
+ .intro-copy>.button,.about-copy>.button{margin-top:32px}
+ .intro-copy p:last-of-type,.about-copy p:last-of-type{padding-bottom:0}
+}
+@media(max-width:700px){
+ body:not(.internal){--home-section:64px;--home-band:48px;--home-flow:32px}
+ .contact-bottom{display:flex;gap:24px}
+ .contact-bottom>div{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+ .contact-bottom p{margin:0}
+ body:not(.internal) .footer-top{column-gap:var(--gap)}
+ .quote-layout{margin-top:24px}
+ .quote-credit{margin-top:24px}
+ .faq-list{margin-top:32px}
+}
