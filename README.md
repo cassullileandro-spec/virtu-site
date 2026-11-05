@@ -1,6 +1,6 @@
 # Virtù — prévia editorial
 
-[Abrir o site público](https://cassullileandro-spec.github.io/virtu-site/) · [Código no GitHub](https://github.com/cassullileandro-spec/virtu-site)
+[Abrir o site público](https://virtu-editorial-previa.cassullileandro.chatgpt.site/) · [Código no GitHub](https://github.com/cassullileandro-spec/virtu-site)
 
 Home responsiva em HTML/CSS/JavaScript, com GSAP 3.15.0 e ScrollTrigger locais. Sem backend, cookies de rastreamento ou formulário com envio simulado.
 
@@ -14,7 +14,7 @@ Abra http://localhost:4173 no navegador. As 12 páginas prontas estão em `dist/
 
 ## Publicar no GitHub Pages
 
-O site público usa a pasta `dist/`, publicada na branch `gh-pages`. Depois de salvar e commitar alterações na `main`, publique a nova versão:
+O GitHub Pages está configurado para a branch `gh-pages`, derivada de `dist/`. A primeira tentativa falhou por timeout no GitHub; o link público funcional é o Sites acima. Para uma nova publicação após salvar e commitar alterações na `main`:
 
     git push github main
     git subtree push --prefix=dist github gh-pages
