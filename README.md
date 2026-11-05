@@ -1,5 +1,7 @@
 # Virtù — prévia editorial
 
+[Abrir o site publicado](https://virtu-editorial-previa.cassullileandro.chatgpt.site/) · [Código no GitHub](https://github.com/cassullileandro-spec/virtu-site)
+
 Home responsiva em HTML/CSS/JavaScript, com GSAP 3.15.0 e ScrollTrigger locais. Sem backend, cookies de rastreamento ou formulário com envio simulado.
 
 ## Rodar
@@ -7,6 +9,8 @@ Home responsiva em HTML/CSS/JavaScript, com GSAP 3.15.0 e ScrollTrigger locais. 
 Na raiz deste diretório:
 
     python3 -m http.server 4173 --directory dist
+
+Abra http://localhost:4173 no navegador. As 12 páginas prontas estão em `dist/`; não é necessário compilar para visualizar.
 
 ## Editar
 
