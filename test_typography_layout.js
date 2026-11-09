@@ -7,7 +7,7 @@
  const issues = [], used = new Set();
  for (const e of elements) {
   const r = e.getBoundingClientRect(), s = getComputedStyle(e);
-  if (!r.width || !r.height) continue;
+  if (!r.width || !r.height || e.closest('.sr-only') || s.visibility === 'hidden') continue;
   if (r.left < -1 || r.right > width + 1) issues.push('Overflow: ' + e.textContent.slice(0,50));
   if (!sizes.has(s.fontSize)) issues.push('Size outside five roles: '+s.fontSize+' '+e.textContent.slice(0,40));
   const heading = e.matches('h1,h2,h3,h4,blockquote,.menu-main a') && !e.matches('.faq h3');

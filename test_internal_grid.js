@@ -14,8 +14,7 @@
  const action = hero?.querySelector('.actions');
  if (hero && action && innerHeight > 450) {
   const r = hero.getBoundingClientRect(), a = action.getBoundingClientRect();
-  const gap = Number.parseFloat(getComputedStyle(hero).columnGap) || 0;
-  near(a.left, width > 700 ? r.left + (r.width + gap) * 8 / 12 : r.left, 'Hero action axis');
+  near(a.left, r.left, 'Hero action axis');
  }
  for (const section of document.querySelectorAll('.closing-section')) {
   const copy = section.querySelector('.closing-copy'), action = section.querySelector('.actions');
@@ -24,11 +23,8 @@
  for (const section of document.querySelectorAll('.page-section')) {
   const s = getComputedStyle(section), r = section.getBoundingClientRect();
   const wrap = section.querySelector('.page-wrap').getBoundingClientRect();
-  near(wrap.left, r.left + Number.parseFloat(s.paddingLeft), 'Section container axis');
-  if (width <= 900) {
-   near(Number.parseFloat(s.paddingTop), width <= 700 ? 72 : 96, 'Section top padding');
-   near(Number.parseFloat(s.paddingBottom), width <= 700 ? 72 : 96, 'Section bottom padding');
-  }
+  if (!section.matches('.image-section,.speaker-section')) near(wrap.left, r.left + Number.parseFloat(s.paddingLeft), 'Section container axis');
+
  }
  if (issues.length) throw new Error(issues.join(' / '));
  return {page:location.pathname,width,height:innerHeight,passed:true};

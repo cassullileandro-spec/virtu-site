@@ -1,0 +1,149 @@
+/* The home language continues through the institutional and product pages. */
+.internal{--section-space:96px;--reading:680px}
+.internal .site-header .brand img{filter:brightness(0) invert(.15)}
+.internal .menu-toggle:not(.scrolled){color:var(--ink);border-color:#26262666;background:#fafafa44}
+.internal .editorial-hero{background:#e8e8e8;color:var(--ink);min-height:800px;overflow:hidden}
+.internal .editorial-hero .internal-hero-content{width:54%;min-height:800px;padding:160px 64px 96px var(--gutter);justify-content:center;gap:32px}
+.internal .internal-hero h1{font-size:var(--type-title);line-height:var(--line-title);max-width:760px;text-wrap:balance}
+.internal .internal-hero-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:32px}
+.internal .internal-hero .hero-description{max-width:600px}
+.internal .internal-hero .hero-description p{margin:0 0 20px}
+.internal .internal-hero .hero-description p:last-child{margin-bottom:0}
+.internal .internal-hero .actions{margin:0;justify-self:auto}
+.internal .internal-hero .button{background:var(--wine);color:var(--paper);border-color:transparent}
+.internal .hero-portrait{position:absolute;left:54%;right:var(--gutter);top:128px;bottom:0;margin:0;overflow:hidden;border-radius:4px 4px 0 0}
+.internal .hero-portrait .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;filter:var(--photo-tone)}
+.page-oficina .hero-portrait .hero-image{object-position:43% center}
+.page-empresas .hero-portrait .hero-image{object-position:60% center}
+.internal .page-section{padding-block:var(--section-space)}
+.internal .section-title{max-width:900px;text-wrap:balance}
+.internal .hero-deck{background:var(--paper);border-bottom:1px solid var(--line);padding-block:48px}
+.internal .hero-deck .content-grid{align-items:start}
+.internal .hero-deck p{margin:0 0 20px}
+.internal .image-section{padding:0}
+.internal .image-section .page-wrap{max-width:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;align-items:stretch}
+.internal .image-section .editorial-photo{width:100%;max-width:100%;grid-column:1;grid-row:1;margin:0;min-height:600px;border-radius:0;position:relative}
+.internal .image-section .editorial-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:var(--photo-tone)}
+.internal .image-section .editorial-content{grid-column:2;grid-row:1;padding:96px var(--gutter) 96px 72px;align-self:center}
+.internal .image-section.image-reverse .editorial-photo{grid-column:2}
+.internal .image-section.image-reverse .editorial-content{grid-column:1;padding:96px 72px 96px var(--gutter)}
+.internal .image-section .editorial-content .section-title{max-width:none;margin-bottom:32px}
+.internal .image-section .editorial-content .actions{margin-top:32px}
+.internal .pillar-grid article{padding-top:24px;border-top:1px solid #8e232366}
+.internal .pillar-grid article>.index{color:var(--wine);margin-bottom:24px}
+.internal .wine-section .pillar-grid article>.index{color:#fafafa}
+.internal .process-section{background:#262626;color:#fafafa}
+.internal .process-grid{margin-top:56px}
+.internal .process-grid .index{margin-bottom:32px;color:#fafafa}
+.internal .process-grid article:after{display:none}
+.internal .process-grid h3{font-style:italic}
+.internal .closing-section{background:#262626}
+.internal .closing-section .button{background:var(--wine);color:#fafafa;border-color:transparent}
+.internal .closing-section .section-title{max-width:1100px}
+/* A visual directory gives each company journey room for its actual proposition. */
+.page-empresas .solution-grid,.page-empresas .solution-grid:has(>article:last-child:nth-child(2)){grid-template-columns:1fr;gap:32px}
+.page-empresas .solution-card{display:grid;grid-template-columns:44% minmax(0,1fr);column-gap:64px;row-gap:24px;border:0;border-top:1px solid var(--line);padding:32px 0;overflow:hidden}
+.page-empresas .solution-card figure{grid-column:1;grid-row:1/5;margin:0;min-height:360px;max-height:440px;aspect-ratio:auto;border-radius:4px;overflow:hidden}
+.page-empresas .solution-card figure img{height:100%;width:100%;object-fit:cover;object-position:center 32%;filter:var(--photo-tone)}
+.page-empresas .solution-card img[src*="heroes-vanguard"]{object-position:center 8%}
+.page-empresas .solution-card>.index{grid-column:2;align-self:end;color:var(--wine);margin:0}
+.page-empresas .solution-card>h3{grid-column:2;align-self:end;margin:0;max-width:650px}
+.page-empresas .solution-card>p{grid-column:2;margin:0;max-width:600px}
+.page-empresas .solution-card>a{grid-column:2;align-self:start;justify-self:start;margin:0}
+/* Talk identities belong to their presentations; neutral pages keep the home palette. */
+.theme-lideranca{--talk-accent:#f1c284;--talk-dark:#303235;--talk-soft:#ececec}
+.theme-influencia{--talk-accent:#d7ae6d;--talk-dark:#352717;--talk-soft:#f3eee5}
+.theme-performance{--talk-accent:#edb7c8;--talk-dark:#350b20;--talk-soft:#f5e9ed}
+.theme-eu{--talk-accent:#f1c284;--talk-dark:#26262a;--talk-soft:#eeece8}
+.internal .talk-hero{background:var(--talk-dark);color:#fafafa;min-height:860px}
+.internal .talk-hero>.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:none}
+.internal .talk-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,#262626cc,transparent 70%)}
+.internal .talk-hero .internal-hero-content{width:52%;min-height:860px;padding:160px 48px 96px var(--gutter);justify-content:center}
+.internal .talk-hero .hero-description{max-width:560px}
+.internal .talk-hero .talk-back{color:var(--talk-accent);line-height:20px}
+.internal .talk-hero .button{background:var(--talk-accent);color:var(--talk-dark)}
+.talk-detail .site-header .brand img{filter:none}
+.talk-detail .menu-toggle:not(.scrolled){color:#fafafa;border-color:#fafafa66;background:#26262633}
+.theme-performance .talk-hero .internal-hero-content{margin-left:48%;width:52%;padding-left:64px;padding-right:var(--gutter)}
+.theme-performance .talk-hero-shade{background:linear-gradient(90deg,transparent 30%,#350b2088 65%)}
+.talk-intro .section-title{grid-column:1/6;margin:0}
+.talk-intro .editorial-copy{grid-column:7/13}
+.talk-topics{background:var(--talk-soft)}
+.talk-topics-intro{grid-column:1/6}
+.talk-topics-intro .section-title{margin-top:24px}
+.talk-topics-intro figure{margin-top:40px;aspect-ratio:4/3;overflow:hidden;border-radius:4px}
+.talk-topics-intro img{width:100%;height:100%;object-fit:cover;object-position:right}
+.talk-topic-list{grid-column:7/13}
+.talk-topic-list article{display:grid;grid-template-columns:32px minmax(0,1fr);gap:24px;border-top:1px solid #26262644;padding:32px 0}
+.talk-topic-list article:first-child{padding-top:24px}
+.talk-topic-list h3{margin:0 0 20px}
+.talk-topic-list p{margin:0}
+.talk-experience .page-wrap>div:first-child{grid-column:1/6}
+.talk-experience h2{margin-top:24px}
+.experience-list{grid-column:7/13;display:grid;gap:40px}
+.experience-list h3{margin-bottom:20px}
+.internal .speaker-section{padding:0;background:#ededed}
+.speaker-section .page-wrap{max-width:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.speaker-section figure{height:620px;margin:0;overflow:hidden}
+.speaker-section figure img{width:100%;height:100%;object-fit:cover;object-position:50% 8%;filter:grayscale(1)}
+.speaker-section .page-wrap>div{padding:96px var(--gutter) 96px 72px;align-self:center}
+.speaker-section .section-title{margin:24px 0 32px}
+.speaker-section .button{margin-top:32px}
+.talk-detail .closing-section{background:var(--talk-dark)}
+.talk-detail .closing-section .button{background:var(--talk-accent);color:var(--talk-dark)}
+.talk-detail .closing-section .page-wrap>.actions{grid-column:9/13;grid-row:2;align-self:end}
+.internal .catalog-talk .talk-photo{width:100%;max-width:100%;overflow:hidden;border-radius:4px}
+.catalog-talk .talk-photo a{display:block;height:100%}
+.internal .catalog-talk .talk-photo img{filter:none;object-position:70% center}
+.internal .catalog-talk.theme-performance .talk-photo img{object-position:28% center}
+.catalog-talk .talk-copy>.eyebrow{color:var(--wine);margin:0 0 24px}
+.catalog-talk .actions{flex-wrap:wrap;gap:16px}
+.catalog-talk .actions .button+ .button{color:var(--ink);background:transparent;border-color:#26262666}
+@media(max-width:1100px){
+ .internal{--section-space:80px}
+ .internal .editorial-hero .internal-hero-content{padding-right:40px}
+ .internal .hero-portrait{left:56%}
+ .internal .image-section .editorial-content,.internal .image-section.image-reverse .editorial-content{padding:80px 40px}
+ .page-empresas .solution-card{column-gap:40px}
+ .internal .talk-hero .internal-hero-content{width:58%;padding-right:32px}
+ .theme-performance .talk-hero .internal-hero-content{margin-left:42%;width:58%;padding-left:40px}
+}
+@media(max-width:900px){
+ .internal .editorial-hero{display:flex;flex-direction:column;min-height:0}
+ .internal .editorial-hero .internal-hero-content{width:100%;min-height:0;padding:128px var(--gutter) 48px}
+ .internal .hero-portrait{position:relative;inset:auto;width:calc(100% - var(--gutter)*2);height:480px;margin:0 var(--gutter);border-radius:4px 4px 0 0}
+ .internal .hero-portrait .hero-image{object-position:center 32%}
+ .internal .image-section .page-wrap,.speaker-section .page-wrap{grid-template-columns:1fr}
+ .internal .image-section .editorial-photo,.internal .image-section.image-reverse .editorial-photo{grid-column:1;grid-row:1;min-height:480px}
+ .internal .image-section .editorial-content,.internal .image-section.image-reverse .editorial-content{grid-column:1;grid-row:2;padding:64px var(--gutter)}
+ .page-empresas .solution-card{grid-template-columns:40% minmax(0,1fr);column-gap:32px}
+ .talk-intro .editorial-copy,.talk-intro .section-title,.talk-topic-list,.talk-topics-intro,.talk-experience .page-wrap>div:first-child,.experience-list{grid-column:1/-1}
+ .talk-intro .page-wrap,.talk-topics .page-wrap,.talk-experience .page-wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+ .talk-topics-intro figure{max-height:400px}
+ .speaker-section figure{height:500px}
+ .speaker-section .page-wrap>div{padding:64px var(--gutter)}
+ .talk-detail .closing-section .page-wrap>.actions{grid-column:1/-1;grid-row:auto;margin-top:32px}
+}
+@media(max-width:700px){
+ .internal{--section-space:64px}
+ .internal .internal-hero h1{font-size:var(--type-title);line-height:var(--line-title)}
+ .internal .editorial-hero .internal-hero-content{padding-top:120px;gap:28px}
+ .internal .hero-portrait{height:440px}
+ .internal .internal-hero .actions,.internal .internal-hero .button{max-width:100%}
+ .internal .internal-hero .button{padding:16px 20px}
+ .internal .image-section .editorial-photo,.internal .image-section.image-reverse .editorial-photo{min-height:360px}
+ .page-empresas .solution-card{display:flex;flex-direction:column;gap:24px;padding-top:24px}
+ .page-empresas .solution-card figure{width:100%;height:300px;min-height:0;flex-shrink:0}
+ .page-empresas .solution-card img[src*="heroes-vanguard"]{object-position:center 8%}
+.page-empresas .solution-card>.index{align-self:start}
+ .page-empresas .solution-card>h3{align-self:start}
+ .internal .talk-hero{display:flex;flex-direction:column;min-height:0;padding:0}
+ .internal .talk-hero>.hero-image{position:relative;order:0;inset:auto;height:360px;object-position:70% center;margin-top:92px}
+ .internal .talk-hero-shade{display:none}
+ .internal .talk-hero .internal-hero-content,.theme-performance .talk-hero .internal-hero-content{order:1;position:relative;width:100%;margin:0;min-height:0;padding:40px var(--gutter) 64px;gap:24px}
+ .theme-performance .talk-hero>.hero-image{object-position:28% center}
+ .internal .talk-hero .internal-hero-bottom{gap:28px}
+ .talk-topic-list article{grid-template-columns:24px minmax(0,1fr);gap:16px}
+ .speaker-section figure{height:400px}
+ .internal .catalog-talk .talk-photo{min-height:300px;height:300px}
+}

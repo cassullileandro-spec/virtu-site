@@ -10,7 +10,7 @@ Na raiz deste diretório:
 
     python3 -m http.server 4173 --directory dist
 
-Abra http://localhost:4173 no navegador. As 12 páginas prontas estão em `dist/`; não é necessário compilar para visualizar.
+Abra http://localhost:4173 no navegador. As 16 páginas prontas estão em `dist/`; não é necessário compilar para visualizar.
 
 ## Publicar no GitHub Pages
 
@@ -31,7 +31,7 @@ A publicação do Sites é independente do GitHub Pages.
 
 Após alterar `build.py` ou a copy, execute `python3 build.py`. CSS e JS não são sobrescritos.
 
-A hero da home segue a capa das apresentações, componente Figma 194:1558: fundo cinza, retrato JEF01830 em preto e branco, Editor’s Note e Geist. O estilo responsivo está em `dist/hero-cover.css`; o recorte original e as fontes ficam em `dist/assets`. O restante das 12 páginas segue as apresentações: Editor’s Note regular/itálica, Geist para leitura, fotografias em preto e branco, fundos neutros e fios vermelhos. A copy é preservada.
+A hero da home segue a capa das apresentações, componente Figma 194:1558: fundo cinza, retrato JEF01830 em preto e branco, Editor’s Note e Geist. O estilo responsivo está em `dist/hero-cover.css`; o recorte original e as fontes ficam em `dist/assets`. O restante das páginas segue as apresentações: Editor’s Note regular/itálica, Geist para leitura, fotografias em preto e branco, fundos neutros e fios vermelhos. A copy é preservada.
 
 `dist/design-system.css` centraliza cinco papéis de leitura, em tamanho/entrelinha: título principal 96/100, título de seção 56/60, título de bloco 32/36, corpo 18/28 e auxiliar 14/20 px. No celular: 48/52, 36/40, 24/28, 16/24 e 14/20 px. Os dois parágrafos da hero usam o mesmo corpo; não há um subtítulo maior. Marca e ícones decorativos não fazem parte da escala de leitura. `test_typography_layout.js` verifica a escala e os limites do conteúdo em cada página renderizada.
 
@@ -55,6 +55,17 @@ As legendas usam transcrição automática já existente no acervo e precisam de
 
 ## Páginas internas / grid
 
-`python3 build-pages.py` recompõe a home e as 11 internas. Usa BeautifulSoup, já disponível no ambiente de autoria; a hospedagem serve somente HTML, CSS e JS estáticos.
+`python3 build-pages.py` recompõe a home, as 11 internas e as quatro páginas de palestras. Usa BeautifulSoup, já disponível no ambiente de autoria; a hospedagem serve somente HTML, CSS e JS estáticos.
 
 `dist/pages.css` define a base Full HD: 1440 px úteis, grid de 12 colunas, gutters de 24 px e heros com altura mínima de uma tela e crescimento natural para textos longos. `dist/pages.js` cuida das animações internas e dos formulários que abrem rascunhos no WhatsApp. As fontes aprovadas e os ajustes editoriais estão em `sources/approved-pages.json` e `ALTERACOES-PAGINAS.md`.
+
+
+## Versão final · 09 nov 2026
+
+[Site novo — versão final no Figma](https://www.figma.com/design/DtC8cjFITfeoEF3ejiVW8D?node-id=787-989): 16 telas desktop editáveis, em uma página separada do mesmo arquivo.
+
+`dist/internal-editorial.css` aplica a identidade da home às páginas internas: base branca/cinza/carvão, vermelho nos detalhes, fotos em preto e branco e a mesma escala tipográfica. A página de empresas apresenta cada jornada com fotografia e área de leitura próprias.
+
+`sources/talks.json` registra conteúdo, fontes Figma e imagens das quatro palestras: As cinco dimensões da liderança, Influência real, Auto Performance para times e EU — A força inabalável de ser. Cada palestra tem rota própria, identidade visual da apresentação e CTA com tema pré-selecionado no contato. A copy anterior permanece preservada; preços e condições comerciais não foram adicionados.
+
+Validação: `python3 test_talk_pages.py` confere textos das palestras, links, arquivos locais e temas de contato; `python3 test_typography.py` confere a transformação tipográfica. A revisão no navegador cobriu 360, 390, 900, 1440 e 1920 px, menu, FAQ e seleção de tema, sem enviar mensagens.

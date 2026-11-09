@@ -7,6 +7,7 @@ from urllib.parse import quote
 import json,re,subprocess,sys
 P=Path(__file__).parent
 subprocess.run([sys.executable,str(P/'build.py')],check=True)
+TALKS=json.loads((P/'sources/talks.json').read_text())['talks']
 DATA=json.loads((P/'sources/approved-pages.json').read_text())['pages']
 NAMES={'virtu':'A Virtù','veridiana':'Veridiana Cavalheri','trabalhe':'Trabalhe conosco','palestras':'Palestras','gravado':'Meta V — Acesso gravado','oficina':'Super Humanos — Oficina prática','mentoria':'Mentoria Meta V','phd':'PHD','vanguard':'Vanguard','empresas':'Soluções para empresas','contato':'Fale conosco'}
 home=BeautifulSoup((P/'dist/index.html').read_text(),'html.parser')
@@ -50,7 +51,7 @@ for key,sections in DATA.items():
  if key=='contato':actions=frag('<div class="actions">'+link('Iniciar uma conversa','#formulario')+'</div>')
  if key=='trabalhe':
   for a in actions.select('a'):a['href']='#candidatura'
- hero=f'<section class="hero internal-hero" id="inicio" aria-labelledby="hero-title"><img class="hero-image" src="assets/curadoria-heroes-{key}.jpg" alt="Veridiana Cavalheri" fetchpriority="high"><div class="hero-shade"></div><div class="hero-grid" aria-hidden="true"></div><div class="internal-hero-content"><p class="eyebrow hero-kicker">VIRTÙ / {e(NAMES[key])}</p><h1 id="hero-title">{e(h1)}</h1><div class="internal-hero-bottom"><div class="hero-description">{str(paras[0]) if paras else ""}</div>{str(actions) if actions else ""}</div></div><a class="scroll-cue" href="#pagina" aria-label="Explorar esta página">↓</a></section>'
+ hero=f'<section class="hero internal-hero editorial-hero" id="inicio" aria-labelledby="hero-title"><div class="internal-hero-content"><p class="eyebrow hero-kicker">VIRTÙ / {e(NAMES[key])}</p><h1 id="hero-title">{e(h1)}</h1><div class="internal-hero-bottom"><div class="hero-description">{str(paras[0]) if paras else ""}</div>{str(actions) if actions else ""}</div></div><figure class="hero-portrait"><img class="hero-image" src="assets/curadoria-heroes-{key}.jpg" alt="Veridiana Cavalheri" fetchpriority="high"></figure></section>'
  main.append(frag(hero));main.append(frag('<div id="pagina"></div>'))
  if len(paras)>1:main.append(frag('<section class="hero-deck"><div class="content-grid"><p class="eyebrow">'+e(NAMES[key])+'</p><div>'+''.join(map(str,paras[1:]))+'</div></div></section>'))
  for idx,source in enumerate(sections[1:],1):
@@ -86,16 +87,20 @@ for key,sections in DATA.items():
   elif 'talk-immersive' in source['classes']:
    sec['class']+=['talk-section']
    sec.select_one('.talk-shade').decompose()
-   photo=frag('<figure class="talk-photo">'+img('curadoria-talks-'+str(idx+1),'Veridiana em sua trajetória profissional')+'</figure>');wrap.insert(0,photo)
+   talk=TALKS[idx-2]
+   sec['class']+=['catalog-talk','theme-'+talk['theme']]
+   photo=frag('<figure class="talk-photo"><a href="'+talk['slug']+'.html" aria-label="'+e(talk['title'],quote=True)+'"><img src="assets/'+talk['heroImage']+'" alt="'+e(talk['title'],quote=True)+'" loading="lazy"></a></figure>');wrap.insert(0,photo)
+   sec.select_one('.talk-copy').insert(0,frag('<p class="eyebrow">'+e(talk['title'])+'</p>'))
+   sec.select_one('.actions').insert(0,frag(link('Conhecer a palestra',talk['slug']+'.html')))
   elif grid:
    features=grid.select(':scope > article');gridclasses=grid.get('class',[])
    for i,a in enumerate(features):
     if not a.select_one('.index'):a.insert(0,frag(f'<span class="index">{i+1:02d}</span>'))
    if 'solutions' in gridclasses:
-    sec['class']+=['solution-section'];grid['class']=['solution-grid']
+    sec['class']+=['solution-section'];grid['class']=['solution-grid'];grid.attrs.pop('style',None)
     dests=['gravado','oficina','mentoria'] if idx==2 else ['phd','vanguard']
     for a,dest in zip(features,dests):
-     a.insert(0,frag('<figure>'+img(dest,NAMES[dest])+'</figure>'));a.select_one('a')['href']=dest+'.html'
+     a.insert(0,frag('<figure>'+img('curadoria-heroes-'+dest,NAMES[dest])+'</figure>'));a.select_one('a')['href']=dest+'.html'
    elif 'farm-grid' in gridclasses or 'steps' in gridclasses or (key in ['mentoria','vanguard'] and idx in ([3] if key=='mentoria' else [4])):
     sec['class']+=['process-section'];grid['class']=['process-grid']
    elif len(features)>4:
@@ -176,3 +181,23 @@ for key,sections in DATA.items():
   if a.find_parent('footer'):a['href']='index.html'
  (P/'dist'/f'{key}.html').write_text(finish_typography(str(doc)),encoding='utf-8')
 print('Generated',len(DATA),'internal pages from approved source')
+
+# Individual talks reuse the site's navigation, contact flow and type scale.
+for talk in TALKS:
+ doc=soup((P/'dist/palestras.html').read_text());doc.title.string=talk['title']+' · Virtù'
+ doc.body['class']=['internal','talk-detail','theme-'+talk['theme']]
+ doc.select_one('meta[name="description"]')['content']=talk['heroSupport']
+ doc.select_one('link[rel="preload"][as="image"]')['href']='assets/'+talk['heroImage']
+ main=doc.select_one('main');main.clear()
+ contact_url='contato.html?interesse='+quote(talk['interest'])
+ action=link('Levar esta palestra ao meu evento',contact_url)
+ main.append(frag('<section class="hero internal-hero talk-hero" id="inicio"><img class="hero-image" src="assets/'+talk['heroImage']+'" alt="Veridiana Cavalheri" fetchpriority="high"><div class="talk-hero-shade"></div><div class="internal-hero-content"><a class="eyebrow talk-back" href="palestras.html">← Palestras com Veridiana</a><h1 id="hero-title">'+e(talk['title'])+'</h1><div class="internal-hero-bottom"><div class="hero-description"><p>'+e(talk['heroBody'])+'</p><p>'+e(talk['heroSupport'])+'</p></div><div class="actions">'+action+'</div></div></div></section>'))
+ main.append(frag('<section class="page-section talk-intro" id="pagina"><div class="page-wrap"><h2 class="section-title">'+e(talk['intro']['title'])+'</h2><div class="editorial-copy"><p>'+e(talk['intro']['body'])+'</p></div></div></section>'))
+ topics=''.join('<article><span class="index">'+str(i+1).zfill(2)+'</span><div><h3>'+e(item['title'])+'</h3><p>'+e(item['body'])+'</p></div></article>' for i,item in enumerate(talk['topics']))
+ main.append(frag('<section class="page-section talk-topics"><div class="page-wrap"><div class="talk-topics-intro"><p class="eyebrow">Conteúdo da palestra</p><h2 class="section-title">O que vamos colocar em conversa.</h2><figure><img src="assets/'+talk['detailImage']+'" alt="Composição editorial da palestra '+e(talk['title'],quote=True)+'" loading="lazy"></figure></div><div class="talk-topic-list">'+topics+'</div></div></section>'))
+ experience=''.join('<article><h3>'+e(item['title'])+'</h3><p>'+e(item['body'])+'</p></article>' for item in talk['experience'])
+ main.append(frag('<section class="page-section talk-experience"><div class="page-wrap"><div><p class="eyebrow">A experiência</p><h2 class="section-title">Uma conversa que continua depois do encontro.</h2></div><div class="experience-list">'+experience+'</div></div></section>'))
+ main.append(frag('<section class="page-section speaker-section"><div class="page-wrap"><figure><img src="assets/curadoria-heroes-veridiana.jpg" alt="Veridiana Cavalheri" loading="lazy"></figure><div><p class="eyebrow">Quem conduz essa conversa</p><h2 class="section-title">Veridiana Cavalheri</h2><p>Fundadora da Virtù, palestrante, consultora, mentora e autora de Antifraca.</p>'+link('Conheça sua trajetória','veridiana.html')+'</div></div></section>'))
+ main.append(frag('<section class="page-section closing-section" id="contato"><div class="page-wrap"><h2 class="section-title">'+e(talk['closing']['title'])+'</h2><div class="closing-copy"><p>'+e(talk['closing']['body'])+'</p></div><div class="actions">'+action+'</div></div></section>'))
+ (P/'dist'/f'{talk["slug"]}.html').write_text(finish_typography(str(doc)),encoding='utf-8')
+print('Generated',len(TALKS),'individual talk pages')

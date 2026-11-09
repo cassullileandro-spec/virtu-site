@@ -1,0 +1,245 @@
+{
+  "sourceFile": "DtC8cjFITfeoEF3ejiVW8D",
+  "sourceDate": "2026-11-09",
+  "talks": [
+    {
+      "title": "As cinco dimensões da liderança",
+      "slug": "palestra-cinco-dimensoes",
+      "theme": "lideranca",
+      "heroBody": "A palestra que transforma potencial humano em resultados sustentáveis.",
+      "heroSupport": "Uma jornada para líderes que precisam desenvolver pessoas, fortalecer o compromisso do time e conectar a execução ao crescimento da empresa.",
+      "intro": {
+        "title": "Cultura & engajamento.",
+        "body": "Como culturas fortes criam times comprometidos. Referências de empresas com resultados notáveis. O papel do líder como guardião dos valores."
+      },
+      "topics": [
+        {
+          "title": "Cultura",
+          "body": "Valores que se tornam comportamentos reais."
+        },
+        {
+          "title": "Governança",
+          "body": "Princípios que orientam decisões e crescimento."
+        },
+        {
+          "title": "Liderança",
+          "body": "Protagonismo que gera resultados sustentáveis."
+        },
+        {
+          "title": "Engajamento",
+          "body": "Times comprometidos com o propósito da empresa."
+        },
+        {
+          "title": "Inteligência comportamental",
+          "body": "Leitura humana que impulsiona a performance."
+        }
+      ],
+      "experience": [
+        {
+          "title": "Inspiração",
+          "body": "Conteúdo concebido para inspirar reflexões e mudanças em pessoas e negócios."
+        },
+        {
+          "title": "Ferramentas",
+          "body": "Ferramentas práticas que deixam um legado muito além da experiência."
+        }
+      ],
+      "closing": {
+        "title": "Que desafio de liderança sua empresa precisa enfrentar agora?",
+        "body": "Vamos conversar sobre o contexto da sua empresa, o perfil dos participantes e a proposta para o seu evento."
+      },
+      "sourceNodes": {
+        "page": "139:989",
+        "hero": "139:996",
+        "intro": "139:998",
+        "topics": [
+          "139:997"
+        ],
+        "experience": "139:1000",
+        "closing": "139:1004"
+      },
+      "interest": "As cinco dimensões da liderança",
+      "heroImage": "palestra-lideranca-capa.webp",
+      "detailImage": "palestra-lideranca-conteudo.webp"
+    },
+    {
+      "title": "Influência real",
+      "slug": "palestra-influencia-real",
+      "theme": "influencia",
+      "heroBody": "O magnetismo de quem fala e é ouvido.",
+      "heroSupport": "Uma palestra sobre comunicação, vínculo e inteligência emocional para as conversas que fazem parte do trabalho.",
+      "intro": {
+        "title": "O que você vai encontrar",
+        "body": "A comunicação como o espelho mais preciso da nossa qualidade comportamental: como o vínculo se constrói ou se desfaz na conversa e o que faz algumas pessoas serem ouvidas sem precisar se impor."
+      },
+      "topics": [
+        {
+          "title": "Inteligência emocional: a raiz da comunicação",
+          "body": "O que trava uma conversa nunca é o vocabulário — é o que você sente enquanto fala."
+        },
+        {
+          "title": "O espelho: seu arquétipo na comunicação",
+          "body": "Quatro formas de se comunicar. Cada uma resolve o que as outras não resolvem — e pode criar riscos mesmo sem essa intenção."
+        },
+        {
+          "title": "Padrões tóxicos — e como nos reconhecemos neles",
+          "body": "Crítica, desprezo, defensividade e silêncio destroem relações sem barulho. Todos nós usamos algum deles."
+        },
+        {
+          "title": "Comunicação magnética real",
+          "body": "Magnetismo não é técnica de fala: é consequência do vínculo. Ninguém se aproxima de quem fala bem, e sim de quem escuta bem."
+        },
+        {
+          "title": "Princípios dos relacionamentos positivos",
+          "body": "Como dizer o que precisa ser dito sem destruir a relação — e o achado mais contraintuitivo: a forma como você responde às boas notícias prevê o futuro do vínculo."
+        }
+      ],
+      "experience": [
+        {
+          "title": "Inspiração",
+          "body": "Conteúdo concebido para inspirar reflexões e mudanças em pessoas e negócios."
+        },
+        {
+          "title": "Ferramentas",
+          "body": "Ferramentas práticas que deixam um legado muito além da experiência."
+        }
+      ],
+      "closing": {
+        "title": "Que conversas precisam evoluir na sua empresa?",
+        "body": "Vamos entender o contexto do seu público e alinhar a proposta para o seu evento."
+      },
+      "sourceNodes": {
+        "page": "139:1005",
+        "hero": "139:1012",
+        "intro": "139:1013",
+        "topics": [
+          "139:1013",
+          "139:1014"
+        ],
+        "experience": "139:1015",
+        "closing": "139:1019"
+      },
+      "interest": "Influência real",
+      "heroImage": "palestra-influencia-capa.webp",
+      "detailImage": "palestra-influencia-conteudo.webp"
+    },
+    {
+      "title": "Auto Performance para times",
+      "slug": "palestra-auto-performance",
+      "theme": "performance",
+      "heroBody": "Para empresas em busca de alta performance.",
+      "heroSupport": "Do auxiliar ao acionista, uma mensagem para a empresa inteira. Uma palestra para provocar autorresponsabilidade, compromisso com os valores e dedicação à própria entrega.",
+      "intro": {
+        "title": "O desafio da consistência",
+        "body": "Existe uma diferença silenciosa entre pessoas com o mesmo cargo, o mesmo treinamento e as mesmas ferramentas: umas sustentam resultados ao longo do tempo; outras brilham na estreia e desaparecem quando o holofote se apaga."
+      },
+      "topics": [
+        {
+          "title": "A mentalidade de autoperformance.",
+          "body": "Autorresponsabilidade como ponto de partida: o padrão de uma equipe não é o que se prega, é o pior comportamento que se tolera. Aqui trabalhamos a virada do \"isso aconteceu comigo\" para \"o que eu faço com isso\"."
+        },
+        {
+          "title": "As virtudes da performance e as 24 forças de caráter.",
+          "body": "A partir do estudo do VIA Institute, apresentamos as seis virtudes universais e as 24 forças que as compõem."
+        },
+        {
+          "title": "As características e soft skills da alta performance.",
+          "body": "Nomeamos as competências comportamentais que sustentam resultados consistentes, sempre traduzidas em comportamentos observáveis — o que a pessoa faz, não o adjetivo que usa para se descrever."
+        },
+        {
+          "title": "Saúde mental e inteligência emocional.",
+          "body": "O intervalo entre gatilho e reação como espaço de escolha. Autorregulação emocional aplicada ao ambiente de trabalho, à pressão por resultados e às conversas difíceis."
+        },
+        {
+          "title": "A dimensão relacional.",
+          "body": "Trazemos isso para dentro da empresa: segurança psicológica, confiança e a capacidade de dizer \"não sei\", \"eu errei\" e \"discordo\" sem pagar um preço social por isso."
+        }
+      ],
+      "experience": [
+        {
+          "title": "Inspiração",
+          "body": "Conteúdo concebido para inspirar reflexões e mudanças em pessoas e negócios."
+        },
+        {
+          "title": "Ferramentas",
+          "body": "Ferramentas práticas que deixam um legado muito além da experiência."
+        }
+      ],
+      "closing": {
+        "title": "O que sua equipe precisa assumir para dar o próximo passo?",
+        "body": "Vamos conversar sobre o momento da empresa, o perfil do público e a mensagem que seu evento precisa levar."
+      },
+      "sourceNodes": {
+        "page": "139:1020",
+        "hero": "139:1027",
+        "intro": "139:1028",
+        "topics": [
+          "139:1034",
+          "139:1035"
+        ],
+        "experience": "139:1036",
+        "closing": "139:1040"
+      },
+      "interest": "Auto Performance",
+      "heroImage": "palestra-performance-capa.webp",
+      "detailImage": "palestra-performance-conteudo.webp"
+    },
+    {
+      "title": "EU — A força inabalável de ser",
+      "slug": "palestra-eu",
+      "theme": "eu",
+      "heroBody": "Palestra exclusiva para elas.",
+      "heroSupport": "Fundamentada na obra Antifraca, de Veridiana Cavalheri. Um convite à autoliderança, à coragem e à construção de uma nova relação com a própria história.",
+      "intro": {
+        "title": "A proposta da palestra",
+        "body": "Fundamentada na obra \"Antifraca\", de Veridiana Cavalheri, a palestra conduz mulheres a uma jornada para resgatar a coragem, acessar a força interior e repensar a própria história. O conceito de \"antifragilidade\" aplicado ao ser orienta essa transformação de desafios em oportunidades de crescimento."
+      },
+      "topics": [
+        {
+          "title": "Dominar o diálogo interno",
+          "body": "Compreender como o diálogo e a força interna impactam os resultados externos."
+        },
+        {
+          "title": "Exercer autoinfluência",
+          "body": "Ser a agente de sua própria narrativa, influenciando seus pensamentos para direcionar seus comportamentos."
+        },
+        {
+          "title": "Ser a agente de mudança",
+          "body": "Líderes são modelos para os outros. Ao assumir o controle de sua vida, a líder inspira sua comunidade e sua região a buscarem grandeza, independentemente do cenário em que se encontram."
+        },
+        {
+          "title": "Transcender o ego",
+          "body": "A liderança exige vulnerabilidade e a aceitação das falhas para que a autoestima e o orgulho pessoal floresçam de forma autêntica."
+        }
+      ],
+      "experience": [
+        {
+          "title": "Inspiração",
+          "body": "Conteúdo transformador, fundamentado na história pessoal de Veridiana e concebido para inspirar reflexões e mudanças significativas."
+        },
+        {
+          "title": "Ferramentas",
+          "body": "Mais do que uma palestra: ferramentas práticas que criam uma experiência de decisão e deixam um legado que vai muito além desse encontro."
+        }
+      ],
+      "closing": {
+        "title": "Vamos construir esse encontro para as mulheres do seu evento?",
+        "body": "Converse com a Virtù para alinhar o perfil das participantes, a data e as condições da proposta."
+      },
+      "sourceNodes": {
+        "page": "139:1041",
+        "hero": "139:1048",
+        "intro": "139:1049",
+        "topics": [
+          "139:1051",
+          "139:1052"
+        ],
+        "experience": "139:1055",
+        "closing": "139:1058"
+      },
+      "interest": "EU — A força inabalável de ser",
+      "heroImage": "palestra-eu-capa.webp",
+      "detailImage": "palestra-eu-conteudo.webp"
+    }
+  ]
+}
