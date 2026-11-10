@@ -16,7 +16,11 @@
 .journey-panel.journey-cover .journey-panel-shade{background:linear-gradient(90deg,#20222366,transparent 65%)}
 .journey-panel.journey-cover .journey-content{width:46%}
 .journey-thumb img[src*="jornada-"]{filter:none;object-position:83% 15%;transform:scale(1.65);transform-origin:83% 15%}
-.page-empresas .solution-card.journey-cover{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:24px;min-height:560px;padding:64px 52% 64px 48px;border:0;border-radius:0}
+.page-empresas .solution-section{padding:0}
+.page-empresas .solution-section .page-wrap{display:block;max-width:none;width:100%}
+.page-empresas .solution-section .section-title{max-width:none;margin:0;padding:80px var(--gutter) 48px}
+.page-empresas .solution-section .solution-grid,.page-empresas .solution-section .solution-grid:has(>article:last-child:nth-child(2)){display:flex;flex-direction:column;gap:0;margin:0}
+.page-empresas .solution-card.journey-cover{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:24px;width:100%;min-height:max(800px,56.25vw);margin:0;padding:96px 52% 96px var(--gutter);border:0;border-radius:0}
 .page-empresas .solution-card.journey-cover>.index{color:var(--journey-light);align-self:auto}
 .page-empresas .solution-card.journey-cover>h3,.page-empresas .solution-card.journey-cover>p{color:#fafafa;align-self:auto}
 .page-empresas .solution-card.journey-cover>h3{font-size:var(--type-title);line-height:var(--line-title)}
@@ -26,6 +30,7 @@
  .page-empresas .solution-card.journey-cover{padding-left:32px;padding-right:48%}
 }
 @media(max-width:700px){
+ .page-empresas .solution-section .section-title{padding:64px var(--gutter) 32px}
  .internal .editorial-hero.journey-cover .internal-hero-content{width:100%;min-height:980px;padding:500px var(--gutter) 64px;justify-content:end}
  .internal .journey-cover .hero-portrait .hero-image,.journey-panel.journey-cover>img,.page-empresas .solution-card.journey-cover figure img{height:580px;object-position:86% top!important;mask-image:linear-gradient(#000 62%,transparent 100%)}
  .internal .editorial-hero.journey-cover:before{background:none}
