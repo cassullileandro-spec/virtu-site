@@ -147,3 +147,63 @@
  .speaker-section figure{height:400px}
  .internal .catalog-talk .talk-photo{min-height:300px;height:300px}
 }
+
+/* Photography is the whole section, with a reading layer over the image. */
+.page-palestras .catalog-talk{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:max(800px,56.25vw);background:var(--talk-dark);color:#fafafa}
+.page-palestras .catalog-talk .page-wrap{width:100%;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));position:static}
+.page-palestras .catalog-talk .talk-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;min-height:0;max-height:none;aspect-ratio:auto;margin:0;border-radius:0}
+.page-palestras .catalog-talk .talk-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:none}
+.page-palestras .catalog-talk:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#202124ed 0%,#202124bf 36%,#20212400 80%);pointer-events:none}
+.page-palestras .catalog-talk .talk-copy{grid-column:1/7;width:100%;max-width:620px;min-height:0;align-self:center;padding:0}
+.page-palestras .catalog-talk .talk-copy p{color:#fafafa}
+.page-palestras .catalog-talk .talk-copy>.eyebrow{color:var(--talk-accent)}
+.page-palestras .catalog-talk .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px;padding:0}
+.page-palestras .catalog-talk .button{color:var(--talk-dark);background:var(--talk-accent);border-color:transparent}
+.page-palestras .catalog-talk .button+.button{color:#fafafa;background:#20212455;border-color:#fafafa88}
+.page-palestras .catalog-talk.theme-performance .talk-copy{grid-column:7/13;justify-self:end}
+.page-palestras .catalog-talk.theme-performance:before{background:linear-gradient(90deg,#350b2000 10%,#350b20cc 58%,#350b20f2 100%)}
+/* Meta V and its mentoring journey share charcoal and champagne gold. */
+.page-gravado,.page-mentoria{--wine:#d6b477;--line:#d6b47740;background:#232427;color:#f5f3ed}
+:is(.page-gravado,.page-mentoria) .page-section{background:#232427;color:#f5f3ed}
+:is(.page-gravado,.page-mentoria) .page-section:nth-of-type(even){background:#292a2d}
+:is(.page-gravado,.page-mentoria) .page-section p,.internal:is(.page-gravado,.page-mentoria) .editorial-copy>p:first-child{color:#dedbd5}
+:is(.page-gravado,.page-mentoria) .page-section :is(.index,.check){color:#d6b477}
+:is(.page-gravado,.page-mentoria) .pillar-grid article{border-color:#d6b47755}
+.internal:is(.page-gravado,.page-mentoria) .button{background:#d6b477;color:#232427;border-color:transparent}
+:is(.page-gravado,.page-mentoria) .text-link{color:#d6b477}
+:is(.page-gravado,.page-mentoria) .process-section,:is(.page-gravado,.page-mentoria) .closing-section{background:#202124}
+:is(.page-gravado,.page-mentoria) .site-footer{background:#202124;border-color:#d6b47740}
+:is(.page-gravado,.page-mentoria) .eyebrow{color:#d6b477}
+/* All photographs on these three pages extend to the section edges. */
+:is(.page-palestras,.page-gravado,.page-mentoria) .editorial-hero{isolation:isolate;background:#202124;color:#fafafa}
+:is(.page-palestras,.page-gravado,.page-mentoria) .hero-portrait{position:absolute;inset:0;width:100%;height:100%;margin:0;border-radius:0;z-index:-2}
+:is(.page-palestras,.page-gravado,.page-mentoria) .hero-portrait .hero-image{object-position:center 8%}
+:is(.page-palestras,.page-gravado,.page-mentoria) .editorial-hero:before,:is(.page-palestras,.page-mentoria) .image-section:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#202124f5 5%,#202124db 40%,#20212418 85%);pointer-events:none}
+:is(.page-palestras,.page-gravado,.page-mentoria) .site-header .brand img{filter:none}
+:is(.page-palestras,.page-gravado,.page-mentoria) .menu-toggle:not(.scrolled){color:#fafafa;border-color:#fafafa66;background:#20212444}
+:is(.page-gravado,.page-mentoria) .editorial-hero .button{color:#232427;background:#d6b477}
+:is(.page-palestras,.page-mentoria) .image-section{position:relative;isolation:isolate;overflow:hidden;min-height:760px;display:flex;align-items:center;background:#202124;color:#fafafa}
+:is(.page-palestras,.page-mentoria) .image-section .page-wrap{width:100%;display:block}
+:is(.page-palestras,.page-mentoria) .image-section .editorial-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;min-height:0;max-height:none;aspect-ratio:auto;margin:0;border-radius:0}
+:is(.page-palestras,.page-mentoria) .image-section .editorial-photo img{object-position:center 12%}
+:is(.page-palestras,.page-mentoria) .image-section .editorial-content{width:52%;padding:96px var(--gutter);position:relative}
+:is(.page-palestras,.page-mentoria) .image-section .editorial-content p{color:#f5f3ed}
+@media(max-width:900px){
+ .page-palestras .catalog-talk .talk-copy{grid-column:1/8}
+ .page-palestras .catalog-talk.theme-performance .talk-copy{grid-column:6/13}
+ :is(.page-palestras,.page-gravado,.page-mentoria) .editorial-hero .internal-hero-content{width:65%;min-height:800px;padding-top:144px;padding-bottom:96px}
+ :is(.page-palestras,.page-mentoria) .image-section .editorial-content{width:65%;padding:80px var(--gutter)}
+}
+@media(max-width:700px){
+ .page-palestras .catalog-talk{min-height:960px;padding-top:380px;padding-bottom:64px;align-items:end}
+ .page-palestras .catalog-talk .talk-copy,.page-palestras .catalog-talk.theme-performance .talk-copy{grid-column:1/-1;max-width:none}
+ .page-palestras .catalog-talk .talk-photo img{object-position:75% top}
+ .page-palestras .catalog-talk.theme-performance .talk-photo img{object-position:24% top}
+ .page-palestras .catalog-talk:before,.page-palestras .catalog-talk.theme-performance:before{background:linear-gradient(180deg,#20212410 0%,#20212477 26%,#202124f5 48%,#202124 100%)}
+ .page-palestras .catalog-talk.theme-performance:before{background:linear-gradient(180deg,#350b2010 0%,#350b2077 26%,#350b20f5 48%,#350b20 100%)}
+ :is(.page-palestras,.page-gravado,.page-mentoria) .editorial-hero .internal-hero-content{width:100%;min-height:980px;padding:460px var(--gutter) 64px;justify-content:end}
+ :is(.page-palestras,.page-gravado,.page-mentoria) .hero-portrait .hero-image{object-position:65% top}
+ :is(.page-palestras,.page-gravado,.page-mentoria) .editorial-hero:before,:is(.page-palestras,.page-mentoria) .image-section:before{background:linear-gradient(180deg,#20212433 0%,#20212433 28%,#202124ed 48%,#202124 100%)}
+ :is(.page-palestras,.page-mentoria) .image-section .editorial-content{width:100%;padding:420px var(--gutter) 64px}
+ :is(.page-palestras,.page-mentoria) .image-section .editorial-photo img{object-position:65% top}
+}

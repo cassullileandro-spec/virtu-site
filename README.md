@@ -31,7 +31,7 @@ A publicação do Sites é independente do GitHub Pages.
 
 Após alterar `build.py` ou a copy, execute `python3 build.py`. CSS e JS não são sobrescritos.
 
-A hero da home segue a capa das apresentações, componente Figma 194:1558: fundo cinza, retrato JEF01830 em preto e branco, Editor’s Note e Geist. O estilo responsivo está em `dist/hero-cover.css`; o recorte original e as fontes ficam em `dist/assets`. O restante das páginas segue as apresentações: Editor’s Note regular/itálica, Geist para leitura, fotografias em preto e branco, fundos neutros e fios vermelhos. A copy é preservada.
+A hero da home segue a capa das apresentações, componente Figma 194:1558: fundo cinza, retrato JEF01830 em preto e branco, Editor’s Note e Geist. O estilo responsivo está em `dist/hero-cover.css`; o recorte original e as fontes ficam em `dist/assets`. O restante das páginas segue as apresentações: Editor’s Note regular/itálica, Geist para leitura, fotografias em preto e branco, fundos neutros e fios vermelhos. A copy é preservada. Palestras, Meta V gravado e Mentoria usam fotografias de ponta a ponta nas seções; as duas páginas Meta V adotam grafite e dourado, com regras em `dist/internal-editorial.css`.
 
 `dist/design-system.css` centraliza cinco papéis de leitura, em tamanho/entrelinha: título principal 96/100, título de seção 56/60, título de bloco 32/36, corpo 18/28 e auxiliar 14/20 px. No celular: 48/52, 36/40, 24/28, 16/24 e 14/20 px. Os dois parágrafos da hero usam o mesmo corpo; não há um subtítulo maior. Marca e ícones decorativos não fazem parte da escala de leitura. `test_typography_layout.js` verifica a escala e os limites do conteúdo em cada página renderizada.
 
