@@ -53,7 +53,7 @@
  .footer-v2-brand{gap:40px}
 }
 @media(max-width:900px){
- .approved-section .approved-stack{grid-template-columns:minmax(0,1fr)!important;gap:32px!important}
+ :is(.approved-section.approved-stack,.approved-section .approved-stack){grid-template-columns:minmax(0,1fr)!important;gap:32px!important}
  .approved-section .approved-photo{min-height:420px!important}
  .approved-section [style*="padding-right:max"],.approved-section [style*="padding-left:max"]{padding-inline:var(--gutter)!important}
  .footer-v2-brand{grid-template-columns:1fr}.footer-v2-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -61,7 +61,7 @@
 }
 @media(max-width:700px){
  .approved-section .approved-heading{font-size:var(--type-title)!important;line-height:var(--line-title)!important}
- .approved-section .approved-four{grid-template-columns:1fr!important}
+ :is(.approved-section.approved-four,.approved-section .approved-four){grid-template-columns:1fr!important}
  .approved-section .approved-row{max-width:100%}
  .approved-section .approved-media{min-height:240px}
  .approved-section .approved-action{min-height:48px!important}
@@ -71,13 +71,18 @@
  .internal .approved-hero .internal-hero-content{width:100%;min-height:0;padding:480px var(--gutter) 64px;gap:24px}
  .internal .approved-hero:before{display:none}
  .internal .approved-hero .hero-image{filter:none!important;object-position:center top}
- .footer-v2{padding-block:64px 24px}.footer-v2-brand h2{font-size:36px;line-height:40px}
+ .site-footer.footer-v2{padding-block:64px 24px}.footer-v2-brand h2{font-size:36px;line-height:40px}
  .footer-v2-nav{gap:32px 24px;margin-top:40px}.footer-v2-bottom{gap:24px;margin-top:40px}
 }
 
 @media(max-width:900px){
- .approved-section.approved-cover{padding-inline:var(--gutter)!important;padding-top:420px!important;padding-bottom:64px!important}
- .approved-cover>div:has(img){height:100%!important}
+ .approved-section.approved-cover{--cover-photo-height:400px;padding:calc(var(--cover-photo-height) + 32px) var(--gutter) 64px!important;min-height:0!important}
+ .approved-cover>.approved-art{height:var(--cover-photo-height)!important;left:0!important;width:100%!important}
+ .approved-cover>.approved-art:not(:has(img)){display:none}
+ .approved-cover>.approved-art img{object-position:center 20%!important}
+ .approved-cover>.approved-inset-block{padding-block:0!important}
+ .approved-placed-grid{grid-template-rows:none!important}
+ .approved-placed-grid>*{grid-column:auto!important;grid-row:auto!important}
 }
 
 .approved-section .approved-art{pointer-events:none;z-index:0}
@@ -112,4 +117,41 @@
 .approved-cover>:not(.approved-art){padding-left:0!important;padding-right:0!important}
 
 .approved-side-art img{object-position:center 12%!important}
-@media(max-width:900px){.approved-cover>.approved-side-art{left:0!important;width:100%!important;height:480px!important}}
+
+
+
+@media(max-width:700px){
+ :is(.approved-section.approved-wide-gap,.approved-section .approved-wide-gap){gap:32px!important}
+ .approved-section .approved-row:not(.approved-stack){gap:16px!important}
+ .approved-section .approved-prose{gap:16px!important}
+ .approved-section .approved-media{min-height:0;aspect-ratio:4/3!important}
+ .approved-section .approved-inset-block{padding-block:0!important}
+ .approved-section .approved-photo:not(.approved-cover){padding:24px!important;min-height:380px!important}
+ .page-empresas .approved-section .approved-photo{padding:320px 24px 32px!important;min-height:0!important}
+ .page-empresas .approved-photo .approved-art:has(img){height:400px;bottom:auto}
+ .page-empresas .approved-photo img{object-position:center top!important}
+ .page-empresas .approved-photo .approved-heading{font-size:28px!important;line-height:32px!important;overflow-wrap:normal}
+ .approved-section.approved-cover{--cover-photo-height:360px}
+ .approved-cover .approved-action{width:100%!important}
+ .approved-section [data-name="cta-inner"]{padding-inline:24px!important}
+ .approved-section [data-name="Ações"]{gap:16px!important}
+ .approved-section [data-name="Abertura editorial"]{align-items:stretch!important}
+ .internal .approved-hero .internal-hero-content{padding-top:440px}
+ .internal .approved-hero .hero-portrait,.internal .approved-hero>.approved-hero-picture>.hero-image{height:520px!important}
+ .footer-v2-brand{gap:32px}
+ .home-talk-card{min-height:420px}
+}
+
+@media(max-width:700px){
+ .approved-section.approved-inner-spacing{padding-block:64px!important}
+ .approved-section .approved-copy-row,.approved-section .approved-tight-stack{gap:16px!important}
+ .approved-section .approved-number-row{grid-template-columns:24px minmax(0,1fr)!important}
+ .approved-number-row>:first-child{white-space:nowrap}
+ .approved-section .approved-shadow{box-shadow:var(--mobile-shadow)!important}
+ .approved-section .approved-heading>span{display:inline!important}
+ .approved-section .approved-heading>span::after{content:" "}
+ .internal .approved-hero .hero-image{mask-image:linear-gradient(#000 65%,transparent 100%)}
+ .page-empresas .approved-photo .approved-art:has(img){mask-image:linear-gradient(#000 60%,transparent 100%)}
+ .approved-cover>.approved-art:has(img[src$=".svg"]){display:none}
+ .page-veridiana .approved-section [style*="padding-right:max"],.page-veridiana .approved-section [style*="padding-left:max"]{padding-inline:0!important}
+}

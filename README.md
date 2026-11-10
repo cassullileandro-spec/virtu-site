@@ -34,6 +34,8 @@ Texto de leitura permanece em **18/28 px** no desktop e **16/24 px** no celular.
 
 Seções usam alturas determinadas pelo conteúdo e espaçamento vertical de 96 px no desktop, 80 px na faixa intermediária e 64 px no celular. Fotos e capas têm proporções ou altura mínima próprias.
 
+No mobile, grades e cards passam a uma coluna, com 24 px de recuo, 32 px entre blocos e 16 px entre título e descrição de um card. Padding interno herdado do desktop não se soma ao padding da seção. Capas com fotografia se dividem em imagem e texto; os números das listas mantêm uma coluna própria.
+
 Os arquivos de `sources/figma/` preservam a referência aprovada. Os fundos mobile ficam separados em `dist/assets/mobile/`, com seus frames editáveis na página [Fundos mobile](https://www.figma.com/design/DtC8cjFITfeoEF3ejiVW8D?node-id=1005-989). As páginas internas selecionam seus fundos por `picture/source`.
 
 ## Verificação

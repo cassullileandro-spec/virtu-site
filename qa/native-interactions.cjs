@@ -1,13 +1,18 @@
 const assert=require('assert/strict'),fs=require('fs'),puppeteer=require(process.env.PUPPETEER_MODULE||'/Users/leandrocassulli/.npm/_npx/0f94ee7615faf582/node_modules/puppeteer-core');
 (async()=>{const b=await puppeteer.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});const errors=[];const p=await b.newPage();p.on('pageerror',e=>errors.push(e.message));const base=process.env.QA_URL||'http://127.0.0.1:4180';
 try{
- await p.setViewport({width:1440,height:900,deviceScaleFactor:2});
+ const width=Number(process.env.QA_WIDTH||1440);await p.setViewport({width,height:844,deviceScaleFactor:2,isMobile:width<=700,hasTouch:width<=700});
  for(const file of fs.readdirSync('dist').filter(f=>f.endsWith('.html'))){
   await p.goto(base+'/'+file,{waitUntil:'networkidle0'});await p.evaluate(()=>document.fonts.ready);
   const state=await p.evaluate(()=>({zoom:getComputedStyle(document.querySelector('main')).zoom,body:getComputedStyle(document.querySelector('main p')).fontSize,gsap:!!window.gsap,animations:gsap.globalTimeline.getChildren().length}));
-  assert.equal(state.zoom,'1',file);assert.equal(state.body,'18px',file);assert(state.gsap&&state.animations>0,file+' original motion active');
+  if(width<=700){
+   await p.evaluate(()=>scrollTo(0,document.body.scrollHeight));await new Promise(r=>setTimeout(r,1600));
+   const hidden=await p.evaluate(()=>[...document.querySelectorAll('.approved-stack>*')].filter(n=>getComputedStyle(n).visibility==='hidden'||Number(getComputedStyle(n).opacity)<.99).length);
+   assert.equal(hidden,0,file+' content remains visible after scroll');
+  }
+  assert.equal(state.zoom,'1',file);assert.equal(state.body,width<=700?'16px':'18px',file);assert(state.gsap&&state.animations>0,file+' original motion active');
  }
- await p.goto(base+'/index.html',{waitUntil:'networkidle0'});await p.click('.menu-toggle');assert(await p.$eval('#menu',d=>d.open));await p.keyboard.press('Escape');assert.equal(await p.$eval('#menu',d=>d.open),false);
+ await p.goto(base+'/index.html',{waitUntil:'networkidle0'});await (width<=700?p.tap('.menu-toggle'):p.click('.menu-toggle'));assert(await p.$eval('#menu',d=>d.open));await p.keyboard.press('Escape');assert.equal(await p.$eval('#menu',d=>d.open),false);
  await p.$eval('.journey summary',n=>n.click());assert(await p.$eval('.journey',n=>n.open));
  await p.$eval('.faq summary',n=>n.click());assert(await p.$eval('.faq',n=>n.open));
  await p.$eval('[data-next]',n=>n.click());assert((await p.$eval('.challenge-count',n=>n.textContent)).startsWith('02'));
@@ -20,5 +25,5 @@ try{
   assert((await p.evaluate(()=>window.__draft))?.startsWith('https://wa.me/5541999693214?text='));
  }
  assert.deepEqual(errors,[]);
- console.log('PASS: Retina 1440px, 16 motion runtimes, menu, FAQ, journeys, carousel, video, contact dialog and forms without sending.');
+ console.log('PASS: Retina '+width+'px, 16 motion runtimes, menu, FAQ, journeys, carousel, video, contact dialog and forms without sending.');
 }finally{await b.close()}})().catch(e=>{console.error(e);process.exit(1)});

@@ -31,7 +31,7 @@ def fluid(section):
   classes,st,w,h=original[id(n)];st=st.copy()
   istext=n.name in ('p','h1','h2','h3','span') and text(n)
   art=n.name in ('img','picture','source') or (not text(n) and st.get('position')=='absolute')
-  media=not text(n) and n.name=='div' and n.find('img') is not None and st.get('position')!='absolute' and st.get('display')!='flex' and bool(w or h or st.get('height')=='100%')
+  media=not text(n) and n.name=='div' and n.find('img') is not None and st.get('position')!='absolute' and st.get('display')!='flex'
   card='v-photo-card' in classes
   for k in ['flex-shrink','min-width']:st.pop(k,None)
   if art:
@@ -64,7 +64,18 @@ def fluid(section):
    for k in ['padding-left','padding-right']:
     if re.fullmatch(r'[\d.]+px',st.get(k,'')) and float(st[k][:-2])>96:st[k]='max(32px,calc((100vw - 1280px)/2))'
    st.pop('overflow',None)
+  if st.get('display')=='grid':
+   cls(n,'approved-stack');cls(n,'approved-placed-grid')
+  if n is not section and any(float(st.get(k,'0').removesuffix('px'))>=64 for k in ['padding-top','padding-bottom'] if re.fullmatch(r'[\d.]+px',st.get(k,'0'))):
+   cls(n,'approved-inset-block')
+   if not original[id(section)][1].get('padding-top') and 'v-photo-card' not in original[id(section)][0]:cls(section,'approved-inner-spacing')
+  if re.fullmatch(r'[\d.]+px',st.get('gap','')) and float(st['gap'][:-2])>32:
+   cls(n,'approved-wide-gap')
+  if 'parágrafos' in n.get('data-name',''):
+   cls(n,'approved-prose')
   if media:
+   if 'box-shadow' in st:
+    cls(n,'approved-shadow');st['--mobile-shadow']=st['box-shadow'].replace('20px','8px')
    st.update(width='100%',height='auto',overflow='hidden')
    st['aspect-ratio']=f'{w or 640}/{h}' if h else '4/3'
    cls(n,'approved-media')
@@ -73,7 +84,7 @@ def fluid(section):
    st['min-height']=f'{min(h or 600,800)}px';st['height']='auto'
    cls(n,'approved-photo')
   if n.name=='img':
-   originals={'a25d7fa7-ba25-4643-93d3-4c8145c14919.png':'curadoria-secondary-virtu-8.jpg','9f4bded1-197b-433a-9bc3-f3d3e6665850.png':'curadoria-secondary-mentoria-7.jpg'}
+   originals={'a25d7fa7-ba25-4643-93d3-4c8145c14919.png':'curadoria-secondary-virtu-8.jpg','9f4bded1-197b-433a-9bc3-f3d3e6665850.png':'curadoria-secondary-mentoria-7.jpg','48f871d1-9c64-461b-900f-64d566899759.png':'curadoria-secondary-veridiana-2.jpg','f32bbae8-6a42-49da-991d-7ff947ddf594.png':'curadoria-secondary-veridiana-6.jpg','57e021ac-d5ca-4fe8-a9eb-1da56b9ccacf.png':'curadoria-secondary-veridiana-7.jpg','aed3ed65-4cf5-4662-ac38-f0a4287047dd.png':'curadoria-secondary-mentoria-7.jpg','dbef1ae2-e569-4e2b-88e0-ff49c3b23fd7.png':'curadoria-secondary-virtu-3.jpg'}
    if Path(n.get('src','')).name in originals:
     n['src']='assets/'+originals[Path(n['src']).name];st['filter']='grayscale(1)'
    st.update(width='100%',height='100%',left='0',top='0');st['object-fit']='cover'
@@ -98,6 +109,8 @@ def fluid(section):
    st['display']='grid';st.pop('flex-direction',None)
    st['grid-template-columns']=' '.join(f'{x}px' if x<=64 else f'minmax(0,{x}fr)' for x in widths)
    cls(n,'approved-row')
+   if all(c.name in ('p','h2','h3','span') for c in children) and all(x>100 for x in widths):cls(n,'approved-copy-row')
+   if len(widths)==2 and widths[0]<=64 and re.fullmatch(r'\d{1,2}',text(children[0])):cls(n,'approved-number-row')
    if all(x>100 for x in widths):cls(n,'approved-stack')
    if len(widths)>=4 and all(x>100 for x in widths):cls(n,'approved-four')
   if n.name in ('a','button') and text(n):
@@ -113,6 +126,8 @@ def fluid(section):
    if len(manual)>=3 and re.fullmatch(r'\d{1,2}',text(manual[0])):
     st.update(display='grid',**{'grid-template-columns':'32px minmax(0,5fr) minmax(0,6fr)','gap':'24px','align-items':'start'})
     st.pop('flex-direction',None);cls(n,'approved-list-row')
+  if st.get('display')=='flex' and st.get('flex-direction')=='column' and len(children)>1 and not st.get('gap'):
+   cls(n,'approved-tight-stack')
   if n.name=='details':cls(n,'faq')
   if n.name=='summary':
    st['display']='flex';st['gap']='24px';st['align-items']='center';st['justify-content']='space-between'
@@ -139,7 +154,7 @@ MOBILE={x['slug']:x for x in json.loads((P/'sources/figma/mobile-backgrounds.jso
 for f in sorted((P/'sources/figma').glob('*.tsx')):
  slug=f.stem;source=C['fragment'](f.read_text());root=C['classify'](source,slug);root=C['enhance'](source,root,slug)
  doc=parse((P/'dist'/f'{slug}.html').read_text())
- doc.head.append(parse('<link rel="stylesheet" href="approved.css?v=20261110-fluid">').link)
+ doc.head.append(parse('<link rel="stylesheet" href="approved.css?v=20261110-mobile2">').link)
  # Original shell, navigation, dialogs, forms and animation runtime remain in place.
  doc.select_one('footer').replace_with(footer(root.select_one('footer')))
  for n in doc.select('.eyebrow'):
