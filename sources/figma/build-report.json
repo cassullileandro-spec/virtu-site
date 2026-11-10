@@ -1,0 +1,82 @@
+[
+  {
+    "page": "contato",
+    "images": 10,
+    "nodes": 140
+  },
+  {
+    "page": "empresas",
+    "images": 15,
+    "nodes": 199
+  },
+  {
+    "page": "gravado",
+    "images": 16,
+    "nodes": 181
+  },
+  {
+    "page": "index",
+    "images": 37,
+    "nodes": 457
+  },
+  {
+    "page": "mentoria",
+    "images": 18,
+    "nodes": 238
+  },
+  {
+    "page": "oficina",
+    "images": 12,
+    "nodes": 231
+  },
+  {
+    "page": "palestra-auto-performance",
+    "images": 11,
+    "nodes": 148
+  },
+  {
+    "page": "palestra-cinco-dimensoes",
+    "images": 11,
+    "nodes": 151
+  },
+  {
+    "page": "palestra-eu",
+    "images": 11,
+    "nodes": 144
+  },
+  {
+    "page": "palestra-influencia-real",
+    "images": 11,
+    "nodes": 147
+  },
+  {
+    "page": "palestras",
+    "images": 14,
+    "nodes": 250
+  },
+  {
+    "page": "phd",
+    "images": 13,
+    "nodes": 212
+  },
+  {
+    "page": "trabalhe",
+    "images": 10,
+    "nodes": 151
+  },
+  {
+    "page": "vanguard",
+    "images": 13,
+    "nodes": 268
+  },
+  {
+    "page": "veridiana",
+    "images": 15,
+    "nodes": 283
+  },
+  {
+    "page": "virtu",
+    "images": 16,
+    "nodes": 238
+  }
+]

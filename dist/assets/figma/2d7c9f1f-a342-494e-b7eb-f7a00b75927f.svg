@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1920" height="760" viewBox="0 0 1920 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Leitura sobre fotografia" d="M0 0H1920V760H0V0Z" fill="url(#paint0_linear_0_196)"/>
+<defs>
+<linearGradient id="paint0_linear_0_196" x1="0" y1="380" x2="1920" y2="380" gradientUnits="userSpaceOnUse">
+<stop offset="0.05" stop-color="#202124" stop-opacity="0.96"/>
+<stop offset="0.4" stop-color="#202124" stop-opacity="0.86"/>
+<stop offset="0.85" stop-color="#202124" stop-opacity="0.094"/>
+</linearGradient>
+</defs>
+</svg>

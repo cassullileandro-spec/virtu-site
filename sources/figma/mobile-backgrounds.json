@@ -1,0 +1,169 @@
+[
+  {
+    "slug": "index",
+    "id": "1005:990",
+    "color": {
+      "r": 0.6100000143051147,
+      "g": 0.6100000143051147,
+      "b": 0.6100000143051147
+    },
+    "path": "assets/mobile/index.png"
+  },
+  {
+    "slug": "virtu",
+    "id": "1005:991",
+    "color": {
+      "r": 0.04313725605607033,
+      "g": 0.04313725605607033,
+      "b": 0.04313725605607033
+    },
+    "path": "assets/mobile/virtu.png"
+  },
+  {
+    "slug": "veridiana",
+    "id": "1005:992",
+    "color": {
+      "r": 0.043137254901960784,
+      "g": 0.043137254901960784,
+      "b": 0.043137254901960784
+    },
+    "path": "assets/mobile/veridiana.png"
+  },
+  {
+    "slug": "empresas",
+    "id": "1005:993",
+    "color": {
+      "r": 0.043137254901960784,
+      "g": 0.043137254901960784,
+      "b": 0.043137254901960784
+    },
+    "path": "assets/mobile/empresas.png"
+  },
+  {
+    "slug": "palestras",
+    "id": "1005:994",
+    "color": {
+      "r": 0.04313725605607033,
+      "g": 0.04313725605607033,
+      "b": 0.04313725605607033
+    },
+    "path": "assets/mobile/palestras.png"
+  },
+  {
+    "slug": "gravado",
+    "id": "1005:995",
+    "color": {
+      "r": 0.04313725605607033,
+      "g": 0.04313725605607033,
+      "b": 0.04313725605607033
+    },
+    "path": "assets/mobile/gravado.png"
+  },
+  {
+    "slug": "oficina",
+    "id": "1005:996",
+    "color": {
+      "r": 0.08627451211214066,
+      "g": 0.23529411852359772,
+      "b": 0.20000000298023224
+    },
+    "path": "assets/mobile/oficina.png"
+  },
+  {
+    "slug": "mentoria",
+    "id": "1005:997",
+    "color": {
+      "r": 0.04313725605607033,
+      "g": 0.04313725605607033,
+      "b": 0.04313725605607033
+    },
+    "path": "assets/mobile/mentoria.png"
+  },
+  {
+    "slug": "phd",
+    "id": "1005:998",
+    "color": {
+      "r": 0.0941176488995552,
+      "g": 0.18039216101169586,
+      "b": 0.2705882489681244
+    },
+    "path": "assets/mobile/phd.png"
+  },
+  {
+    "slug": "vanguard",
+    "id": "1005:999",
+    "color": {
+      "r": 0.2078431397676468,
+      "g": 0.1411764770746231,
+      "b": 0.24313725531101227
+    },
+    "path": "assets/mobile/vanguard.png"
+  },
+  {
+    "slug": "contato",
+    "id": "1005:1000",
+    "color": {
+      "r": 0.043137254901960784,
+      "g": 0.043137254901960784,
+      "b": 0.043137254901960784
+    },
+    "path": "assets/mobile/contato.png"
+  },
+  {
+    "slug": "trabalhe",
+    "id": "1005:1001",
+    "color": {
+      "r": 0.043137254901960784,
+      "g": 0.043137254901960784,
+      "b": 0.043137254901960784
+    },
+    "path": "assets/mobile/trabalhe.png"
+  },
+  {
+    "slug": "palestra-cinco-dimensoes",
+    "id": "1005:1002",
+    "color": {
+      "r": 0.0784313753247261,
+      "g": 0.0784313753247261,
+      "b": 0.0784313753247261
+    },
+    "path": "assets/mobile/palestra-cinco-dimensoes.png"
+  },
+  {
+    "slug": "palestra-influencia-real",
+    "id": "1005:1003",
+    "color": {
+      "r": 0.2078431397676468,
+      "g": 0.15294118225574493,
+      "b": 0.09019608050584793
+    },
+    "path": "assets/mobile/palestra-influencia-real.png"
+  },
+  {
+    "slug": "palestra-auto-performance",
+    "id": "1005:1004",
+    "color": {
+      "r": 0.2078431397676468,
+      "g": 0.04313725605607033,
+      "b": 0.125490203499794
+    },
+    "path": "assets/mobile/palestra-auto-performance.png"
+  },
+  {
+    "slug": "palestra-eu",
+    "id": "1005:1005",
+    "color": {
+      "r": 0.04313725605607033,
+      "g": 0.04313725605607033,
+      "b": 0.04313725605607033
+    },
+    "path": "assets/mobile/palestra-eu.png"
+  },
+  {
+    "slug": "teaser",
+    "id": "1008:2736",
+    "path": "assets/mobile/teaser.png",
+    "width": 780,
+    "height": 1300
+  }
+]

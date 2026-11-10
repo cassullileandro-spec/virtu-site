@@ -1,3 +1,4 @@
-qa/
+qa/artifacts/
 .DS_Store
 *.tar.gz
+__pycache__/

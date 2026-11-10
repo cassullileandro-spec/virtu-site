@@ -1,0 +1,233 @@
+{
+  "contato": {
+    "details": [],
+    "challenges": []
+  },
+  "palestra-eu": {
+    "details": [],
+    "challenges": []
+  },
+  "empresas": {
+    "details": [],
+    "challenges": []
+  },
+  "index": {
+    "details": [
+      {
+        "title": "01 Palestras",
+        "content": "<div class=\"journey-panel\"><img alt=\"Acervo de Veridiana — Palestras\" decoding=\"async\" loading=\"lazy\" src=\"assets/palestras.jpg\"/><div class=\"journey-panel-shade\"></div><div class=\"journey-content\"><h4>Palestras</h4><p>Leve uma conversa sobre liderança, comunicação, performance ou autoliderança para o seu evento. Conteúdos para provocar reflexão e colocar os desafios de pessoas no centro da conversa.</p><a class=\"button light\" href=\"palestras.html\"><span>CONHECER AS PALESTRAS  ↗</span><span aria-hidden=\"true\" class=\"arrow\">↗</span></a></div></div>"
+      },
+      {
+        "title": "02 Meta V — Acesso gravado",
+        "content": "<div class=\"journey-panel journey-cover journey-gravado\"><img alt=\"Acervo de Veridiana — Meta V — Acesso gravado\" decoding=\"async\" loading=\"lazy\" src=\"assets/jornada-gravado-capa-v2.webp\"/><div class=\"journey-panel-shade\"></div><div class=\"journey-content\"><h4>Meta V — Acesso gravado</h4><p>Amplie seu repertório de gestão com conteúdos que você pode estudar no seu ritmo. Um caminho para desenvolver sua liderança com flexibilidade de horário.</p><a class=\"button light\" href=\"gravado.html\"><span>CONHECER O ACESSO GRAVADO  ↗</span><span aria-hidden=\"true\" class=\"arrow\">↗</span></a></div></div>"
+      },
+      {
+        "title": "03 Super Humanos — Oficina",
+        "content": "<div class=\"journey-panel journey-cover journey-oficina\"><img alt=\"Acervo de Veridiana — Super Humanos — Oficina\" decoding=\"async\" loading=\"lazy\" src=\"assets/jornada-oficina-capa-v2.webp\"/><div class=\"journey-panel-shade\"></div><div class=\"journey-content\"><h4>Super Humanos — Oficina</h4><p>Trabalhe habilidades de liderança e leve o aprendizado para os desafios da equipe. Uma jornada que conecta conteúdo e aplicação, com encontros conforme a modalidade contratada.</p><a class=\"button light\" href=\"oficina.html\"><span>CONHECER A OFICINA  ↗</span><span aria-hidden=\"true\" class=\"arrow\">↗</span></a></div></div>"
+      },
+      {
+        "title": "04 Mentoria Meta V",
+        "content": "<div class=\"journey-panel journey-cover journey-mentoria\"><img alt=\"Acervo de Veridiana — Mentoria Meta V\" decoding=\"async\" loading=\"lazy\" src=\"assets/jornada-mentoria-capa-v2.webp\"/><div class=\"journey-panel-shade\"></div><div class=\"journey-content\"><h4>Mentoria Meta V</h4><p>Encontre espaço para discutir decisões, rever práticas e construir sua gestão com orientação. Para empresários, executivos e líderes que precisam conduzir pessoas e fazer o negócio avançar.</p><a class=\"button light\" href=\"mentoria.html\"><span>CONHECER A MENTORIA  ↗</span><span aria-hidden=\"true\" class=\"arrow\">↗</span></a></div></div>"
+      },
+      {
+        "title": "05 PHD",
+        "content": "<div class=\"journey-panel journey-cover journey-phd\"><img alt=\"Acervo de Veridiana — PHD\" decoding=\"async\" loading=\"lazy\" src=\"assets/jornada-phd-capa-v2.webp\"/><div class=\"journey-panel-shade\"></div><div class=\"journey-content\"><h4>PHD</h4><p>Desenvolva as habilidades que sua equipe precisa fortalecer. Um projeto in company desenhado a partir dos desafios e das prioridades da sua organização.</p><a class=\"button light\" href=\"phd.html\"><span>CONHECER O PHD  ↗</span><span aria-hidden=\"true\" class=\"arrow\">↗</span></a></div></div>"
+      },
+      {
+        "title": "06 Vanguard",
+        "content": "<div class=\"journey-panel journey-cover journey-vanguard\"><img alt=\"Acervo de Veridiana — Vanguard\" decoding=\"async\" loading=\"lazy\" src=\"assets/jornada-vanguard-capa-v2.webp\"/><div class=\"journey-panel-shade\"></div><div class=\"journey-content\"><h4>Vanguard</h4><p>Estruture a gestão de pessoas para sustentar o próximo passo da empresa. Uma consultoria que conecta diagnóstico, cultura e processos de gestão à implementação e ao acompanhamento.</p><a class=\"button light\" href=\"vanguard.html\"><span>CONHECER O VANGUARD  ↗</span><span aria-hidden=\"true\" class=\"arrow\">↗</span></a></div></div>"
+      },
+      {
+        "title": "Não sei qual programa escolher. Por onde começo?",
+        "content": "<div class=\"faq-answer\"><p>Comece contando para a nossa equipe qual desafio você precisa enfrentar, quem participa desse processo e o que deseja desenvolver. Essa conversa ajuda a identificar a jornada mais adequada.</p></div>"
+      },
+      {
+        "title": "Posso contratar somente uma palestra?",
+        "content": "<div class=\"faq-answer\"><p>Sim. Conte o objetivo do encontro, o perfil do público, a cidade e a data prevista. A equipe orienta a escolha do tema e verifica a disponibilidade.</p></div>"
+      },
+      {
+        "title": "A Virtù desenvolve projetos para empresas?",
+        "content": "<div class=\"faq-answer\"><p>Sim. O PHD trabalha o desenvolvimento de habilidades da equipe. O Vanguard atua na estruturação da gestão de pessoas. O escopo de cada projeto é definido em proposta, conforme o contexto da organização.</p></div>"
+      },
+      {
+        "title": "Qual a diferença entre acesso gravado, oficina e mentoria?",
+        "content": "<div class=\"faq-answer\"><p>O acesso gravado permite estudar os conteúdos no seu ritmo. A oficina conecta aprendizado e aplicação prática. A mentoria oferece orientação para discutir desafios e desenvolver a gestão. Encontros e condições variam conforme a modalidade contratada.</p></div>"
+      },
+      {
+        "title": "Como consulto valores e disponibilidade?",
+        "content": "<div class=\"faq-answer\"><p>Entre em contato com a equipe da Virtù. A proposta considera a solução escolhida, o público e o escopo do trabalho.</p></div>"
+      }
+    ],
+    "challenges": [
+      "Você enxerga oportunidades, mas falta uma equipe preparada para dar o próximo passo.",
+      "O investimento em pessoas aumenta, mas as entregas continuam aquém do que o negócio precisa.",
+      "Encontrar gente com as habilidades certas virou um dos maiores desafios para crescer.",
+      "Os combinados estão claros, mas o compromisso ainda depende de cobrança constante.",
+      "O time cresce e os custos também. A capacidade de realizar não acompanha na mesma proporção."
+    ]
+  },
+  "palestras": {
+    "details": [
+      {
+        "title": "Como escolher o tema?",
+        "content": "<div class=\"faq-answer\"><p>Comece pelo objetivo do encontro e pelo perfil do público. Nossa equipe pode ajudar a identificar a palestra mais adequada.</p></div>"
+      },
+      {
+        "title": "Qual é a duração e o formato?",
+        "content": "<div class=\"faq-answer\"><p>A duração e a modalidade de participação são alinhadas conforme o evento e registradas na proposta.</p></div>"
+      },
+      {
+        "title": "Como solicitar um orçamento?",
+        "content": "<div class=\"faq-answer\"><p>Envie o tema de interesse, a data prevista, a cidade e uma breve descrição do público. Se algum detalhe ainda não estiver definido, conte o que já sabe.</p></div>"
+      }
+    ],
+    "challenges": []
+  },
+  "vanguard": {
+    "details": [
+      {
+        "title": "01 DESIGN FUNCIONAL",
+        "content": "<div class=\"topic-answer\"><p>Estrutura das áreas e definição de responsabilidades.</p></div>"
+      },
+      {
+        "title": "02 EXPECTATIVAS E METAS",
+        "content": "<div class=\"topic-answer\"><p>Clareza sobre entregas e indicadores por área e função.</p></div>"
+      },
+      {
+        "title": "03 REMUNERAÇÃO E CRESCIMENTO",
+        "content": "<div class=\"topic-answer\"><p>Proposta de valor e formas de reconhecimento.</p></div>"
+      },
+      {
+        "title": "04 CULTURA E ENGAJAMENTO",
+        "content": "<div class=\"topic-answer\"><p>Valores traduzidos em comportamentos e critérios de gestão.</p></div>"
+      },
+      {
+        "title": "05 AVALIAÇÃO DE DESEMPENHO",
+        "content": "<div class=\"topic-answer\"><p>Práticas de avaliação e desenvolvimento das pessoas.</p></div>"
+      },
+      {
+        "title": "06 ATRAÇÃO E SELEÇÃO",
+        "content": "<div class=\"topic-answer\"><p>Perfil, roteiro e jornada de contratação.</p></div>"
+      },
+      {
+        "title": "07 INTEGRAÇÃO E DESENVOLVIMENTO",
+        "content": "<div class=\"topic-answer\"><p>Organização da entrada e do crescimento do colaborador.</p></div>"
+      },
+      {
+        "title": "08 RITMO DE GESTÃO",
+        "content": "<div class=\"topic-answer\"><p>Rituais e práticas para a atuação das lideranças.</p></div>"
+      },
+      {
+        "title": "01 RAIO X DO NEGÓCIO",
+        "content": "<div class=\"topic-answer\"><p>Leitura do cenário e dos pontos de atenção.</p></div>"
+      },
+      {
+        "title": "02 MANUAL DA CULTURA",
+        "content": "<div class=\"topic-answer\"><p>Princípios e políticas adequados ao momento da organização.</p></div>"
+      },
+      {
+        "title": "03 DESIGN HUMANO",
+        "content": "<div class=\"topic-answer\"><p>Relação entre estrutura, estratégia e cultura.</p></div>"
+      },
+      {
+        "title": "04 MODELO DE GESTÃO E LIDERANÇA",
+        "content": "<div class=\"topic-answer\"><p>Práticas definidas para conduzir o trabalho.</p></div>"
+      },
+      {
+        "title": "05 PLANO DE TRANSFORMAÇÃO",
+        "content": "<div class=\"topic-answer\"><p>Ações, prioridades e responsáveis.</p></div>"
+      },
+      {
+        "title": "06 PLANO DE SUSTENTAÇÃO",
+        "content": "<div class=\"topic-answer\"><p>Marcos e responsabilidades para a continuidade.</p></div>"
+      }
+    ],
+    "challenges": []
+  },
+  "virtu": {
+    "details": [],
+    "challenges": []
+  },
+  "phd": {
+    "details": [
+      {
+        "title": "01 CULTURA E ENGAJAMENTO",
+        "content": "<div class=\"topic-answer\"><p>O papel do líder na tradução dos valores em atitudes e na construção de confiança.</p></div>"
+      },
+      {
+        "title": "02 GESTÃO DE TIMES",
+        "content": "<div class=\"topic-answer\"><p>Objetivos, combinados, delegação e acompanhamento das entregas.</p></div>"
+      },
+      {
+        "title": "03 INTELIGÊNCIA COMPORTAMENTAL",
+        "content": "<div class=\"topic-answer\"><p>Autoconhecimento, hábitos e compreensão da própria atuação como líder.</p></div>"
+      },
+      {
+        "title": "04 COMUNICAÇÃO",
+        "content": "<div class=\"topic-answer\"><p>Escuta, feedback, condução de reuniões e conversas difíceis.</p></div>"
+      },
+      {
+        "title": "05 INTELIGÊNCIA EMOCIONAL",
+        "content": "<div class=\"topic-answer\"><p>Reconhecimento das reações e reflexão sobre a forma de lidar com pressão e mudanças.</p></div>"
+      },
+      {
+        "title": "O programa tem uma grade única?",
+        "content": "<div class=\"faq-answer\"><p>A proposta é customizada. A composição dos temas e dos encontros deve responder aos objetivos alinhados com a empresa.</p></div>"
+      },
+      {
+        "title": "Como são definidos o calendário e o investimento?",
+        "content": "<div class=\"faq-answer\"><p>A partir do escopo, dos formatos e dos participantes. As condições são apresentadas na proposta comercial.</p></div>"
+      },
+      {
+        "title": "Como começar?",
+        "content": "<div class=\"faq-answer\"><p>Conte sobre suas lideranças e os desafios que deseja trabalhar. Nossa equipe conduz o alinhamento inicial.</p></div>"
+      }
+    ],
+    "challenges": []
+  },
+  "palestra-cinco-dimensoes": {
+    "details": [],
+    "challenges": []
+  },
+  "gravado": {
+    "details": [],
+    "challenges": []
+  },
+  "palestra-auto-performance": {
+    "details": [],
+    "challenges": []
+  },
+  "trabalhe": {
+    "details": [],
+    "challenges": []
+  },
+  "veridiana": {
+    "details": [],
+    "challenges": []
+  },
+  "mentoria": {
+    "details": [],
+    "challenges": []
+  },
+  "palestra-influencia-real": {
+    "details": [],
+    "challenges": []
+  },
+  "oficina": {
+    "details": [
+      {
+        "title": "A oficina é igual ao acesso gravado?",
+        "content": "<div class=\"faq-answer\"><p>São propostas distintas. O acesso gravado é voltado ao estudo do conteúdo. A oficina contempla uma jornada de aprendizagem e aplicação, cujas condições variam conforme a modalidade.</p></div>"
+      },
+      {
+        "title": "Posso participar com outros líderes da empresa?",
+        "content": "<div class=\"faq-answer\"><p>As fontes apresentam opções para equipes. Consulte a composição e as condições disponíveis para o seu grupo.</p></div>"
+      },
+      {
+        "title": "Qual é a duração?",
+        "content": "<div class=\"faq-answer\"><p>Nossa equipe informa o calendário, o tempo de acesso e o período de acompanhamento da modalidade escolhida antes da contratação.</p></div>"
+      }
+    ],
+    "challenges": []
+  }
+}
