@@ -155,3 +155,12 @@
  .approved-cover>.approved-art:has(img[src$=".svg"]){display:none}
  .page-veridiana .approved-section [style*="padding-right:max"],.page-veridiana .approved-section [style*="padding-left:max"]{padding-inline:0!important}
 }
+
+/* Native editorial grids need content-sized rows, not equal-height canvas tracks. */
+@media(min-width:901px){
+ .approved-placed-grid{grid-template-rows:auto!important}
+ .theme-influencia .approved-placed-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important}
+ .theme-influencia .approved-placed-grid>*{grid-column:span 2!important;grid-row:auto!important}
+ .theme-influencia .approved-placed-grid>:nth-child(-n+2){grid-column:span 3!important}
+ .theme-influencia .approved-placed-grid>.approved-media{grid-column:1/-1!important;aspect-ratio:16/6!important}
+}
