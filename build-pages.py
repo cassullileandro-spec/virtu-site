@@ -7,6 +7,7 @@ from urllib.parse import quote
 import json,re,subprocess,sys
 P=Path(__file__).parent
 subprocess.run([sys.executable,str(P/'build.py')],check=True)
+JOURNEY_COVERS={j['slug']:j['image'] for j in json.loads((P/'sources/journey-covers.json').read_text())}
 TALKS=json.loads((P/'sources/talks.json').read_text())['talks']
 DATA=json.loads((P/'sources/approved-pages.json').read_text())['pages']
 NAMES={'virtu':'A Virtù','veridiana':'Veridiana Cavalheri','trabalhe':'Trabalhe conosco','palestras':'Palestras','gravado':'Meta V — Acesso gravado','oficina':'Super Humanos — Oficina prática','mentoria':'Mentoria Meta V','phd':'PHD','vanguard':'Vanguard','empresas':'Soluções para empresas','contato':'Fale conosco'}
@@ -33,7 +34,8 @@ def links(sec):
 for key,sections in DATA.items():
  doc=soup(str(home));doc.title.string=NAMES[key]+' · Virtù';doc.body['class']=['internal','page-'+key]
  doc.select_one('meta[name="description"]')['content']=txt(soup(sections[0]['html']).select_one('p'))
- doc.select_one('link[rel="preload"][as="image"]')['href']=f'assets/curadoria-heroes-{key}.jpg'
+ hero_image=JOURNEY_COVERS.get(key,f'curadoria-heroes-{key}.jpg')
+ doc.select_one('link[rel="preload"][as="image"]')['href']='assets/'+hero_image
  for s in doc.select('script[src^="app.js"]'):s.insert_after(frag('<script defer src="pages.js?v=20261104-all-pages"></script>'))
  header=doc.select_one('.brand');header['href']='index.html'
  menu=doc.select_one('#menu');menu.select_one('a[href="#filme"]')['href']='index.html#filme'
@@ -51,7 +53,8 @@ for key,sections in DATA.items():
  if key=='contato':actions=frag('<div class="actions">'+link('Iniciar uma conversa','#formulario')+'</div>')
  if key=='trabalhe':
   for a in actions.select('a'):a['href']='#candidatura'
- hero=f'<section class="hero internal-hero editorial-hero" id="inicio" aria-labelledby="hero-title"><div class="internal-hero-content"><p class="eyebrow hero-kicker">VIRTÙ / {e(NAMES[key])}</p><h1 id="hero-title">{e(h1)}</h1><div class="internal-hero-bottom"><div class="hero-description">{str(paras[0]) if paras else ""}</div>{str(actions) if actions else ""}</div></div><figure class="hero-portrait"><img class="hero-image" src="assets/curadoria-heroes-{key}.jpg" alt="Veridiana Cavalheri" fetchpriority="high"></figure></section>'
+ hero=f'<section class="hero internal-hero editorial-hero" id="inicio" aria-labelledby="hero-title"><div class="internal-hero-content"><p class="eyebrow hero-kicker">VIRTÙ / {e(NAMES[key])}</p><h1 id="hero-title">{e(h1)}</h1><div class="internal-hero-bottom"><div class="hero-description">{str(paras[0]) if paras else ""}</div>{str(actions) if actions else ""}</div></div><figure class="hero-portrait"><img class="hero-image" src="assets/{hero_image}" alt="Veridiana Cavalheri" fetchpriority="high"></figure></section>'
+ if key in JOURNEY_COVERS:hero=hero.replace('editorial-hero"',f'editorial-hero journey-cover journey-{key}"')
  main.append(frag(hero));main.append(frag('<div id="pagina"></div>'))
  if len(paras)>1:main.append(frag('<section class="hero-deck"><div class="content-grid"><p class="eyebrow">'+e(NAMES[key])+'</p><div>'+''.join(map(str,paras[1:]))+'</div></div></section>'))
  if key=='virtu' and main.select_one('.hero-deck .eyebrow'):main.select_one('.hero-deck .eyebrow').name='h2'
@@ -101,7 +104,8 @@ for key,sections in DATA.items():
     sec['class']+=['solution-section'];grid['class']=['solution-grid'];grid.attrs.pop('style',None)
     dests=['gravado','oficina','mentoria'] if idx==2 else ['phd','vanguard']
     for a,dest in zip(features,dests):
-     a.insert(0,frag('<figure>'+img('curadoria-heroes-'+dest,NAMES[dest])+'</figure>'));a.select_one('a')['href']=dest+'.html'
+     a['class']=a.get('class',[])+['journey-cover','journey-'+dest]
+     a.insert(0,frag('<figure><img src="assets/'+JOURNEY_COVERS[dest]+'" alt="Veridiana Cavalheri" loading="lazy" decoding="async"></figure>'));a.select_one('a')['href']=dest+'.html'
    elif 'farm-grid' in gridclasses or 'steps' in gridclasses or (key in ['mentoria','vanguard'] and idx in ([3] if key=='mentoria' else [4])):
     sec['class']+=['process-section'];grid['class']=['process-grid']
    elif len(features)>4:

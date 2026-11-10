@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "gravado",
+    "image": "jornada-gravado-original.jpg",
+    "originalName": "JEF01849.jpg",
+    "driveId": "1LygfhPPcP5ywQecTPHCCZHIFj-7FmEVw",
+    "sha256": "465fdd8c265ffb02f4dee754b235ba54a6c6bd10726c533a56555ffa6fa4218b",
+    "treatment": "Original intacto; composição e degradês apenas no layout."
+  },
+  {
+    "slug": "mentoria",
+    "image": "jornada-mentoria-original.jpg",
+    "originalName": "JEF01939.jpg",
+    "driveId": "1Q_DqGE3WzSIKqwAgLgkYBaiStJhuYnpo",
+    "sha256": "f76f80dc14eb92f07a2d38cddb4f7e83a8d809ba96d018cce4315ca4b3b36a87",
+    "treatment": "Original intacto; composição e degradês apenas no layout."
+  },
+  {
+    "slug": "oficina",
+    "image": "jornada-oficina-original.jpg",
+    "originalName": "JEF02253.jpg",
+    "driveId": "13BzYFEhec1IkgpNUHRaPh4HPdFUKPl4N",
+    "sha256": "de71c6ea36091aec7e43832681d38616322965899adff4feb94ab78a047d0fc5",
+    "treatment": "Original intacto; composição e degradês apenas no layout."
+  },
+  {
+    "slug": "phd",
+    "image": "jornada-phd-original.jpg",
+    "originalName": "JEF02012.jpg",
+    "driveId": "1CRUy-seJoSpPQw0Ibm3j1YaKl016XlUS",
+    "sha256": "74a42ced0c0350bfbebf32715938cc2866aa39a2bed89ae8056e17fdc2c20a90",
+    "treatment": "Original intacto; composição e degradês apenas no layout."
+  },
+  {
+    "slug": "vanguard",
+    "image": "jornada-vanguard-original.jpg",
+    "originalName": "JEF02238.jpg",
+    "driveId": "12qbepzQlxLK_Sai6dyeyLKvEgsqExq1N",
+    "sha256": "d2cd22ef45ba36ec88dc746513e382b59d1484ff97545e387495e86388834a26",
+    "treatment": "Original intacto; composição e degradês apenas no layout."
+  }
+]
