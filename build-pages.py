@@ -54,6 +54,7 @@ for key,sections in DATA.items():
  hero=f'<section class="hero internal-hero editorial-hero" id="inicio" aria-labelledby="hero-title"><div class="internal-hero-content"><p class="eyebrow hero-kicker">VIRTÙ / {e(NAMES[key])}</p><h1 id="hero-title">{e(h1)}</h1><div class="internal-hero-bottom"><div class="hero-description">{str(paras[0]) if paras else ""}</div>{str(actions) if actions else ""}</div></div><figure class="hero-portrait"><img class="hero-image" src="assets/curadoria-heroes-{key}.jpg" alt="Veridiana Cavalheri" fetchpriority="high"></figure></section>'
  main.append(frag(hero));main.append(frag('<div id="pagina"></div>'))
  if len(paras)>1:main.append(frag('<section class="hero-deck"><div class="content-grid"><p class="eyebrow">'+e(NAMES[key])+'</p><div>'+''.join(map(str,paras[1:]))+'</div></div></section>'))
+ if key=='virtu' and main.select_one('.hero-deck .eyebrow'):main.select_one('.hero-deck .eyebrow').name='h2'
  for idx,source in enumerate(sections[1:],1):
   sec=soup(source['html']).section;links(sec);sec['class']=['page-section'];sec['id']=source['id'] or 'bloco-'+str(idx+1).zfill(2)
   wrap=sec.select_one('.wrap');wrap['class']=['page-wrap']

@@ -175,24 +175,24 @@
 :is(.page-gravado,.page-mentoria) .site-footer{background:#202124;border-color:#d6b47740}
 :is(.page-gravado,.page-mentoria) .eyebrow{color:#d6b477}
 /* All photographs on these three pages extend to the section edges. */
-:is(.page-palestras,.page-gravado,.page-mentoria) .editorial-hero{isolation:isolate;background:#202124;color:#fafafa}
-:is(.page-palestras,.page-gravado,.page-mentoria) .hero-portrait{position:absolute;inset:0;width:100%;height:100%;margin:0;border-radius:0;z-index:-2}
-:is(.page-palestras,.page-gravado,.page-mentoria) .hero-portrait .hero-image{object-position:center 8%}
-:is(.page-palestras,.page-gravado,.page-mentoria) .editorial-hero:before,:is(.page-palestras,.page-mentoria) .image-section:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#202124f5 5%,#202124db 40%,#20212418 85%);pointer-events:none}
-:is(.page-palestras,.page-gravado,.page-mentoria) .site-header .brand img{filter:none}
-:is(.page-palestras,.page-gravado,.page-mentoria) .menu-toggle:not(.scrolled){color:#fafafa;border-color:#fafafa66;background:#20212444}
+:is(.page-palestras,.page-gravado,.page-mentoria,.page-virtu) .editorial-hero{isolation:isolate;background:#202124;color:#fafafa}
+:is(.page-palestras,.page-gravado,.page-mentoria,.page-virtu) .hero-portrait{position:absolute;inset:0;width:100%;height:100%;margin:0;border-radius:0;z-index:-2}
+:is(.page-palestras,.page-gravado,.page-mentoria,.page-virtu) .hero-portrait .hero-image{object-position:center 8%}
+:is(.page-palestras,.page-gravado,.page-mentoria,.page-virtu) .editorial-hero:before,:is(.page-palestras,.page-mentoria,.page-virtu) .image-section:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#202124f5 5%,#202124db 40%,#20212418 85%);pointer-events:none}
+:is(.page-palestras,.page-gravado,.page-mentoria,.page-virtu) .site-header .brand img{filter:none}
+:is(.page-palestras,.page-gravado,.page-mentoria,.page-virtu) .menu-toggle:not(.scrolled){color:#fafafa;border-color:#fafafa66;background:#20212444}
 :is(.page-gravado,.page-mentoria) .editorial-hero .button{color:#232427;background:#d6b477}
-:is(.page-palestras,.page-mentoria) .image-section{position:relative;isolation:isolate;overflow:hidden;min-height:760px;display:flex;align-items:center;background:#202124;color:#fafafa}
-:is(.page-palestras,.page-mentoria) .image-section .page-wrap{width:100%;display:block}
-:is(.page-palestras,.page-mentoria) .image-section .editorial-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;min-height:0;max-height:none;aspect-ratio:auto;margin:0;border-radius:0}
-:is(.page-palestras,.page-mentoria) .image-section .editorial-photo img{object-position:center 12%}
-:is(.page-palestras,.page-mentoria) .image-section .editorial-content{width:52%;padding:96px var(--gutter);position:relative}
-:is(.page-palestras,.page-mentoria) .image-section .editorial-content p{color:#f5f3ed}
+:is(.page-palestras,.page-mentoria,.page-virtu) .image-section{position:relative;isolation:isolate;overflow:hidden;min-height:760px;display:flex;align-items:center;background:#202124;color:#fafafa}
+:is(.page-palestras,.page-mentoria,.page-virtu) .image-section .page-wrap{width:100%;display:block}
+:is(.page-palestras,.page-mentoria,.page-virtu) .image-section .editorial-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;min-height:0;max-height:none;aspect-ratio:auto;margin:0;border-radius:0}
+:is(.page-palestras,.page-mentoria,.page-virtu) .image-section .editorial-photo img{object-position:center 12%}
+:is(.page-palestras,.page-mentoria,.page-virtu) .image-section .editorial-content{width:52%;padding:96px var(--gutter);position:relative}
+:is(.page-palestras,.page-mentoria,.page-virtu) .image-section .editorial-content p{color:#f5f3ed}
 @media(max-width:900px){
  .page-palestras .catalog-talk .talk-copy{grid-column:1/8}
  .page-palestras .catalog-talk.theme-performance .talk-copy{grid-column:6/13}
- :is(.page-palestras,.page-gravado,.page-mentoria) .editorial-hero .internal-hero-content{width:65%;min-height:800px;padding-top:144px;padding-bottom:96px}
- :is(.page-palestras,.page-mentoria) .image-section .editorial-content{width:65%;padding:80px var(--gutter)}
+ :is(.page-palestras,.page-gravado,.page-mentoria,.page-virtu) .editorial-hero .internal-hero-content{width:65%;min-height:800px;padding-top:144px;padding-bottom:96px}
+ :is(.page-palestras,.page-mentoria,.page-virtu) .image-section .editorial-content{width:65%;padding:80px var(--gutter)}
 }
 @media(max-width:700px){
  .page-palestras .catalog-talk{min-height:960px;padding-top:380px;padding-bottom:64px;align-items:end}
@@ -201,9 +201,28 @@
  .page-palestras .catalog-talk.theme-performance .talk-photo img{object-position:24% top}
  .page-palestras .catalog-talk:before,.page-palestras .catalog-talk.theme-performance:before{background:linear-gradient(180deg,#20212410 0%,#20212477 26%,#202124f5 48%,#202124 100%)}
  .page-palestras .catalog-talk.theme-performance:before{background:linear-gradient(180deg,#350b2010 0%,#350b2077 26%,#350b20f5 48%,#350b20 100%)}
- :is(.page-palestras,.page-gravado,.page-mentoria) .editorial-hero .internal-hero-content{width:100%;min-height:980px;padding:460px var(--gutter) 64px;justify-content:end}
- :is(.page-palestras,.page-gravado,.page-mentoria) .hero-portrait .hero-image{object-position:65% top}
- :is(.page-palestras,.page-gravado,.page-mentoria) .editorial-hero:before,:is(.page-palestras,.page-mentoria) .image-section:before{background:linear-gradient(180deg,#20212433 0%,#20212433 28%,#202124ed 48%,#202124 100%)}
- :is(.page-palestras,.page-mentoria) .image-section .editorial-content{width:100%;padding:420px var(--gutter) 64px}
- :is(.page-palestras,.page-mentoria) .image-section .editorial-photo img{object-position:65% top}
+ :is(.page-palestras,.page-gravado,.page-mentoria,.page-virtu) .editorial-hero .internal-hero-content{width:100%;min-height:980px;padding:460px var(--gutter) 64px;justify-content:end}
+ :is(.page-palestras,.page-gravado,.page-mentoria,.page-virtu) .hero-portrait .hero-image{object-position:65% top}
+ :is(.page-palestras,.page-gravado,.page-mentoria,.page-virtu) .editorial-hero:before,:is(.page-palestras,.page-mentoria,.page-virtu) .image-section:before{background:linear-gradient(180deg,#20212433 0%,#20212433 28%,#202124ed 48%,#202124 100%)}
+ :is(.page-palestras,.page-mentoria,.page-virtu) .image-section .editorial-content{width:100%;padding:420px var(--gutter) 64px}
+ :is(.page-palestras,.page-mentoria,.page-virtu) .image-section .editorial-photo img{object-position:65% top}
 }
+
+/* A Virtù: full photographic sections, an editorial brand band and a centered close. */
+.page-virtu .editorial-hero .internal-hero-content{width:60%;min-height:900px;padding:440px 64px 64px var(--gutter);justify-content:end}
+.page-virtu .hero-portrait .hero-image{object-position:center 42%}
+.page-virtu .editorial-hero:before{background:linear-gradient(0deg,#202124f5 0%,#20212477 44%,#20212422 78%)}
+.internal.page-virtu .hero-deck{background:#26272a;color:#fafafa;border:0;padding-block:64px}
+.page-virtu .hero-deck .content-grid{align-items:center}
+.page-virtu .hero-deck .eyebrow{grid-column:1/5;font-family:var(--font-heading);font-size:var(--type-hero);line-height:var(--line-hero);letter-spacing:-.04em;padding:0;margin:0}
+.page-virtu .hero-deck .content-grid>div{grid-column:6/13}
+.page-virtu .hero-deck p:last-child{margin-bottom:0}
+.internal.page-virtu .image-section .editorial-content{padding:96px var(--gutter)}
+.page-virtu .image-section .editorial-photo img{object-position:center 8%}
+@media(min-width:701px){.page-virtu #bloco-03 .editorial-photo img{transform:scale(1.2);transform-origin:left center}}
+.page-virtu .closing-section .cta-inner{display:flex;flex-direction:column;align-items:center;gap:32px;text-align:center}
+.page-virtu .closing-section .section-title{max-width:960px;margin:0}
+.page-virtu .closing-section .closing-copy{max-width:760px;align-self:center}
+.page-virtu .closing-section .actions{margin:0;align-self:center}
+@media(max-width:900px){.page-virtu .editorial-hero .internal-hero-content{width:80%}.page-virtu .hero-deck .eyebrow{font-size:var(--type-title);line-height:var(--line-title)}}
+@media(max-width:700px){.page-virtu .editorial-hero .internal-hero-content{width:100%;min-height:880px;padding:460px var(--gutter) 64px}.page-virtu .hero-portrait .hero-image{object-position:35% top!important}.page-virtu .hero-deck .eyebrow{font-size:var(--type-hero);line-height:var(--line-hero);margin-bottom:32px}.internal.page-virtu .image-section .editorial-content{padding:420px var(--gutter) 64px}}
