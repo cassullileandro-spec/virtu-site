@@ -1,42 +1,47 @@
 [
   {
     "slug": "gravado",
-    "image": "jornada-gravado-original.jpg",
-    "originalName": "JEF01849.jpg",
-    "driveId": "1LygfhPPcP5ywQecTPHCCZHIFj-7FmEVw",
-    "sha256": "465fdd8c265ffb02f4dee754b235ba54a6c6bd10726c533a56555ffa6fa4218b",
-    "treatment": "Original intacto; composição e degradês apenas no layout."
+    "image": "jornada-gravado-capa-v2.webp",
+    "originalName": "JEF01904.jpg",
+    "driveId": "14iQ-Mkkdl9BZMLB7-8NyvtSn3onOrCu9",
+    "sha256": "2ef2995e9046ad96036c86d7a2830dd07591ae2b86e25ff04a8406755237edcb",
+    "treatment": "Capa raster finalizada com image_gen a partir de fotografia de estúdio; enquadramento de rosto e tronco; texto separado no site.",
+    "originalSha256": "81834db8c9afd1a6a3956e0eacd929c2608bf6ab2286b8f4244c69febc39851b"
   },
   {
     "slug": "mentoria",
-    "image": "jornada-mentoria-original.jpg",
-    "originalName": "JEF01939.jpg",
-    "driveId": "1Q_DqGE3WzSIKqwAgLgkYBaiStJhuYnpo",
-    "sha256": "f76f80dc14eb92f07a2d38cddb4f7e83a8d809ba96d018cce4315ca4b3b36a87",
-    "treatment": "Original intacto; composição e degradês apenas no layout."
+    "image": "jornada-mentoria-capa-v2.webp",
+    "originalName": "JEF01887.jpg",
+    "driveId": "1U6NBR5qCIqhgZyUD6dFHC2W3qcPGDIjz",
+    "sha256": "2024d9be74928edc232a33fdc089a1026631e64e51b5a36dfcf20aaebe1ae590",
+    "treatment": "Capa raster finalizada com image_gen a partir de fotografia de estúdio; enquadramento de rosto e tronco; texto separado no site.",
+    "originalSha256": "bc7571841f1ad3507c460c7bf6da4ecadacfc9672d6602d2a6d32fac92ee7153"
   },
   {
     "slug": "oficina",
-    "image": "jornada-oficina-original.jpg",
-    "originalName": "JEF02253.jpg",
-    "driveId": "13BzYFEhec1IkgpNUHRaPh4HPdFUKPl4N",
-    "sha256": "de71c6ea36091aec7e43832681d38616322965899adff4feb94ab78a047d0fc5",
-    "treatment": "Original intacto; composição e degradês apenas no layout."
+    "image": "jornada-oficina-capa-v2.webp",
+    "originalName": "JEF01962.jpg",
+    "driveId": "1mxqfF29k5gMJRRI1P4UPqNFWpKiNCwjc",
+    "sha256": "8bb59209abcd440328fa3e47653636ef5f70303910391931e0173359ff006f28",
+    "treatment": "Capa raster finalizada com image_gen a partir de fotografia de estúdio; enquadramento de rosto e tronco; texto separado no site.",
+    "originalSha256": "78b99d5a63f878c40d0b36e2612e671ae2881aeab17a385f140848a0347515c8"
   },
   {
     "slug": "phd",
-    "image": "jornada-phd-original.jpg",
-    "originalName": "JEF02012.jpg",
-    "driveId": "1CRUy-seJoSpPQw0Ibm3j1YaKl016XlUS",
-    "sha256": "74a42ced0c0350bfbebf32715938cc2866aa39a2bed89ae8056e17fdc2c20a90",
-    "treatment": "Original intacto; composição e degradês apenas no layout."
+    "image": "jornada-phd-capa-v2.webp",
+    "originalName": "JEF01992.jpg",
+    "driveId": "1WMsDR--ObuZGwXi1U8LlK-m_04xn-UfR",
+    "sha256": "cfe81783e84766af1b0e3865e8d360635fb7eea23eca628783409a1533b23fe7",
+    "treatment": "Capa raster finalizada com image_gen a partir de fotografia de estúdio; enquadramento de rosto e tronco; texto separado no site.",
+    "originalSha256": "a44ebaaea745ed998b6118841da6885c08de017e6af6f88be3dc195eb2f4210e"
   },
   {
     "slug": "vanguard",
-    "image": "jornada-vanguard-original.jpg",
-    "originalName": "JEF02238.jpg",
-    "driveId": "12qbepzQlxLK_Sai6dyeyLKvEgsqExq1N",
-    "sha256": "d2cd22ef45ba36ec88dc746513e382b59d1484ff97545e387495e86388834a26",
-    "treatment": "Original intacto; composição e degradês apenas no layout."
+    "image": "jornada-vanguard-capa-v2.webp",
+    "originalName": "JEF02146.jpg",
+    "driveId": "1mQ9beG_Eki9vM3_29jvoX-toZ2KH7RrF",
+    "sha256": "0462e56485e37f2a1d9237b075c8ded25d09614564865fec82d6c3f968696fb1",
+    "treatment": "Capa raster finalizada com image_gen a partir de fotografia de estúdio; enquadramento de rosto e tronco; texto separado no site.",
+    "originalSha256": "69e7f071f7c339ab4ff13de371c1f0aa8d8812ef3a713f840004d9c06462e24b"
   }
 ]

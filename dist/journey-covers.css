@@ -1,38 +1,37 @@
-/* Original photographs stay unretouched; color and light belong to the layout. */
-.journey-cover{--journey-dark:#252629;--journey-light:#d6b477;position:relative;isolation:isolate;color:#fafafa;background:var(--journey-dark);overflow:hidden}
-.journey-oficina{--journey-dark:#163c33;--journey-light:#ddc087}
-.journey-phd{--journey-dark:#182e45;--journey-light:#ddbd83}
-.journey-vanguard{--journey-dark:#35243e;--journey-light:#d6b88a}
-.internal .editorial-hero.journey-cover{background:radial-gradient(ellipse at 72% 18%,#d6b47718,transparent 55%),var(--journey-dark);color:#fafafa}
+/* Final cover artwork includes the portrait and backdrop; copy stays live. */
+.journey-cover{--journey-dark:#292b2c;--journey-light:#d6bd89;position:relative;isolation:isolate;color:#fafafa;background:var(--journey-dark);overflow:hidden}
+.journey-oficina{--journey-dark:#343b32}
+.journey-phd{--journey-dark:#303c46}
+.internal .editorial-hero.journey-cover{background:var(--journey-dark);color:#fafafa}
 .internal .journey-cover .hero-portrait,.page-empresas .solution-card.journey-cover figure{position:absolute;inset:0;width:100%;height:100%;min-height:0;max-height:none;margin:0;border:0;border-radius:0;z-index:-2}
-.internal .journey-cover .hero-portrait .hero-image,.journey-panel.journey-cover>img,.page-empresas .solution-card.journey-cover figure img{position:absolute;inset:0 0 0 auto;width:auto;max-width:55%;height:100%;object-fit:cover;object-position:center 24%;filter:none;mask-image:linear-gradient(90deg,transparent,#000 28%);border-radius:0}
-.journey-cover:after{content:"";position:absolute;width:70%;height:160%;left:12%;top:-36%;border:1px solid var(--journey-light);border-radius:50%;transform:rotate(-24deg);opacity:.26;z-index:-1;pointer-events:none;mask-image:linear-gradient(90deg,#000,transparent 72%)}
-.internal .editorial-hero.journey-cover:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,var(--journey-dark) 18%,transparent 62%)}
-.internal .editorial-hero.journey-cover .internal-hero-content{width:60%;min-height:800px;padding-top:144px;padding-bottom:96px}
+.internal .journey-cover .hero-portrait .hero-image,.journey-panel.journey-cover>img,.page-empresas .solution-card.journey-cover figure img{position:absolute;inset:0;width:100%;max-width:none;height:100%;object-fit:cover;object-position:center top;filter:none;mask-image:none;border-radius:0}
+.journey-cover:after{content:none}
+.internal .editorial-hero.journey-cover:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#20222352,transparent 62%)}
+.internal .editorial-hero.journey-cover .internal-hero-content{width:55%;min-height:800px;padding-top:144px;padding-bottom:96px}
 .internal .editorial-hero.journey-cover .hero-kicker{color:var(--journey-light)}
 .internal .editorial-hero.journey-cover .button,.page-empresas .solution-card.journey-cover .button{color:#252629;background:var(--journey-light);border-color:transparent}
 .internal:has(.editorial-hero.journey-cover) .site-header .brand img{filter:none}
 .internal:has(.editorial-hero.journey-cover) .menu-toggle:not(.scrolled){color:#fafafa;border-color:#fafafa66;background:#25262944}
 .journey-panel.journey-cover{border-radius:0}
-.journey-panel.journey-cover .journey-panel-shade{background:linear-gradient(90deg,var(--journey-dark) 12%,transparent 72%)}
-.journey-thumb img[src*="jornada-"]{filter:none;object-position:center 20%}
+.journey-panel.journey-cover .journey-panel-shade{background:linear-gradient(90deg,#20222366,transparent 65%)}
+.journey-panel.journey-cover .journey-content{width:46%}
+.journey-thumb img[src*="jornada-"]{filter:none;object-position:83% 15%;transform:scale(1.65);transform-origin:83% 15%}
 .page-empresas .solution-card.journey-cover{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:24px;min-height:560px;padding:64px 52% 64px 48px;border:0;border-radius:0}
 .page-empresas .solution-card.journey-cover>.index{color:var(--journey-light);align-self:auto}
 .page-empresas .solution-card.journey-cover>h3,.page-empresas .solution-card.journey-cover>p{color:#fafafa;align-self:auto}
 .page-empresas .solution-card.journey-cover>h3{font-size:var(--type-title);line-height:var(--line-title)}
 .page-empresas .solution-card.journey-cover>a{margin-top:8px}
-@media(max-width:900px){
- .internal .editorial-hero.journey-cover .internal-hero-content{width:64%}
- .page-empresas .solution-card.journey-cover{padding-left:32px;padding-right:46%}
+@media(min-width:701px) and (max-width:900px){
+ .internal .editorial-hero.journey-cover .internal-hero-content{width:58%;padding-right:24px}
+ .page-empresas .solution-card.journey-cover{padding-left:32px;padding-right:48%}
 }
 @media(max-width:700px){
- .internal .editorial-hero.journey-cover .internal-hero-content{width:100%;min-height:980px;padding:480px var(--gutter) 64px;justify-content:end}
- .internal .journey-cover .hero-portrait .hero-image,.journey-panel.journey-cover>img,.page-empresas .solution-card.journey-cover figure img{width:100%;max-width:100%;height:520px;object-position:center 22%!important;mask-image:linear-gradient(#000 66%,transparent 100%)}
+ .internal .editorial-hero.journey-cover .internal-hero-content{width:100%;min-height:980px;padding:500px var(--gutter) 64px;justify-content:end}
+ .internal .journey-cover .hero-portrait .hero-image,.journey-panel.journey-cover>img,.page-empresas .solution-card.journey-cover figure img{height:580px;object-position:86% top!important;mask-image:linear-gradient(#000 62%,transparent 100%)}
  .internal .editorial-hero.journey-cover:before{background:none}
- .journey-cover:after{width:150%;height:80%;left:-80%;top:40%;opacity:.18}
  .journey-panel.journey-cover{height:auto;min-height:780px}
- .journey-panel.journey-cover>img{height:400px}
+ .journey-panel.journey-cover>img{height:460px}
  .journey-panel.journey-cover .journey-panel-shade{background:none}
- .journey-panel.journey-cover .journey-content{position:relative;left:auto;right:auto;bottom:auto;top:auto;transform:none;width:auto;padding:380px 24px 40px}
- .page-empresas .solution-card.journey-cover{min-height:800px;padding:480px 24px 48px;justify-content:end}
+ .journey-panel.journey-cover .journey-content{position:relative;left:auto;right:auto;bottom:auto;top:auto;transform:none;width:auto;padding:400px 24px 40px}
+ .page-empresas .solution-card.journey-cover{min-height:800px;padding:500px 24px 48px;justify-content:end}
 }
