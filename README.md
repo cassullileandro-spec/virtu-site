@@ -1,50 +1,53 @@
-# Virtù — site aprovado no Figma
+# Virtù — implementação responsiva
 
-[Prévia online](https://virtu-editorial-previa.cassullileandro.chatgpt.site/) · [GitHub](https://github.com/cassullileandro-spec/virtu-site) · [Figma aprovado](https://www.figma.com/design/DtC8cjFITfeoEF3ejiVW8D?node-id=787-989)
+[Site](https://virtu-editorial-previa.cassullileandro.chatgpt.site/) · [GitHub](https://github.com/cassullileandro-spec/virtu-site) · [Figma aprovado](https://www.figma.com/design/DtC8cjFITfeoEF3ejiVW8D?node-id=787-989)
 
-As 16 páginas foram transpostas da versão aprovada de 10/11/2026. O desktop de referência tem 1920 px, conteúdo de 1280 px, fontes Editor’s Note e Geist e o rodapé compartilhado. A implementação preserva textos, fotografias, cores, posicionamentos e hierarquia do arquivo.
+A base responsiva e as interações da versão 29 foram recuperadas. As alterações editoriais do Figma foram aplicadas sobre essa base. O canvas de 1920 px é uma referência de composição: não define a largura do navegador e não é reduzido com CSS zoom.
 
-## Visualizar e reconstruir
+## Construir e visualizar
 
-As páginas de `dist/` são HTML, CSS e JavaScript estáticos, sem framework obrigatório no navegador.
+A entrada completa é:
 
 ```sh
-python3 -m http.server 4180 --directory dist
-python3 build.py
+python3 build-pages.py
 python3 test_figma_site.py
+python3 -m http.server 4180 --directory dist
 ```
 
-A reconstrução usa BeautifulSoup 4, já utilizado pelo projeto. `build-pages.py` é uma entrada equivalente. A hospedagem não requer Python.
+A construção usa BeautifulSoup 4, já utilizado pelo projeto. A hospedagem serve HTML, CSS e JavaScript estáticos, sem Python ou framework no navegador.
 
-## Fontes de edição
+- `build.py`: home original, navegação, contato, vídeo, carrossel e jornadas.
+- `build-pages.py`: páginas internas e palestras; chama a aplicação editorial ao terminar.
+- `apply-approved.py`: textos, fotografias, cards, paletas e rodapé aprovados; converte as colunas editoriais em trilhas fluidas e mantém formulários e FAQs anteriores.
+- `sync-figma.py` / `enhance-figma.py`: leitura dos snapshots e identificação dos conteúdos. Não geram mais um site com largura fixa.
+- `dist/styles.css`, `pages.css`, `design-system.css`, `hero-cover.css`, `internal-editorial.css`, `journey-covers.css`: estilos originais.
+- `dist/approved.css`: ajustes editoriais e contrato responsivo atual.
+- `dist/app.js` / `pages.js`: comportamentos e animações GSAP originais, com os novos blocos incluídos nos seletores.
 
-- `sources/figma/*.tsx`: snapshots do código de alta fidelidade retornado pelo Figma, com referências locais aos assets.
-- `sync-figma.py`: converte os snapshots em HTML sem depender de React ou Tailwind; valida classes desconhecidas antes de gravar.
-- `enhance-figma.py`: aplica semântica, destinos e controles nativos, preservando a composição.
-- `dist/figma-site.css`: estilos desktop gerados; não editar manualmente.
-- `dist/responsive.css`: composição mobile e adaptação de larguras.
-- `dist/figma-site.js`: menu, vídeo, carrossel e abertura de rascunhos no WhatsApp.
-- `sources/figma/interactions.json`: respostas e conteúdos de interação preservados da versão anterior.
-- `sources/figma/dimensions.json`: medidas das 16 páginas e seções no Figma.
+Não executar somente `build.py` para publicar: ele produz apenas a base da home. `build-pages.py` constrói o conjunto completo.
 
-Os estilos antigos permanecem no histórico e no acervo, mas não são carregados pelas páginas atuais. Os antigos testes de seletores foram substituídos pela verificação de fonte e pela suíte de navegador abaixo.
+## Contrato de layout
 
-## Fundos mobile
+Conteúdo útil máximo de **1280 px**, com margens mínimas de 32 px no desktop e 24 px no celular. Em 1440 px, o conteúdo central tem 80 px de margem; em 1920 px, 320 px. Heroes e imagens de fundo podem ocupar a tela inteira.
 
-São 17 arquivos independentes em `dist/assets/mobile/`: um para cada hero e outro para o teaser. Os cards de palestras e jornadas também selecionam essas composições no celular por meio de `picture/source`. As imagens desktop foram mantidas.
+Texto de leitura permanece em **18/28 px** no desktop e **16/24 px** no celular. A escala tipográfica anterior de títulos foi preservada. O DPR de uma tela Retina não altera o tamanho CSS do texto. Os fundos e as colunas se adaptam à largura disponível; não há escala global.
 
-Os fundos foram compostos com as fotografias aprovadas, usando recortes próprios, tratamentos originais e gradientes na cor da página. Não foram geradas novas pessoas.
+Seções usam alturas determinadas pelo conteúdo e espaçamento vertical de 96 px no desktop, 80 px na faixa intermediária e 64 px no celular. Fotos e capas têm proporções ou altura mínima próprias.
 
-As peças permanecem editáveis na página [Fundos mobile · site publicado](https://www.figma.com/design/DtC8cjFITfeoEF3ejiVW8D?node-id=1005-989). `mobile-backgrounds.json` relaciona cada arquivo ao seu frame.
+Os arquivos de `sources/figma/` preservam a referência aprovada. Os fundos mobile ficam separados em `dist/assets/mobile/`, com seus frames editáveis na página [Fundos mobile](https://www.figma.com/design/DtC8cjFITfeoEF3ejiVW8D?node-id=1005-989). As páginas internas selecionam seus fundos por `picture/source`.
 
 ## Verificação
 
-`python3 test_figma_site.py` verifica preservação da copy do Figma, assets locais, links e âncoras, páginas das palestras, campos dos formulários e fundos mobile.
+`test_figma_site.py` confere 16 rotas, copy aprovada, assets, links, formulários e o carregamento do runtime original.
 
-`qa/figma-site.cjs` usa Puppeteer Core e Chrome disponíveis no ambiente. Pode receber `PUPPETEER_MODULE`, `CHROME_BIN`, `QA_URL` e `QA_OUTPUT`. Cobre as 16 páginas em 390, 1440 e 1920 px, sem overflow de textos, imagens quebradas ou labels colapsadas; verifica menu, FAQ, jornadas, carrossel, vídeo e os dois formulários. O teste intercepta a abertura do WhatsApp: não envia mensagens.
+`qa/responsive-recovery.cjs` verifica larguras de 390, 1280, 1440, 1512 e 1920 px, ausência de escala global, overflow, imagens quebradas e fotografias colapsadas; também produz capturas completas.
 
-As legendas do teaser continuam sendo a transcrição automática anterior e precisam de revisão audiovisual. A conferência foi feita em navegador, sem teste em aparelhos físicos.
+`qa/native-interactions.cjs` verifica Retina 1440 px, movimentos ativos nas 16 páginas, menu, FAQ, jornadas, carrossel, vídeo, contato e os dois formulários. A abertura do WhatsApp é interceptada: nenhum teste envia mensagens.
 
-## Publicação
+Os testes usam Chrome e Puppeteer Core locais. A simulação de viewport não substitui testes em Safari e aparelhos físicos. As legendas automáticas anteriores do teaser ainda precisam de revisão audiovisual.
 
-O Site existente é mantido por `.openai/hosting.json`, no mesmo endereço público. O fluxo de publicação sincroniza o commit da fonte antes de empacotar `dist/`. A branch `main` do GitHub acompanha esse commit. O domínio institucional não é alterado por este projeto.
+## Publicação e recuperação
+
+A identidade do Site está em `.openai/hosting.json`. O endereço público permanece o mesmo e a branch main do GitHub recebe o mesmo commit.
+
+A versão 29, commit `b85194900fc9b6007c1c61c9011d37b6f802d96d`, é a base anterior recuperável. A versão 30 permanece no histórico, mas sua implementação com canvas escalado foi retirada.

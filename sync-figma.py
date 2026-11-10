@@ -1,4 +1,4 @@
-"""Render the approved Figma snapshots as static HTML and CSS."""
+"""Parse approved Figma content for the original responsive site."""
 from pathlib import Path
 from html import escape
 import json,re,runpy
@@ -133,39 +133,3 @@ def classify(soup,slug):
   if txt.startswith('← PALESTRAS'):link(n,'palestras.html')
   elif txt in ['Quero conversar com a Virtù','Conversar com a Virtù','Conversar sobre meu evento']:link(n.parent,'contato.html')
  return root
-BASE="""@font-face{font-family:'Geist';src:url('assets/geist-regular.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
-@font-face{font-family:"Editor's Note";src:url('assets/editors-note-regular.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
-@font-face{font-family:"Editor's Note";src:url('assets/editors-note-italic.woff2') format('woff2');font-style:italic;font-weight:400;font-display:swap}
-*,*::before,*::after{box-sizing:border-box;border-width:0;border-style:solid}html{scroll-behavior:smooth}body{margin:0;font-family:Geist,sans-serif;background:#fafafa;color:#262626}p,h1,h2,h3,h4,figure{margin:0;font-weight:inherit}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit;color:inherit}button{cursor:pointer;background:none}button:focus-visible,a:focus-visible{outline:2px solid #f1c284;outline-offset:5px}.page{margin:0 auto}.action{cursor:pointer;transition:color .15s,opacity .15s}.action:hover{opacity:.85}.site-footer .action:hover,.site-footer .action:focus-visible{color:#f4f4f4;opacity:1}.site-footer .action:hover p{color:inherit}.skip-link{position:fixed;left:20px;top:-100px;z-index:99;background:white;color:black;padding:12px}.skip-link:focus{top:20px}dialog{border:0}dialog::backdrop{background:#0009}.menu-dialog{position:fixed;inset:0;max-width:none;max-height:none;width:100vw;height:100dvh;background:#0b0b0b;color:#f5f5f5;padding:64px max(24px,calc((100vw - 1280px)/2));z-index:99}.menu-dialog nav{display:grid;grid-template-columns:1fr 1fr;gap:16px 64px;margin-top:64px}.menu-dialog nav a{font-family:"Editor's Note";font-size:36px}.close-menu{position:absolute;right:48px;top:40px;font-size:20px}.media-dialog{padding:24px;background:#0b0b0b;color:white;width:min(1100px,95vw)}.media-dialog video{width:100%;max-height:80vh}.media-dialog button{display:block;margin:0 0 20px auto}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-"""
-def build():
- reports=[];outputs={}
- for path in sorted(S.glob('*.tsx')):
-  soup=fragment(path.read_text());root=classify(soup,path.stem);root=enhance(soup,root,path.stem)
-  for n in [root,*root.find_all(True)]:
-   cls=n.get('class',[])
-   for c in cls:
-    if c not in styles:
-     css=utility(c)
-     if css:styles[c]=(f'u{len(styles)}',css)
-   n['data-design-class']=' '.join(cls)
-   n['class']=[styles[c][0] if c in styles else c for c in cls]
-  menu='<dialog id="site-menu" class="menu-dialog" aria-label="Navegação"><button class="close-menu" aria-label="Fechar menu">Fechar ×</button><nav>'+''.join(f'<a href="{r}">{escape(t)}</a>' for t,r in ROUTES.items() if not r.startswith('#'))+'</nav></dialog>'
-  video='<dialog id="site-video" class="media-dialog"><button class="close-video">Fechar ×</button><video controls playsinline preload="none"><source src="assets/teaser-lideranca.mp4" type="video/mp4"><track kind="captions" src="assets/teaser-pt.vtt" srclang="pt-BR" label="Português"></video></dialog>'
-  titles={'index':'O lado humano do negócio','virtu':'A Virtù','veridiana':'Veridiana Cavalheri','empresas':'Soluções para empresas','palestras':'Palestras','gravado':'Meta V — Acesso gravado','oficina':'Super Humanos — Oficina','mentoria':'Mentoria Meta V','phd':'PHD','vanguard':'Vanguard','contato':'Fale conosco','trabalhe':'Trabalhe conosco','palestra-cinco-dimensoes':'As cinco dimensões da liderança','palestra-influencia-real':'Influência real','palestra-auto-performance':'Auto Performance para times','palestra-eu':'EU — A força inabalável de ser'}
-  title='Virtù — '+titles[path.stem]
-  html='<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>'+title+'</title><link rel="stylesheet" href="figma-site.css"><link rel="stylesheet" href="responsive.css"><script src="figma-site.js" defer></script></head><body><a class="skip-link" href="#conteudo">Pular para o conteúdo</a>'+str(root)+menu+video+'</body></html>'
-  assert 'figma.com/api/mcp' not in html
-  outputs[path.stem+'.html']=html
-  reports.append({'page':path.stem,'images':len(root.find_all('img')),'nodes':len(root.find_all(True))})
- intentional={'page','section','hero','site-header','site-footer','footer-brand-row','footer-nav','footer-logo','footer-intro','footer-credits','action','menu-toggle','talk-card','talk-card-copy','talk-card-row','heading'}
- missing={c for c in unknown-intentional if not c.startswith('v-') and c not in {'faq-answer','journey-panel','topic-answer','text-link','arrow','journey-tag'}}
- assert not missing,'Unmapped design classes: '+str(sorted(missing))
- for name,html in outputs.items():(D/name).write_text(html)
- (D/'figma-site.css').write_text(BASE+'\n'+'\n'.join('.'+name+'{'+css+'}' for name,css in styles.values()))
- (S/'build-report.json').write_text(json.dumps(reports,indent=2))
- print(json.dumps({'pages':len(reports),'css_rules':len(styles),'assets':len(ASSETS)}))
-if __name__=='__main__':
- assert utility('px-[24px]')=='padding-left:24px;padding-right:24px'
- assert utility('text-[color:var(--footer-link,#999)]')=='color:var(--footer-link,#999)'
- build()

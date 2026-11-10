@@ -1,4 +1,6 @@
-qa/artifacts/
+qa/*
+!qa/responsive-recovery.cjs
+!qa/native-interactions.cjs
 .DS_Store
 *.tar.gz
 __pycache__/
