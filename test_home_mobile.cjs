@@ -19,10 +19,12 @@ for(const width of (process.env.QA_WIDTHS||'360,390,430,700,701,768,1440').split
  });
  assert.equal(state.overflow,0,'overflow '+width);assert.deepEqual(state.missing,[],'missing images '+width);
  assert(state.buttons.every(n=>n.visible&&n.fits&&n.text.trim()),'CTA '+width);
+ const cover=await p.evaluate(()=>{const hero=document.querySelector('.cover-hero'),im=hero.querySelector('.cover-portrait'),art=hero.querySelector('.cover-art').getBoundingClientRect(),copy=hero.querySelector('.cover-copy').getBoundingClientRect();return {bg:getComputedStyle(hero).backgroundColor,src:im.currentSrc,filter:getComputedStyle(im).filter,overlap:art.bottom>copy.top+1,wordmark:getComputedStyle(hero.querySelector('.cover-wordmark')).display}});
+ assert.equal(cover.bg,'rgb(156, 156, 156)');assert(cover.src.endsWith('hero-cover-portrait.png'));assert(cover.filter.includes('grayscale(1)'));assert.notEqual(cover.wordmark,'none');if(width<=700)assert(!cover.overlap,'home cover copy must follow the artwork');
  assert(state.heroCopy.includes('Sua estratégia ganha força')&&state.heroCopy.includes('Quero conversar sobre minha empresa'));
- if(width<=700) for(const im of state.images.filter(n=>!n.src.includes('logo')&&!n.src.includes('.png')))assert(Math.abs(im.ratio-im.natural)<.02,'distorted/cropped '+im.src);
+ if(width<=700) for(const im of state.images.filter(n=>!n.src.includes('logo')&&!n.src.includes('.png')))assert(im.fit==='contain'||Math.abs(im.ratio-im.natural)<.02,'distorted/cropped '+im.src);
  if(width===390){
-  await p.evaluate(()=>scrollTo(0,0));await p.screenshot({path:out+'/hero.png'});
+  await p.evaluate(()=>scrollTo(0,0));await new Promise(r=>setTimeout(r,600));await p.screenshot({path:out+'/hero.png'});
   for(const sel of ['.cover-copy','.intro','.film','.home-talks','.about','.site-footer']){await p.$eval(sel,n=>n.scrollIntoView());await new Promise(r=>setTimeout(r,600));await p.screenshot({path:out+'/'+sel.slice(1)+'.png'});}
  }
  for(let i=0;i<6;i++){

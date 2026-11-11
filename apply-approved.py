@@ -155,6 +155,7 @@ MOBILE_ART=json.loads((P/'sources/figma/mobile-art-direction.json').read_text())
 ART_SOURCES={ref:x for x in MOBILE_ART for ref in [x['reference'],*x.get('aliases',[])]}
 def apply_mobile_art(doc):
  for im in list(doc.select('main img')):
+  if 'cover-portrait' in im.get('class',[]):continue
   entry=ART_SOURCES.get(im.get('src'))
   if not entry and im.find_parent(class_=['journey-panel','journey-thumb']):
    route=im.find_parent('details').select_one('.journey-content a')['href'].removesuffix('.html')
@@ -173,7 +174,7 @@ def apply_mobile_art(doc):
 for f in sorted((P/'sources/figma').glob('*.tsx')):
  slug=f.stem;source=C['fragment'](f.read_text());root=C['classify'](source,slug);root=C['enhance'](source,root,slug)
  doc=parse((P/'dist'/f'{slug}.html').read_text())
- doc.head.append(parse('<link rel="stylesheet" href="approved.css?v=20261111-home">').link)
+ doc.head.append(parse('<link rel="stylesheet" href="approved.css?v=20261111-home-figma">').link)
  # Original shell, navigation, dialogs, forms and animation runtime remain in place.
  doc.select_one('footer').replace_with(footer(root.select_one('footer')))
  for n in doc.select('.eyebrow'):

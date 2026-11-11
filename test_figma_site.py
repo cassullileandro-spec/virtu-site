@@ -40,13 +40,15 @@ assert len(art)==20
 for item in art:
  if item.get('scope')=='cover':continue
  doc=pages[item['slug']+'.html']
- assert doc.select_one('.hero picture source[srcset="'+item['path']+'"]'),item['slug']
+ if item['slug']=='index':
+  assert doc.select_one('.hero img[src="assets/hero-cover-portrait.png"]')
+ else:assert doc.select_one('.hero picture source[srcset="'+item['path']+'"]'),item['slug']
  assert (P/'dist'/item['path']).is_file(),item['path']
  assert item['prompt'] and item['reference']!=item['path']
 for name,count in [('palestras.html',4),('empresas.html',5),('index.html',4)]:
  selector='.home-talk-card' if name=='index.html' else '.approved-photo'
  assert len(pages[name].select(selector+'.mobile-art-directed picture source[srcset*="-art-v2"]'))==count,name
-print('PASS: 16 recomposed mobile heroes and all 13 repeated talk/journey covers use dedicated picture sources.')
+print('PASS: 15 recomposed mobile heroes, original home cutout and all 13 repeated talk/journey covers.')
 
 for name in ['virtu.html','mentoria.html','phd.html']:
  for cover in pages[name].select('.approved-cover'):

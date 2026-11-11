@@ -1,0 +1,8 @@
+{
+  "method": "Built-in image_gen",
+  "reference": "/Users/leandrocassulli/Documents/Trabalho/Clientes/Veridiana/Site e materiais/site-virtu/dist/assets/palco.jpg",
+  "asset": "/Users/leandrocassulli/Documents/Trabalho/Clientes/Veridiana/Site e materiais/site-virtu/dist/assets/mobile/home-film-v3.jpg",
+  "generated_source": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-f729802d-3a8c-4845-ac87-a20fb0b16bb4.png",
+  "prompt": "Use case: identity-preserve. Edit target: attached original horizontal event photograph. Create a faithful vertical 9:16 MOBILE adaptation of this SAME photograph for the Virtù website film section, not a simple center crop. Preserve the exact woman's face, age, short swept hair, white jacket and white blouse, headset microphone, expression and open hand gestures. Black-and-white monochrome treatment exactly like the desktop website. Recompose the entire head, upper body, both elbows and both gesturing hands comfortably within a vertical canvas, no facial distortion or new people. Subject occupies middle 55% of canvas, head at about 35% from top, waist near 75%. Reconstruct dark stage ambience and overhead spotlight beams to fill the narrow frame. Top 25% clean nearly black stage atmosphere for a live HTML heading; bottom 23% smoothly fading to near black for live HTML copy. The portrait must not extend into these text areas. Photographic realism, same actual event, same pose and identity, no changes to clothing, no text, no lettering, no added props, no interface, no borders.",
+  "home_hero": "Original approved transparent cutout reused, recomposed in CSS over #9c9c9c, grayscale; desktop untouched."
+}
