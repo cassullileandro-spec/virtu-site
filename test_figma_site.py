@@ -30,6 +30,12 @@ for name,s in pages.items():
 for name in ['contato.html','trabalhe.html']:
  assert pages[name].select('form input[type="email"][required]'),name
  assert pages[name].select('form button[type="submit"]'),name
+logos=pages['veridiana.html'].select_one('.approved-client-logos')
+assert len(logos.select('img,[role="img"]'))==11,'Figma image masks must survive the logo export'
+for mark in logos.select('[role="img"]'):
+ assert mark.get('aria-label')
+ asset=re.search(r'url\("([^"]+)"\)',mark['style'])[1]
+ assert (P/'dist'/asset).is_file(),asset
 css=(P/'dist/approved.css').read_text()
 assert 'zoom:' not in css and '--design-scale' not in css
 assert '--content:1280px' in css

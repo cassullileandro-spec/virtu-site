@@ -73,6 +73,7 @@ def fluid(section):
    cls(n,'approved-wide-gap')
   if 'parágrafos' in n.get('data-name',''):
    cls(n,'approved-prose')
+  if n.get('data-node-id') in ['992:2050','992:2051']:cls(n,'approved-text-lines')
   if media:
    if 'box-shadow' in st:
     cls(n,'approved-shadow');st['--mobile-shadow']=st['box-shadow'].replace('20px','8px')
@@ -80,6 +81,7 @@ def fluid(section):
    st['aspect-ratio']=f'{w or 640}/{h}' if h else '4/3'
    cls(n,'approved-media')
   if card:
+   if n is not section and w and h and w/h>=1.3:cls(n,'approved-landscape-photo')
    st['overflow']='hidden';st['isolation']='isolate'
    st['min-height']=f'{min(h or 600,800)}px';st['height']='auto'
    cls(n,'approved-photo')
@@ -90,6 +92,7 @@ def fluid(section):
    st.update(width='100%',height='100%',left='0',top='0');st['object-fit']='cover'
    n['loading']='lazy';n['decoding']='async'
   if istext:
+   if any(css(c).get('display')=='block' for c in n.find_all('span',recursive=False)):cls(n,'approved-text-lines')
    st.pop('width',None);st.pop('height',None);st.pop('white-space',None);st.pop('word-break',None)
    st.pop('margin-bottom',None)
    size=float(st.get('font-size','0').removesuffix('px')) if re.fullmatch(r'[\d.]+px',st.get('font-size','0')) else 0
@@ -174,7 +177,7 @@ def apply_mobile_art(doc):
 for f in sorted((P/'sources/figma').glob('*.tsx')):
  slug=f.stem;source=C['fragment'](f.read_text());root=C['classify'](source,slug);root=C['enhance'](source,root,slug)
  doc=parse((P/'dist'/f'{slug}.html').read_text())
- doc.head.append(parse('<link rel="stylesheet" href="approved.css?v=20261111-home-figma">').link)
+ doc.head.append(parse('<link rel="stylesheet" href="approved.css?v=20261111-internal-mobile">').link)
  # Original shell, navigation, dialogs, forms and animation runtime remain in place.
  doc.select_one('footer').replace_with(footer(root.select_one('footer')))
  for n in doc.select('.eyebrow'):
@@ -216,8 +219,11 @@ for f in sorted((P/'sources/figma').glob('*.tsx')):
    logos=sec.find(attrs={'data-node-id':'792:1627'})
    if logos:
     mark=parse('<div class="approved-client-logos"></div>').div
-    for im in logos.select('img'):
-     mark.append(parse('<img src="'+im['src']+'" alt="'+escape(im.get('alt',''),quote=True)+'" loading="lazy">').img)
+    for logo in logos.select(':scope > div > div'):
+     im=logo.find('img');mask=logo.select_one('[style*="mask-image"]')
+     label=escape(logo.get('data-name',''),quote=True)
+     if im:mark.append(parse('<img src="'+im['src']+'" alt="'+label+'" loading="lazy">').img)
+     elif mask:mark.append(parse('<span role="img" aria-label="'+label+'" style="'+escape(mask['style'],quote=True)+'"></span>').span)
     logos.replace_with(mark)
    if sec.select_one('form') and old_form:
     main.append(old_form);continue
