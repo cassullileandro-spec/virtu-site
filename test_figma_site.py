@@ -2,7 +2,7 @@
 from pathlib import Path
 from urllib.parse import urlsplit,unquote
 from bs4 import BeautifulSoup
-import runpy,re
+import runpy,re,json
 P=Path(__file__).resolve().parent
 C=runpy.run_path(str(P/'sync-figma.py'))
 norm=lambda s:re.sub(r'\s+',' ',s).strip()
@@ -34,3 +34,20 @@ css=(P/'dist/approved.css').read_text()
 assert 'zoom:' not in css and '--design-scale' not in css
 assert '--content:1280px' in css
 print('PASS: 16 routes, original interaction runtime, approved copy, assets, links, forms and fluid grid.')
+
+art=json.loads((P/'sources/figma/mobile-art-direction.json').read_text())
+assert len(art)==20
+for item in art:
+ if item.get('scope')=='cover':continue
+ doc=pages[item['slug']+'.html']
+ assert doc.select_one('.hero picture source[srcset="'+item['path']+'"]'),item['slug']
+ assert (P/'dist'/item['path']).is_file(),item['path']
+ assert item['prompt'] and item['reference']!=item['path']
+for name,count in [('palestras.html',4),('empresas.html',5),('index.html',4)]:
+ selector='.home-talk-card' if name=='index.html' else '.approved-photo'
+ assert len(pages[name].select(selector+'.mobile-art-directed picture source[srcset*="-art-v2"]'))==count,name
+print('PASS: 16 recomposed mobile heroes and all 13 repeated talk/journey covers use dedicated picture sources.')
+
+for name in ['virtu.html','mentoria.html','phd.html']:
+ for cover in pages[name].select('.approved-cover'):
+  assert cover.select_one('picture source[srcset*="-art-v2"]'),(name,cover.get('data-node-id'))

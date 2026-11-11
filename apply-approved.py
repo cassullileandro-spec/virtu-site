@@ -151,10 +151,26 @@ def footer(source):
  heads=intro.select('p,h2,h3') if intro else []
  return parse('<footer class="site-footer footer-v2 section-pad"><div class="footer-v2-brand"><a href="index.html" aria-label="Virtù — início"><img src="assets/logo-claro.svg" alt="Virtù" width="480" height="165"></a><div>'+''.join('<'+('h2' if i==0 else 'p')+'>'+escape(text(p))+'</'+('h2' if i==0 else 'p')+'>' for i,p in enumerate(heads))+'</div></div><nav class="footer-v2-nav" aria-label="Navegação do rodapé">'+''.join(nav)+'</nav><div class="footer-v2-bottom"><span>© Virtù · Educação corporativa</span><span>Desenvolvimento Manta</span><a href="#inicio">Voltar ao topo ↑</a></div></footer>').footer
 MOBILE={x['slug']:x for x in json.loads((P/'sources/figma/mobile-backgrounds.json').read_text())}
+MOBILE_ART=json.loads((P/'sources/figma/mobile-art-direction.json').read_text())
+ART_SOURCES={ref:x for x in MOBILE_ART for ref in [x['reference'],*x.get('aliases',[])]}
+def apply_mobile_art(doc):
+ for im in list(doc.select('main img')):
+  entry=ART_SOURCES.get(im.get('src'))
+  if not entry:continue
+  if entry.get('scope')=='cover' and not im.find_parent(class_='approved-cover'):continue
+  path=entry['path']
+  pic=im.parent if im.parent.name=='picture' else doc.new_tag('picture')
+  if pic is not im.parent:im.wrap(pic)
+  cls(pic,'mobile-art-picture')
+  for source in list(pic.select('source')):source.decompose()
+  pic.insert(0,doc.new_tag('source',media='(max-width: 700px)',srcset=path))
+  container=im.find_parent(class_=lambda c:c and c in ['hero','approved-photo','home-talk-card'])
+  if container:cls(container,'mobile-art-directed')
+
 for f in sorted((P/'sources/figma').glob('*.tsx')):
  slug=f.stem;source=C['fragment'](f.read_text());root=C['classify'](source,slug);root=C['enhance'](source,root,slug)
  doc=parse((P/'dist'/f'{slug}.html').read_text())
- doc.head.append(parse('<link rel="stylesheet" href="approved.css?v=20261110-mobile2">').link)
+ doc.head.append(parse('<link rel="stylesheet" href="approved.css?v=20261110-art3">').link)
  # Original shell, navigation, dialogs, forms and animation runtime remain in place.
  doc.select_one('footer').replace_with(footer(root.select_one('footer')))
  for n in doc.select('.eyebrow'):
@@ -216,5 +232,6 @@ for f in sorted((P/'sources/figma').glob('*.tsx')):
   for a in doc.select('a[href="#inquiry-form"]'):a['href']='#'+('candidatura' if slug=='trabalhe' else 'formulario')
  for a in doc.select('footer a[href="#duvidas"]'):
   if not doc.select_one('#duvidas'):a['href']='index.html#duvidas'
+ apply_mobile_art(doc)
  (P/'dist'/f'{slug}.html').write_text(str(doc))
 print('Applied approved content to 16 original responsive pages.')

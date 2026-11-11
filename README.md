@@ -53,3 +53,5 @@ Os testes usam Chrome e Puppeteer Core locais. A simulação de viewport não su
 A identidade do Site está em `.openai/hosting.json`. O endereço público permanece o mesmo e a branch main do GitHub recebe o mesmo commit.
 
 A versão 29, commit `b85194900fc9b6007c1c61c9011d37b6f802d96d`, é a base anterior recuperável. A versão 30 permanece no histórico, mas sua implementação com canvas escalado foi retirada.
+
+Mobile art direction: 20 independently generated 3:4 images (16 heroes plus 4 internal banners) in `dist/assets/mobile/*-art-v2.jpg`, based on the desktop references. The reference/prompt manifest is `sources/figma/mobile-art-direction.json`. Shared lecture and journey cards reuse those dedicated mobile assets through `<picture>`, while desktop sources remain unchanged. Mobile images use contain sizing at their original aspect ratio, with copy positioned in the bottom negative space.

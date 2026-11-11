@@ -164,3 +164,26 @@
  .theme-influencia .approved-placed-grid>:nth-child(-n+2){grid-column:span 3!important}
  .theme-influencia .approved-placed-grid>.approved-media{grid-column:1/-1!important;aspect-ratio:16/6!important}
 }
+
+/* These mobile photographs are independently recomposed; keep their full 3:4 canvas. */
+.mobile-art-picture{display:contents}
+@media(max-width:700px){
+ .internal .approved-hero.mobile-art-directed .hero-portrait,
+ .internal .approved-hero.mobile-art-directed>.approved-hero-picture>.hero-image{height:calc(100vw * 4 / 3)!important}
+ .internal .approved-hero.mobile-art-directed .hero-image,
+ .internal .approved-hero.mobile-art-directed .hero-image[style]{object-fit:contain!important;object-position:center top!important;mask-image:linear-gradient(#000 88%,transparent)}
+ .internal .approved-hero.mobile-art-directed .internal-hero-content{padding-top:calc(100vw * 1.13)}
+ .approved-section.approved-cover.mobile-art-directed{--cover-photo-height:calc(100vw * 4 / 3);padding-top:calc(100vw * 1.13)!important}
+ .approved-cover.mobile-art-directed>.approved-art img{object-fit:contain!important;object-position:center top!important;mask-image:linear-gradient(#000 88%,transparent)}
+ .page-empresas .approved-section .approved-photo.mobile-art-directed{padding-top:calc((100vw - 48px) * 1.13)!important}
+ .page-empresas .approved-photo.mobile-art-directed .approved-art:has(img){height:calc((100vw - 48px) * 4 / 3);mask-image:linear-gradient(#000 88%,transparent)}
+ .page-empresas .approved-photo.mobile-art-directed img{object-fit:contain!important;object-position:center top!important}
+ .mobile-art-directed>.approved-art:not(:has(img)){display:none}
+ .home-talk-card.mobile-art-directed{aspect-ratio:auto;min-height:0;padding:calc(100vw * 1.13) 24px 32px}
+ .home-talk-card.mobile-art-directed img{height:calc(100vw * 4 / 3);object-fit:contain;object-position:center top;mask-image:linear-gradient(#000 88%,transparent);transform:none}
+ .home-talk-card.mobile-art-directed:before{display:none}
+ .home-talk-card.mobile-art-directed .home-talk-card-copy{width:100%;max-width:none}
+ .cover-hero.mobile-art-directed .cover-art{height:calc(100vw * 4 / 3);max-height:none;background:#0b0b0b}
+ .cover-hero.mobile-art-directed .cover-portrait{inset:0;width:100%;height:100%;object-fit:contain;filter:none}
+ .cover-hero.mobile-art-directed .cover-signature{color:#fafafa}
+}

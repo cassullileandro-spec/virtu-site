@@ -1,0 +1,204 @@
+[
+  {
+    "slug": "index",
+    "reference": "assets/hero-cover-portrait.png",
+    "prompt": "Use case: identity-preserve. Use this desktop image as reference to create a NEW art-directed mobile background, vertical 3:4 ratio. Exact same woman, black blazer, same pose and facial expression. Warm gold rim lighting on a black studio background. Centered waist-up, both shoulders, 10% headroom. Adapt camera framing and reconstruct background to fit a narrow portrait canvas, NOT a simple crop. Bottom 25% a natural soft fade into #0b0b0b creating quiet negative space for HTML text. Preserve the reference identity, age, facial proportions, realistic skin texture, outfits and lighting. Natural premium photography. No feet, no full body, no overlays, no text, no logos, no border or interface.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-6041e7a0-594d-47b1-a71e-e31a74f48a61.png",
+    "path": "assets/mobile/index-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": []
+  },
+  {
+    "slug": "virtu",
+    "reference": "assets/figma/e601adc9-85a7-45db-8f3a-4750b3dece3a.png",
+    "prompt": "Use case: identity-preserve. Use this desktop image as reference to create a NEW art-directed mobile background, vertical 3:4 ratio. Preserve BOTH foreground people and their exact faces/expressions, raised smartphone and celebratory gesture. Recompose the two people together in upper 70%, with their complete heads, raised hand and phone inside frame. Monochrome event photo with crowd and ceiling lights behind. Keep event atmosphere, do not invent new banners or text. Adapt camera framing and reconstruct background to fit a narrow portrait canvas, NOT a simple crop. Bottom 25% a natural soft fade into #0b0b0b creating quiet negative space for HTML text. Preserve the reference identity, age, facial proportions, realistic skin texture, outfits and lighting. Natural premium photography. No feet, no full body, no overlays, no text, no logos, no border or interface.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-e05e9977-e814-42e2-b0de-a285404bf921.png",
+    "path": "assets/mobile/virtu-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": []
+  },
+  {
+    "slug": "veridiana",
+    "reference": "assets/figma/d2a0e510-f7e0-4df4-b73f-072647f3323e.png",
+    "prompt": "Use case: identity-preserve. Use this desktop image as reference to create a NEW art-directed mobile background, vertical 3:4 ratio. Exact same woman, blazer with stitching, same pose and expression. Monochrome studio portrait centered waist-up, both shoulders visible, 10% headroom. Adapt camera framing and reconstruct background to fit a narrow portrait canvas, NOT a simple crop. Bottom 25% a natural soft fade into #0b0b0b creating quiet negative space for HTML text. Preserve the reference identity, age, facial proportions, realistic skin texture, outfits and lighting. Natural premium photography. No feet, no full body, no overlays, no text, no logos, no border or interface.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-3956fdb1-694c-4306-ac2e-868bd39426a0.png",
+    "path": "assets/mobile/veridiana-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": []
+  },
+  {
+    "slug": "empresas",
+    "reference": "assets/figma/d4280506-d542-4e68-9c25-88149fb5e251.png",
+    "prompt": "Use case: identity-preserve. Use this desktop image as reference to create a NEW art-directed mobile background, vertical 3:4 ratio. Preserve the three colleagues discussing together. Recompose them as a compact triangular group in upper 70%, complete faces, hands and shoulders comfortably visible. Monochrome candid professional meeting, same office, shallow depth of field. Adapt camera framing and reconstruct background to fit a narrow portrait canvas, NOT a simple crop. Bottom 25% a natural soft fade into #0b0b0b creating quiet negative space for HTML text. Preserve the reference identity, age, facial proportions, realistic skin texture, outfits and lighting. Natural premium photography. No feet, no full body, no overlays, no text, no logos, no border or interface.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-899afaad-13b8-4cfe-bea2-5a076cd6626d.png",
+    "path": "assets/mobile/empresas-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": []
+  },
+  {
+    "slug": "palestras",
+    "reference": "assets/figma/d5bb7d7f-248e-4b92-8e41-2ae92bdf0468.png",
+    "prompt": "Use case: identity-preserve. Use this desktop image as reference to create a NEW art-directed mobile background, vertical 3:4 ratio. Preserve exact speaker's face, white jacket, headset microphone and open hand gestures. Recompose centered waist-up with complete head and both hands,10% headroom. Black and white stage photography with spotlights behind. Adapt camera framing and reconstruct background to fit a narrow portrait canvas, NOT a simple crop. Bottom 25% a natural soft fade into #0b0b0b creating quiet negative space for HTML text. Preserve the reference identity, age, facial proportions, realistic skin texture, outfits and lighting. Natural premium photography. No feet, no full body, no overlays, no text, no logos, no border or interface.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-6d5186ad-384a-4446-bedd-1b465d1bf295.png",
+    "path": "assets/mobile/palestras-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": []
+  },
+  {
+    "slug": "gravado",
+    "reference": "assets/figma/50e8d146-470a-4279-9f8c-a82a8d174f42.png",
+    "prompt": "Use case: identity-preserve. Re-create this desktop artwork as a NEW mobile vertical 3:4 studio photographic composition. Keep exact woman identity, facial features, age, hairstyle, outfit, expression, hand gesture and pose. Recompose portrait centrally from waist up with both shoulders comfortably inside frame, 10 percent headroom. Match reference lighting, fabric and skin texture. Restage background's subtle curved shapes for narrow mobile canvas; keep a subtle oversize muted gold V behind subject. Upper 70% portrait, lower 25% smooth dark atmospheric fade into #0b0b0b, empty negative space for HTML copy. Background palette harmonizes reference with #0b0b0b. No cropped head, no feet, no additional people, no UI, no borders. Not simply a crop: adapt scale, surrounding background and breathing room specifically to mobile.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-1222062d-6e87-40fd-b3f0-704f116439a2.png",
+    "path": "assets/mobile/gravado-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": [
+      "assets/figma/16eeae5c-da66-40c7-9f92-e6ceb833a6b1.png"
+    ]
+  },
+  {
+    "slug": "oficina",
+    "reference": "assets/figma/fc0feee1-41da-46af-9090-3b16e0d6e9da.png",
+    "prompt": "Use case: identity-preserve. Re-create this desktop artwork as a NEW mobile vertical 3:4 studio photographic composition. Keep exact woman identity, facial features, age, hairstyle, outfit, expression, hand gesture and pose. Recompose portrait centrally from waist up with both shoulders comfortably inside frame, 10 percent headroom. Match reference lighting, fabric and skin texture. Restage background's subtle curved shapes for narrow mobile canvas; no lettering or logo. Upper 70% portrait, lower 25% smooth dark atmospheric fade into #163c33, empty negative space for HTML copy. Background palette harmonizes reference with #163c33. No cropped head, no feet, no additional people, no UI, no borders. Not simply a crop: adapt scale, surrounding background and breathing room specifically to mobile.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-b3ed791b-3bda-426b-8d92-8ef31f7c03ef.png",
+    "path": "assets/mobile/oficina-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": [
+      "assets/figma/c0236f6e-0bd5-4943-a78f-f831e662f221.png"
+    ]
+  },
+  {
+    "slug": "mentoria",
+    "reference": "assets/figma/4437ffbf-1283-4a51-b22a-424bff612a52.png",
+    "prompt": "Use case: identity-preserve. Re-create this desktop artwork as a NEW mobile vertical 3:4 studio photographic composition. Keep exact woman identity, facial features, age, hairstyle, outfit, expression, hand gesture and pose. Recompose portrait centrally from waist up with both shoulders comfortably inside frame, 10 percent headroom. Match reference lighting, fabric and skin texture. Restage background's subtle curved shapes for narrow mobile canvas; keep a subtle oversize muted gold V behind subject. Upper 70% portrait, lower 25% smooth dark atmospheric fade into #0b0b0b, empty negative space for HTML copy. Background palette harmonizes reference with #0b0b0b. No cropped head, no feet, no additional people, no UI, no borders. Not simply a crop: adapt scale, surrounding background and breathing room specifically to mobile.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-ad125a8e-5b20-4eac-b676-ebd7384c8228.png",
+    "path": "assets/mobile/mentoria-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": [
+      "assets/figma/d3ee4c6b-aecc-437c-8398-73750df4776b.png"
+    ]
+  },
+  {
+    "slug": "phd",
+    "reference": "assets/figma/f91985e7-e9ff-47d4-9bcb-6eb69fb1e2ca.png",
+    "prompt": "Use case: identity-preserve. Re-create this desktop artwork as a NEW mobile vertical 3:4 studio photographic composition. Keep exact woman identity, facial features, age, hairstyle, outfit, expression, hand gesture and pose. Recompose portrait centrally from waist up with both shoulders comfortably inside frame, 10 percent headroom. Match reference lighting, fabric and skin texture. Restage background's subtle curved shapes for narrow mobile canvas; no lettering or logo. Upper 70% portrait, lower 25% smooth dark atmospheric fade into #182e45, empty negative space for HTML copy. Background palette harmonizes reference with #182e45. No cropped head, no feet, no additional people, no UI, no borders. Not simply a crop: adapt scale, surrounding background and breathing room specifically to mobile.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-b8800a75-05e1-4597-90be-c0dbb063a106.png",
+    "path": "assets/mobile/phd-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": [
+      "assets/figma/d1e73635-e1db-47a1-b02f-948008aeff7f.png"
+    ]
+  },
+  {
+    "slug": "vanguard",
+    "reference": "assets/figma/d7e25054-8216-44a7-8329-4f0d11f41700.png",
+    "prompt": "Use case: identity-preserve. Re-create this desktop artwork as a NEW mobile vertical 3:4 studio photographic composition. Keep exact woman identity, facial features, age, hairstyle, outfit, expression, hand gesture and pose. Recompose portrait centrally from waist up with both shoulders comfortably inside frame, 10 percent headroom. Match reference lighting, fabric and skin texture. Restage background's subtle curved shapes for narrow mobile canvas; no lettering or logo. Upper 70% portrait, lower 25% smooth dark atmospheric fade into #35243e, empty negative space for HTML copy. Background palette harmonizes reference with #35243e. No cropped head, no feet, no additional people, no UI, no borders. Not simply a crop: adapt scale, surrounding background and breathing room specifically to mobile.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-c64dec40-947a-4cc0-8550-36a369beffc7.png",
+    "path": "assets/mobile/vanguard-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": [
+      "assets/figma/e0233b17-80c1-4b16-ac31-7cfd36810432.png"
+    ]
+  },
+  {
+    "slug": "contato",
+    "reference": "assets/figma/99e5d00e-01eb-4a79-a25e-f0170812e087.png",
+    "prompt": "Use case: identity-preserve. Use this desktop image as reference to create a NEW art-directed mobile background, vertical 3:4 ratio. Preserve the two colleagues in attentive conversation, facial features, wardrobe and expressions. Recompose as a compact conversational pair centered in upper 70%, complete heads and hands. Monochrome editorial office photography. Adapt camera framing and reconstruct background to fit a narrow portrait canvas, NOT a simple crop. Bottom 25% a natural soft fade into #0b0b0b creating quiet negative space for HTML text. Preserve the reference identity, age, facial proportions, realistic skin texture, outfits and lighting. Natural premium photography. No feet, no full body, no overlays, no text, no logos, no border or interface.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-4d76a8ec-0e73-4cde-bb41-6c4ad03e1b9a.png",
+    "path": "assets/mobile/contato-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": []
+  },
+  {
+    "slug": "trabalhe",
+    "reference": "assets/figma/82b948ed-0253-4504-a7ba-1e89a199acfc.png",
+    "prompt": "Use case: identity-preserve. Use this desktop image as reference to create a NEW art-directed mobile background, vertical 3:4 ratio. Preserve all three colleagues working together and their faces, attire, laptop and conversational gesture. Recompose into a compact triangular group in upper 70%, complete heads and hands. Monochrome editorial office photography with soft window light. Adapt camera framing and reconstruct background to fit a narrow portrait canvas, NOT a simple crop. Bottom 25% a natural soft fade into #0b0b0b creating quiet negative space for HTML text. Preserve the reference identity, age, facial proportions, realistic skin texture, outfits and lighting. Natural premium photography. No feet, no full body, no overlays, no text, no logos, no border or interface.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-3c3106f4-6a49-4c1a-b47d-b73b4310381d.png",
+    "path": "assets/mobile/trabalhe-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": []
+  },
+  {
+    "slug": "palestra-cinco-dimensoes",
+    "reference": "assets/palestra-lideranca-capa.webp",
+    "prompt": "Use case: identity-preserve. Reference is the DESKTOP artwork. Create a newly art-directed vertical MOBILE photograph, 3:4 ratio, not a crop of the desktop. Preserve exact facial identity, age, hair and expression of this woman. black tailored suit, hand gently under chin, charcoal studio background with subtle abstract tonal shapes, natural skin color. Remove the white rectangular outline and large numeral; no graphic overlay. Centered waist-up composition, complete head with 10% headroom, both shoulders and arms comfortably framed. Portrait occupies upper 70%, lower 25% is a natural smooth atmospheric fade to #141414 providing empty room for HTML copy. Recreate lighting and environment for portrait composition. Same premium photographic quality. No feet, no full-body, no text, no logo, no interface, no border.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-6cc2ce65-2437-4440-a30d-5e95284c468a.png",
+    "path": "assets/mobile/palestra-cinco-dimensoes-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": [
+      "assets/figma/fda597eb-ccea-45a4-8d88-c77aa1715b4b.png"
+    ]
+  },
+  {
+    "slug": "palestra-influencia-real",
+    "reference": "assets/palestra-influencia-capa.webp",
+    "prompt": "Use case: identity-preserve. Reference is the DESKTOP artwork. Create a newly art-directed vertical MOBILE photograph, 3:4 ratio, not a crop of the desktop. Preserve exact facial identity, age, hair and expression of this woman. white tailored suit, resting arm on white chair, warm amber studio background with softly projected window light. Centered waist-up composition, complete head with 10% headroom, both shoulders and arms comfortably framed. Portrait occupies upper 70%, lower 25% is a natural smooth atmospheric fade to #352717 providing empty room for HTML copy. Recreate lighting and environment for portrait composition. Same premium photographic quality. No feet, no full-body, no text, no logo, no interface, no border.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-f500e04e-e075-48a0-93d0-bf13aa644313.png",
+    "path": "assets/mobile/palestra-influencia-real-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": [
+      "assets/figma/e850620f-43a6-4ff0-b007-813965f0ecbc.png"
+    ]
+  },
+  {
+    "slug": "palestra-auto-performance",
+    "reference": "assets/palestra-performance-capa.webp",
+    "prompt": "Use case: identity-preserve. Create a NEW art-directed MOBILE photographic hero using the attached desktop artwork as reference. One vertical 3:4 image. Preserve this exact woman's facial identity, blonde hair, age, red tailored suit, seated pose and realistic anatomy. Recompose, do NOT merely crop: centered waist-up portrait in upper 65% of frame, entire head/hair with 10% headroom, both shoulders visible with breathing room. Recreate circular warm blush spotlight behind her, natural shadow, deep burgundy studio background. Lower 30% transitions naturally into rich dark burgundy #350b20 with ample clean negative space for HTML text. Elegant photographic realism matching desktop. No lettering, logos, borders, UI or added people. Reference image is desktop source, composition must be newly designed for narrow mobile screen; no feet or full-body view.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-801dc5a3-7ec6-4084-a885-3f1aa8758bab.png",
+    "path": "assets/mobile/palestra-auto-performance-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": [
+      "assets/figma/0e31dbfd-dae5-4c95-ac43-3cb3b1474c6c.png"
+    ]
+  },
+  {
+    "slug": "palestra-eu",
+    "reference": "assets/palestra-eu-capa.webp",
+    "prompt": "Use case: identity-preserve. Reference is the DESKTOP artwork. Create a newly art-directed vertical MOBILE photograph, 3:4 ratio, not a crop of the desktop. Preserve exact facial identity, age, hair and expression of this woman. monochrome black and white portrait, hand under chin, black blazer, softly windswept blonde hair, grey studio background. Centered waist-up composition, complete head with 10% headroom, both shoulders and arms comfortably framed. Portrait occupies upper 70%, lower 25% is a natural smooth atmospheric fade to #0b0b0b providing empty room for HTML copy. Recreate lighting and environment for portrait composition. Same premium photographic quality. No feet, no full-body, no text, no logo, no interface, no border.",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-46000d10-554b-43f9-883d-889ad6943cac.png",
+    "path": "assets/mobile/palestra-eu-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "aliases": [
+      "assets/figma/0b35fbdd-0f11-49e2-b769-3a2d9219ff56.png"
+    ]
+  },
+  {
+    "slug": "virtu-palco",
+    "reference": "assets/curadoria-secondary-virtu-3.jpg",
+    "prompt": "Use case: identity-preserve. Reference photograph is the desktop source. Create a new MOBILE 3:4 vertical composition based faithfully on it, with reconstructed surrounding background rather than simply cropping. Preserve exact faces, identities, ages, outfits, expression, props and hand gestures. Keep both women together, microphone and award completely visible, warm stage lights but monochrome final photo. Entire heads with 10% headroom, shoulders and relevant hands comfortably inside canvas. Upper 70% contains subject, bottom25% soft natural fade to #0b0b0b for readable HTML copy. Premium realistic editorial photography, no feet, no new people, no new lettering, no interface, no graphic border.",
+    "path": "assets/mobile/virtu-palco-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "scope": "cover",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-77303ed7-4691-4764-9288-8d0a6cfa1660.png",
+    "aliases": []
+  },
+  {
+    "slug": "virtu-experiencia",
+    "reference": "assets/curadoria-secondary-virtu-8.jpg",
+    "prompt": "Use case: identity-preserve. Reference photograph is the desktop source. Create a new MOBILE 3:4 vertical composition based faithfully on it, with reconstructed surrounding background rather than simply cropping. Preserve exact faces, identities, ages, outfits, expression, props and hand gestures. Studio portrait, waist up, same woman, face, pose and clothes, monochrome as displayed in site. Entire heads with 10% headroom, shoulders and relevant hands comfortably inside canvas. Upper 70% contains subject, bottom25% soft natural fade to #0b0b0b for readable HTML copy. Premium realistic editorial photography, no feet, no new people, no new lettering, no interface, no graphic border.",
+    "path": "assets/mobile/virtu-experiencia-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "scope": "cover",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-e1275418-081c-49ad-bf32-9a64d9ee3755.png",
+    "aliases": []
+  },
+  {
+    "slug": "mentoria-experiencia",
+    "reference": "assets/curadoria-secondary-mentoria-7.jpg",
+    "prompt": "Use case: identity-preserve. Reference photograph is the desktop source. Create a new MOBILE 3:4 vertical composition based faithfully on it, with reconstructed surrounding background rather than simply cropping. Preserve exact faces, identities, ages, outfits, expression, props and hand gestures. Studio portrait, waist up, same woman, face, pose and clothes, monochrome as displayed in site. Entire heads with 10% headroom, shoulders and relevant hands comfortably inside canvas. Upper 70% contains subject, bottom25% soft natural fade to #0b0b0b for readable HTML copy. Premium realistic editorial photography, no feet, no new people, no new lettering, no interface, no graphic border.",
+    "path": "assets/mobile/mentoria-experiencia-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "scope": "cover",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-199f09b2-ee3b-47f3-a989-4655ffa1e158.png",
+    "aliases": []
+  },
+  {
+    "slug": "phd-pratica",
+    "reference": "assets/figma/e374fa1d-a8f3-48cf-9b63-39cd6ff820c5.png",
+    "prompt": "Use case: identity-preserve. Reference photograph is the desktop source. Create a new MOBILE 3:4 vertical composition based faithfully on it, with reconstructed surrounding background rather than simply cropping. Preserve exact faces, identities, ages, outfits, expression, props and hand gestures. Keep speaker's face, microphone, angled mic stand and transparent lectern, same colored stage lighting. Entire heads with 10% headroom, shoulders and relevant hands comfortably inside canvas. Upper 70% contains subject, bottom25% soft natural fade to #0b0b0b for readable HTML copy. Premium realistic editorial photography, no feet, no new people, no new lettering, no interface, no graphic border.",
+    "path": "assets/mobile/phd-pratica-art-v2.jpg",
+    "method": "built-in image_gen reference recomposition",
+    "scope": "cover",
+    "generated_path": "/Users/leandrocassulli/.codex/generated_images/01a1c566-0104-70d2-b81a-6ad84420d725/exec-2ba393b0-0379-4100-941c-53fd14797007.png",
+    "aliases": []
+  }
+]
