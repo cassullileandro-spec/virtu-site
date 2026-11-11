@@ -156,6 +156,9 @@ ART_SOURCES={ref:x for x in MOBILE_ART for ref in [x['reference'],*x.get('aliase
 def apply_mobile_art(doc):
  for im in list(doc.select('main img')):
   entry=ART_SOURCES.get(im.get('src'))
+  if not entry and im.find_parent(class_=['journey-panel','journey-thumb']):
+   route=im.find_parent('details').select_one('.journey-content a')['href'].removesuffix('.html')
+   entry=next((x for x in MOBILE_ART if x['slug']==route),None)
   if not entry:continue
   if entry.get('scope')=='cover' and not im.find_parent(class_='approved-cover'):continue
   path=entry['path']
@@ -164,13 +167,13 @@ def apply_mobile_art(doc):
   cls(pic,'mobile-art-picture')
   for source in list(pic.select('source')):source.decompose()
   pic.insert(0,doc.new_tag('source',media='(max-width: 700px)',srcset=path))
-  container=im.find_parent(class_=lambda c:c and c in ['hero','approved-photo','home-talk-card'])
+  container=im.find_parent(class_=lambda c:c and c in ['hero','approved-photo','home-talk-card','journey-panel','journey-thumb'])
   if container:cls(container,'mobile-art-directed')
 
 for f in sorted((P/'sources/figma').glob('*.tsx')):
  slug=f.stem;source=C['fragment'](f.read_text());root=C['classify'](source,slug);root=C['enhance'](source,root,slug)
  doc=parse((P/'dist'/f'{slug}.html').read_text())
- doc.head.append(parse('<link rel="stylesheet" href="approved.css?v=20261110-art3">').link)
+ doc.head.append(parse('<link rel="stylesheet" href="approved.css?v=20261111-home">').link)
  # Original shell, navigation, dialogs, forms and animation runtime remain in place.
  doc.select_one('footer').replace_with(footer(root.select_one('footer')))
  for n in doc.select('.eyebrow'):
@@ -187,6 +190,7 @@ for f in sorted((P/'sources/figma').glob('*.tsx')):
   film.append(parse('<span class="film-duration">TEASER DE LIDERANÇA · 2 MIN 22 S</span>').span)
   approved_logos=root.select_one('[data-node-id="792:3827"]').select('img')
   for old,new in zip(doc.select('.logo-strip img'),approved_logos):old['src']=new['src']
+  doc.select_one('.logo-strip .sicoob img')['src']='assets/logo-sicoob.png'
  else:
   main=doc.select_one('main');oldhero=main.select_one('.hero');newhero=root.select_one('.hero')
   # Keep the old responsive hero layout and type, only updating its approved copy/media.

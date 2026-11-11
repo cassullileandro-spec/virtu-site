@@ -50,7 +50,7 @@ body:not(.internal) .menu-toggle:not(.scrolled){right:4.17%;color:var(--ink);bor
 .home-talk-card .eyebrow,.home-talk-card .text-link{color:var(--talk-accent)}
 .home-talk-card .text-link{display:inline-flex;align-items:center;gap:24px;padding-top:16px;border-top:1px solid currentColor}
 .home-talk-card.theme-performance{justify-content:end}
-.home-talk-card.theme-performance>img{object-position:26% center}
+.home-talk-card.theme-performance img{object-position:26% center}
 .home-talk-card.theme-performance:before{background:linear-gradient(270deg,#350b20d9 0%,#350b2077 48%,#350b2000 100%),linear-gradient(0deg,#350b2099,transparent 65%)}
 .home-talk-card:hover img{transform:scale(1.025)}
 .home-talk-card:focus-visible{outline:3px solid var(--talk-accent);outline-offset:-6px}

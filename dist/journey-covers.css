@@ -4,7 +4,7 @@
 .journey-phd{--journey-dark:#303c46}
 .internal .editorial-hero.journey-cover{background:var(--journey-dark);color:#fafafa}
 .internal .journey-cover .hero-portrait,.page-empresas .solution-card.journey-cover figure{position:absolute;inset:0;width:100%;height:100%;min-height:0;max-height:none;margin:0;border:0;border-radius:0;z-index:-2}
-.internal .journey-cover .hero-portrait .hero-image,.journey-panel.journey-cover>img,.page-empresas .solution-card.journey-cover figure img{position:absolute;inset:0;width:100%;max-width:none;height:100%;object-fit:cover;object-position:center top;filter:none;mask-image:none;border-radius:0}
+.internal .journey-cover .hero-portrait .hero-image,.journey-panel.journey-cover img,.page-empresas .solution-card.journey-cover figure img{position:absolute;inset:0;width:100%;max-width:none;height:100%;object-fit:cover;object-position:center top;filter:none;mask-image:none;border-radius:0}
 .journey-cover:after{content:none}
 .internal .editorial-hero.journey-cover:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#20222352,transparent 62%)}
 .internal .editorial-hero.journey-cover .internal-hero-content{width:55%;min-height:800px;padding-top:144px;padding-bottom:96px}
@@ -32,10 +32,10 @@
 @media(max-width:700px){
  .page-empresas .solution-section .section-title{padding:64px var(--gutter) 32px}
  .internal .editorial-hero.journey-cover .internal-hero-content{width:100%;min-height:980px;padding:500px var(--gutter) 64px;justify-content:end}
- .internal .journey-cover .hero-portrait .hero-image,.journey-panel.journey-cover>img,.page-empresas .solution-card.journey-cover figure img{height:580px;object-position:86% top!important;mask-image:linear-gradient(#000 62%,transparent 100%)}
+ .internal .journey-cover .hero-portrait .hero-image,.journey-panel.journey-cover img,.page-empresas .solution-card.journey-cover figure img{height:580px;object-position:86% top!important;mask-image:linear-gradient(#000 62%,transparent 100%)}
  .internal .editorial-hero.journey-cover:before{background:none}
  .journey-panel.journey-cover{height:auto;min-height:780px}
- .journey-panel.journey-cover>img{height:460px}
+ .journey-panel.journey-cover img{height:460px}
  .journey-panel.journey-cover .journey-panel-shade{background:none}
  .journey-panel.journey-cover .journey-content{position:relative;left:auto;right:auto;bottom:auto;top:auto;transform:none;width:auto;padding:400px 24px 40px}
  .page-empresas .solution-card.journey-cover{min-height:800px;padding:500px 24px 48px;justify-content:end}
